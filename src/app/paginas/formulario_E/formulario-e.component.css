@@ -1,0 +1,53 @@
+.btn_enviar
+{
+  margin-top: 5%;
+}
+
+.table
+{
+  width: 32rem;
+  margin-left: 14rem;
+  margin-bottom: unset;
+}
+
+.contenedor {
+
+  font-size: 13px;
+}
+ th {
+  padding: 4px;
+  width: 14rem;
+  background-color: rgb(128, 128, 128);
+  color: #ffffff;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  text-align: center;
+
+
+}
+@media  screen and (max-width: 763px)   and (min-width: 701px) {
+
+  .table
+{
+  width: 28rem;
+
+}
+}
+@media  screen and (max-width: 701px)  and (min-width: 320px)  {
+
+    .table
+  {
+    width: 24.4rem;
+    margin-left: 12rem;
+
+  }
+  }
+
+  @media  screen and (max-width: 320px)   {
+
+    .contenedor {
+
+      font-size: 12px;
+    }
+  }

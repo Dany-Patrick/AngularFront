@@ -1,0 +1,66 @@
+.dot {
+    background: rgb(211, 211, 211);
+    border-radius: 0.8em;
+   -moz-border-radius: 0.8em;
+   -webkit-border-radius: 0.8em;
+   color:  rgb(20, 172, 0);
+   display: inline-block;
+   font-size:1.5rem;
+    text-align: center;
+   width: 1.6em; 
+  }
+
+
+  .table_style
+  {
+      width: 100%;
+      margin-left:5%;
+      margin-right:5%;
+      padding-right: 5px;
+
+  }
+  .td1
+  {
+    border:0px;
+    padding: 17px;
+    padding-right: 5px;
+    width: 10px
+
+  }
+  .td2
+  {
+ 
+    height: 6px
+
+  }
+  td {
+    border:hidden;
+    }
+    table {
+    border: 1px solid #000;
+    border-collapse:unset;
+    }
+ 
+  .td3
+  {
+    border:0px;
+    padding: 17px;
+    width: 20px
+    
+  }
+.text-center
+{
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+  .card
+  {
+
+    padding: 5px;
+  }
+.row
+{
+  margin:unset;
+}
+ 

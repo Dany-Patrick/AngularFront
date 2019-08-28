@@ -1,0 +1,84 @@
+body
+{
+   font-family: var(--tex-texto);
+}
+.jumbo_tron {
+   margin-bottom:unset;
+   border-radius:unset;
+   background-image: url('/assets/img/inicio_cabecera.jpg');
+   height:250px; 
+   padding: unset;
+}
+
+.nav_bar{
+   margin-bottom:unset; 
+   border-radius:unset; 
+   background-image: url('/assets/img/inicio_nav.jpg');
+}
+
+.img_filtro{
+   height:20px ;
+   padding-right: .9rem; 
+   padding-left: .9rem;
+}
+
+.encuestas_pendientes
+{
+   color: white; 
+   text-align: left;
+   margin-left: 7px;
+   margin-top:20px;
+}
+
+
+
+.logo_infor_hoja
+{
+   height:150px ; 
+   padding-top:10px ;
+  
+}
+
+
+
+.logo_infor{
+   height:20px ;
+}
+
+.nav_collapse
+{
+   padding-right: .9rem; 
+   padding-left: .9rem;
+}
+.btn_menu_1
+{
+
+ font-size: 12px;
+ font-weight: bold;
+
+}
+ 
+ 
+
+.btn_menu
+{
+       display: none;
+}
+
+ @media only screen and (max-width: 991px) {
+     .hidden_pbr
+     {
+         display: none;
+     }
+    
+      .btn_menu
+    {
+       display: block;
+       padding: 1px 6px;
+       background-color: unset;
+    }
+  
+
+ 
+
+ }

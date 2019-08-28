@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<app-title  [formulario]=true></app-title>
+<div class="contenedor">
+
+<subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>     
+
+<div class="form-inline" >
+    <checkbox [titulo]="'Móvil'" [clase_label]="'ancho_25'"></checkbox>
+    <checkbox [titulo]="'Permanente'" [clase_label]="'ancho_25'"></checkbox>
+  </div> 
+  
+
+
+<subtitulo [titulo]="'B2. Situación año_proceso(situación)'"></subtitulo>     
+<div class="form-inline" >
+    <checkbox [titulo]="'Paralizado'"  [clase_label]="'ancho_25'"></checkbox>
+    <checkbox [titulo]="'Trabajando'" [clase_label]="'ancho_25'"></checkbox>
+    <checkbox [titulo]="'Nuevo'" [clase_label]="'ancho_25'"></checkbox>
+    <checkbox [titulo]="'Desaparecido'" [clase_label]="'ancho_25'"></checkbox>
+</div> 
+  
+
+<subtitulo [titulo]="'B3. Causa paralización (causa_paralización)'"></subtitulo>     
+<div class="form-inline" >
+      <checkbox [titulo]="'Falta capital de trabajo'" [clase_label]="'ancho_50'"></checkbox>
+      <checkbox [titulo]="'Falta mercado'" [clase_label]="'ancho_50'"></checkbox>
+      <checkbox [titulo]="'Falta abastecimiento'" [clase_label]="'ancho_50'"></checkbox>
+      <checkbox [titulo]="'Cambio giro'" [clase_label]="'ancho_50'"></checkbox>
+      <checkbox [titulo]="'Fuerza mayor'" [clase_label]="'ancho_50'"></checkbox>
+      <checkbox [titulo]="'Legales y de gestión'" [clase_label]="'ancho_50'"></checkbox>
+    </div> 
+
+<subtitulo [titulo]="'B4. Situación ano_procesc +1 (Situación actual)'"></subtitulo>      
+<div class="form-inline" >
+      <checkbox [titulo]="'Paralizado'" [clase_label]="'ancho_25'"></checkbox>
+      <checkbox [titulo]="'Trabajando'" [clase_label]="'ancho_25'"></checkbox>
+      <checkbox [titulo]="'Nuevo'" [clase_label]="'ancho_25'"></checkbox>
+      <checkbox [titulo]="'Desaparecido'" [clase_label]="'ancho_25'"></checkbox>
+    </div> 
+
+
+</div>
+<br>
+<div align="center" class="btn_enviar" >     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button></div>
+    <menu-footer></menu-footer>

@@ -1,0 +1,383 @@
+label{
+    display: inline-block;
+    width:158px;
+    margin-top: 3px;
+}
+
+
+td{
+    padding: unset; 
+     vertical-align: unset; 
+    border-top: unset; 
+}
+
+.form-control
+{
+    height: unset;
+    padding: unset;
+    width:200px;
+  
+}
+input{
+    text-align: center;
+}
+
+/*FORMULARIO A*/
+
+.mini-input
+{
+    width:106px;
+}
+.mini-label
+{
+    width:65px;
+}
+   
+.label_largo
+{
+    
+  width:180px;
+
+}
+.fono
+{
+  width: 97px;
+}
+
+/*FORMULARIO A*/
+
+
+
+
+  /*FORMULARIO B*/
+
+    /*FORMULARIO B*/
+
+    /*FORMULARIO E*/
+   .input_form_e_permanente
+   {
+    margin-left: 3rem;
+    width: 9rem;
+   }
+   .input_form_e_temporal
+   {
+    margin-left: 16px;
+    width: 7rem;
+   }
+
+      /*FORMULARIO E*/
+        /*FORMULARIO G*/
+        .input_form_g
+        {
+
+         width: 7rem;
+        }
+     
+          /*FORMULARIO G*/
+
+
+      @media  screen and (max-width: 1552px) and (min-width: 1140px) {
+        .form-control
+        {
+        
+            width:150px;
+            font-size: 11px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        label
+        {
+            width:110px;
+        }
+    
+        
+        /*FORMULARIO A*/    
+      
+       
+        .mini-input
+        {
+            width:74px;
+        }
+    
+    .label_largo
+    {
+        
+      width:180px;
+    
+    }
+    .mini-label
+    {
+        width:48px;
+    }
+    .fono
+    {
+        width: 70px;
+    }
+       /*FORMULARIO A*/
+      /*FORMULARIO B*/
+       .label_form_b
+       {
+               
+         width:20rem;
+       }
+      /*FORMULARIO B*/
+         
+             /*FORMULARIO E*/
+       .input_form_e_permanente
+       {
+        margin-left: 35px;
+       }
+       .input_form_e_temporal
+       {
+        margin-left: 28px;
+        width:95px;
+       }
+    
+      /*FORMULARIO E*/
+
+        /*FORMULARIO G*/
+        .input_form_g
+        {
+
+         width: 7rem;
+        }
+     
+          /*FORMULARIO G*/
+       
+      }
+    
+
+      
+
+@media  screen and (max-width: 1140px)  and (min-width: 850px)  {
+    .form-control
+    {
+    
+        width:131px;
+        font-size: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    label
+    {
+        width:88px;
+    }
+
+
+/*FORMULARIO A*/
+ 
+   
+.mini-input
+    {
+        width:65px;
+    }
+
+.label_largo
+{
+    
+  width:101px;
+
+}
+.mini-label
+{
+    width:34px;
+}
+.fono
+{
+    width: 66px;
+}
+/*FORMULARIO A*/
+
+
+     /*FORMULARIO E*/
+
+     .input_form_e_permanente
+     {
+      width: 10rem;
+     }
+     .input_form_e_temporal
+     {
+        width: 7rem;
+        margin-left: 16px;
+     }
+  
+        /*FORMULARIO E*/
+                /*FORMULARIO G*/
+                .input_form_g
+                {
+        
+                 width: 5rem;
+                }
+             
+                  /*FORMULARIO G*/
+  }
+
+  @media  screen and (max-width:850px) and (min-width:450px) {
+
+    td{
+        display: flex;
+    }
+  
+    .form-control
+    {
+      
+        height: 22px;   
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+ /*FORMULARIO A*/
+    
+    .ancho_10
+    {
+
+        width: 15rem;
+    }
+    .ancho_50
+    {
+
+        width: 21rem;
+    }
+    .ancho_70
+    {
+
+        width: 27rem;
+    }
+    .ancho_total
+    {
+
+        width:42.8rem;
+    }
+
+    .mini-input
+    {
+        width:9.5rem;
+    }
+    .fono
+    {
+        margin-top: 19px;
+        width:10.3rem;
+    }
+ /*FORMULARIO A*/
+   /*FORMULARIO F*/
+ .input_form_f
+ {
+         
+   width:13.7rem;
+ 
+ }
+
+    /*FORMULARIO F*/
+    /*FORMULARIO E*/
+
+    .input_form_e_permanente
+    {
+        width: 8rem;
+    margin-left: 3rem;
+    }
+    .input_form_e_temporal
+    {
+        width: 6rem;
+        margin-left: 1.5rem;
+    }
+ 
+       /*FORMULARIO E*/
+             /*FORMULARIO G*/
+             .input_form_g
+             {
+     
+              width: 6rem;
+             }
+          
+               /*FORMULARIO G*/
+}
+
+
+    @media  screen and (max-width: 425px)  and (min-width:320px) {
+
+    
+        
+        td{
+            display: flex;
+        }
+      
+        .form-control
+        {
+            width:9rem;
+            height: 30px;   
+            font-size: 12px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        /*FORMULARIO A*/
+        .fono{
+            width: 5rem;
+        
+            margin-top: 15px;
+           }
+   
+
+ 
+        .mini-input
+        {
+            width:10rem;
+        }
+        .fono
+        {
+            margin-top: 33px;
+            width:9.4rem;
+        }
+/*FORMULARIO A*/
+
+    /*FORMULARIO E*/
+
+    .input_form_e_permanente
+    {
+     width:87px;
+     height: unset;
+    }
+    .input_form_e_temporal
+    {
+     width:87px;
+     height: unset;
+    }
+ 
+       /*FORMULARIO E*/
+                /*FORMULARIO G*/
+                .input_form_g
+                {
+        
+                 width: 3rem;
+                }
+             
+                  /*FORMULARIO G*/
+
+
+                  /*FORMULARIO F*/
+                  .input_form_f
+                  {
+                    width: 6rem;
+                  }
+                  /*FORMULARIO F*/
+
+    }
+
+
+
+    @media  screen and (max-width:320px)   {
+
+          /*FORMULARIO E*/
+
+    .input_form_e_permanente
+    {
+        width: 66px;
+        margin-left: unset;
+    }
+    .input_form_e_temporal
+    {
+        width: 35px;
+        margin-left: unset;
+    }
+ 
+       /*FORMULARIO E*/
+      }

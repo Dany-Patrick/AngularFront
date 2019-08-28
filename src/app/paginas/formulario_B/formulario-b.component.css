@@ -1,0 +1,41 @@
+
+label{
+    margin-left: 15px;
+}
+
+td
+{
+    border:0px;
+    padding:unset;
+}
+.form-inline
+{
+  margin-bottom:10px;
+
+
+ 
+    
+}
+
+@media  screen and (max-width: 1140px)  and (min-width:850px) {
+    
+
+    .contenedor
+    {
+      
+      font-size: 9px;
+    
+    }
+  
+  }
+  @media  screen and (max-width: 1552px) and (min-width: 1140px)  {
+    
+  
+    .contenedor
+    {
+      
+      font-size: 12px;
+    
+    }
+  
+  }

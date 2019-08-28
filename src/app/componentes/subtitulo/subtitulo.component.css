@@ -1,0 +1,19 @@
+span
+{
+
+  color: var(--col-verdeClaro);
+}
+table
+{
+
+
+  border-collapse: unset;
+  margin: 0px;
+}
+td{
+    border:unset;
+}
+hr
+{
+    margin: unset;
+}

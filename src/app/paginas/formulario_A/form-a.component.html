@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+
+<app-navbar></app-navbar>
+<app-title  [formulario]=true></app-title>
+<form >
+<div class="contenedor">
+       
+        <subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>
+        <div class="form-inline" >
+                <lista-desplegable  [titulo]="'Región'"></lista-desplegable>
+                <lista-desplegable [titulo]="'Provincia'"></lista-desplegable>
+                <lista-desplegable [titulo]="'Comuna'"></lista-desplegable>
+            </div>
+
+            <div class="form-inline" >
+                    <textbox  [titulo]="'Localidad'" [clase_input]="'ancho_total'"></textbox>
+                    <textbox [titulo]="'Huso'"  [clase_input]="'mini-input'"  [clase_label]="'mini-label'" ></textbox>
+                    <lista-desplegable [titulo]="'Zona'"  [clase_input]="'mini-input'"  [clase_label]="'mini-label'"></lista-desplegable>
+                    <textbox [titulo]="'UTM X'" [clase_input]="'mini-input'"  [clase_label]="'mini-label'"></textbox>
+                    <textbox [titulo]="'UTM Y'"   [clase_input]="'mini-input'"  [clase_label]="'mini-label'"></textbox>
+                   <button class="btn-gps"><img class="img-gps"  src="assets\icons\icon_place.png"></button>
+                   
+            </div>
+            <div class="form-inline"> 
+                    <textbox [titulo]="'Rut empresa'"   [clase_input]="'ancho_50'"></textbox>
+                    <textbox [titulo]="'Nombre propietario'"  [clase_input]="'ancho_50'"></textbox>
+                    <textbox [titulo]="'Razón social'"  [clase_input]="'ancho_total'"></textbox>
+                    <button class="btn-primary boton">CAMBIAR RAZÓN SOCIAL</button>
+            </div>
+            <div class="form-inline">
+                      
+                     <textbox [titulo]="'Nombre planta'"  [clase_input]="'ancho_50'"></textbox>
+                     <textbox [titulo]="'Ciudad planta'"  [clase_input]="'ancho_50'"></textbox>
+                     <textbox [titulo]="'Dirección planta'"  [clase_input]="'ancho_total'"></textbox>
+            </div>
+            <div class="form-inline">
+                    
+               <codigo-fono [titulo]="'Fono 1'"  [clase_input]="'codigo-fono'"  ></codigo-fono>
+                 <textbox-numerico [titulo]="''" [clase_input]="'fono'"    ></textbox-numerico>
+               <codigo-fono [titulo]="'Fono 2'"  [clase_input]="'codigo-fono'"></codigo-fono>
+                <textbox-numerico [titulo]="''"   [clase_input]="'fono'"></textbox-numerico>
+                   <email [titulo]="'Email planta'" [clase_input]="'ancho_50'"></email>
+                   <textbox [titulo]="'Casilla planta'" [clase_input]="'ancho_50'"></textbox>
+                 
+                </div>
+
+                <subtitulo [titulo]="'A2. Antecedente de la gerencia'"></subtitulo>
+     <div class="form-inline">
+                      
+            <textbox [titulo]="'Nombre gerente'" [clase_input]="'ancho_total'"></textbox>
+           
+           
+                    <span class="label_switch">¿Los datos de la gerencia son los mismo datos de la planta?</span>
+                   <switch-boton></switch-boton>
+            </div>
+         
+             <div class="form-inline">
+                      
+                    <lista-desplegable [titulo]="'Región'" ></lista-desplegable>
+                    <lista-desplegable [titulo]="'Provincia'"></lista-desplegable>
+                    <lista-desplegable [titulo]="'Comuna'"></lista-desplegable>
+                      
+                     </div>
+                     <div class="form-inline">
+                      
+                                   
+                     <textbox [titulo]="'Dirección gerencia'" [clase_input]="'ancho_total'"></textbox>
+                     <textbox [titulo]="'Ciudad gerencia'" [clase_input]="'ancho_50'"></textbox>
+                         <textbox [titulo]="'Casilla gerencia'" [clase_input]="'ancho_50'"></textbox>
+                    </div>
+                    
+                    
+                             <div class="form-inline">
+                      
+                                   
+                                    <codigo-fono [titulo]="'Fono 1'"  [clase_input]="'codigo-fono'" ></codigo-fono>
+                                    <textbox-numerico [titulo]="''" [clase_input]="'fono'" ></textbox-numerico>
+                                    <codigo-fono [titulo]="'Fono 2'" [clase_input]="'codigo-fono'" ></codigo-fono>
+                                    <textbox-numerico [titulo]="''" [clase_input]="'fono'" ></textbox-numerico>
+                                    <email [titulo]="'Email gerencia'" [clase_input]="'ancho_50'"></email>
+                                    <textbox [titulo]="'Web'" [clase_input]="'ancho_50'"></textbox>
+                            </div>
+        
+        <subtitulo [titulo]="'A3. Antecedentes de la gerencia'"></subtitulo>                       
+          <div class="form-inline">
+                      
+                                   
+                <textbox [titulo]="'Nombre encuestrador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'" ></textbox>
+                <textbox [titulo]="'Fecha'" [clase_input]="'ancho_10'" ></textbox>
+          </div>
+          <div class="form-inline">
+                      
+                                   
+                
+                <textbox [titulo]="'Nombre encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></textbox>
+                <lista-desplegable [titulo]="'Cargo'"  ></lista-desplegable>
+             
+          </div>        
+          <div class="form-inline">
+                      
+                                   
+                
+                <email [titulo]="'Email encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_50'"></email>
+              
+                <lista-desplegable [titulo]="'Fono'" [clase_input]="'codigo-fono'" ></lista-desplegable>
+                <textbox-numerico [titulo]="''" [clase_input]="'fono'" ></textbox-numerico>
+            </div>
+  
+          
+       </div>
+       <div class="btn_enviar" align="center">     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button></div>
+  
+</form>
+
+<menu-footer ></menu-footer>

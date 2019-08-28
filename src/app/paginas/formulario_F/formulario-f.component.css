@@ -1,0 +1,57 @@
+
+.label_input
+{
+    width: 35rem;
+}
+table
+{
+    margin-left:10px;
+    
+}
+
+.div_responsivo {
+    box-sizing: border-box;
+    display: table-cell;
+
+ 
+ 
+}
+.contenedor
+{
+  
+  font-size: 12px;
+
+}
+@media  screen and (max-width: 426px)   {
+  .div_responsivo {
+  
+
+    display: inline-block;
+
+ 
+}
+.label_input
+{
+    width: 12rem;
+}
+
+  }
+@media  screen and (max-width: 850px)  and (min-width: 426px) {
+    .div_responsivo {
+  
+
+        display: inline-block;
+     margin-top: 10px;
+     
+    }
+}
+@media  screen and (max-width: 1140px)  and (min-width:850px) {
+
+
+  
+  }
+  @media  screen and (max-width: 1552px) and (min-width: 1140px)  {
+
+
+  
+  }

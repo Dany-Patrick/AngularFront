@@ -1,0 +1,53 @@
+table
+{
+    color:#fff;
+    font-size: 21px;
+    text-align: center;
+    height: 50px;
+    margin: unset;
+  
+}
+.marcador
+{
+    border-bottom:4px solid #fff;
+}
+td{
+    width: 53px;
+    padding: 10px;
+  
+    cursor: pointer;
+    
+}
+td:hover {
+    background-color: var(--col-verdeObscuro);
+  }
+div{
+    background-color: var(--col-verdeClaro) ;
+    width: 100%;
+ 
+position: absolute;
+bottom: 0px;
+margin-top:15px;
+}
+
+/*Responsive*/
+@media  screen and (max-width: 425px) {
+
+    td{
+  
+        padding: 9px;
+      
+
+        
+    }
+
+    }
+    
+@media  screen and (max-width: 850px)  and (min-width: 426px) 
+{
+    td{
+        width: 4%;
+      
+    }
+ 
+}
