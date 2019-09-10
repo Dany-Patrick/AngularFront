@@ -1,4 +1,7 @@
-
+textbox , lista-desplegable , email, textbox-numerico
+{
+  margin-left:11px;
+}
 hr{
   margin-top: 0rem;
   margin-bottom: unset; 
@@ -32,17 +35,17 @@ td,  tr {
 }
 .img-gps
 {
-  width: 14px;
+  width: 17px;
   margin-right: 2px;
   margin-left: 2px;
   margin-top: 3px;
   margin-bottom: 2px;
-  height: 20px;
+  height: 22px;
 }
 .label_switch
 {
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 19px;
 }
 .form-inline
 {
@@ -50,7 +53,7 @@ td,  tr {
 }
 
 /*Responsive*/
-@media  screen and (max-width: 425px) {
+@media  screen and (max-width: 375px) {
 
   .btn-gps
   {
@@ -70,9 +73,71 @@ td,  tr {
     
    
    }
+
 }
 
-@media  screen and (max-width: 850px)  and (min-width: 426px) {
+@media  screen and (max-width: 426px) and (min-width:361px)   {
+        
+  .btn-gps {
+    margin-top: 15px;
+    width: 21.5rem;
+}
+switch-boton
+{
+  margin-left: 9rem;
+  margin-top: 10px;
+}
+.boton{
+  width: 21.5rem;
+  margin-top: 1rem;
+
+}
+}
+@media  screen and (max-width: 687px)  and (min-width: 426px) {
+
+  .contenedor
+  {
+    margin-left: 26px;
+
+   
+  
+  }
+  .btn-gps
+  {
+     margin-top: 1.4rem;
+  }
+  .boton{
+    margin-left: 11rem;
+    margin-top: 1rem;
+
+ }
+ .label_switch
+ {
+  margin-left: 15px;
+  margin-top: 15px;
+ }
+
+}
+@media  screen and (max-width: 766px)  and (min-width: 687px) {
+
+ 
+  .btn-gps
+  {
+     margin-top: 1.4rem;
+  }
+  .boton{
+    margin-left: 15rem;
+    margin-top: 1rem;
+
+ }
+ .label_switch
+ {
+  margin-left: 15px;
+  margin-top: 15px;
+ }
+
+}
+@media  screen and (max-width: 850px)  and (min-width: 766px) {
   .label_switch
   {
     margin-left: 15px;
@@ -80,20 +145,36 @@ td,  tr {
   }
   .contenedor
   {
-    margin-left: 30px;
-    margin-right: 24px;
-    font-size: 14px;
+    margin-left: 22px;
+
+    font-size: 16px;
   
   }
  .btn-gps
  {
-    margin-top: 1.1rem;
+  width: 48px;
+  height: 42px;
+    margin-top: 1.5rem;
  }
  .boton{
-    margin-left: 17rem;
+    margin-left: 14rem;
     margin-top: 1rem;
-
+    height: 40px;
+    width: 278px;
+  border-radius: 4px;
  }
+ .img-gps
+ {
+   width: 16px;
+   height: 25px;
+ }
+ .btn
+ {
+   font-size: 15px;
+ }
+ .btn_enviar {
+  font-size: 16px;
+}
 
 }
 @media  screen and (max-width: 1166px)  and (min-width:850px) {

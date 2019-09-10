@@ -56,7 +56,7 @@ label{
             display: flex;
         }
     }
-    @media  screen and (max-width: 425px) and (min-width:361px)   {
+    @media  screen and (max-width: 426px) and (min-width:361px)   {
         
         td{
             display: flex;
@@ -64,7 +64,7 @@ label{
       
         .form-control
         {
-            width:21rem;
+            width:22rem;
             height: 30px;   
             font-size: 12px;
             padding-top: 1px;
@@ -90,7 +90,87 @@ label{
         }
 /*FORMULARIO A*/
     }
-    @media  screen and (max-width:752px) and (min-width:450px) {
+    @media  screen and (max-width: 570px)  and (min-width: 426px) {
+
+        .ancho_total{
+            width: 22rem;
+        }
+    
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+           
+            
+        }
+        td {
+            display: -webkit-box;
+            display: flex;
+           
+
+        }
+        .mini-input
+        {
+            width:10.5rem;
+        }
+        .ancho_50
+        {
+    
+            width:15.5rem;
+        }
+        .ancho_70
+        {
+    
+            width: 18.5rem;
+        }
+        
+    }
+    
+    @media  screen and (max-width: 687px)  and (min-width: 570px) {
+        .contenedor
+        {
+            font-size:13px ;
+        }
+ 
+        .ancho_total{
+            width: 32rem;
+        }
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+           
+            
+        }
+        td {
+            display: -webkit-box;
+            display: flex;
+           
+
+        }
+        .mini-input
+        {
+            width:7rem;
+        }
+        .ancho_50
+        {
+    
+            width:15.5rem;
+        }
+        .ancho_70
+        {
+    
+            width: 20.5rem;
+        }
+        
+        .ancho_10{
+            width: 169px;
+        }
+      }
+
+    @media  screen and (max-width:752px) and (min-width:687px) {
         .ancho_total{
             width: 39.8rem;
         }
@@ -104,6 +184,21 @@ label{
             display: -webkit-box;
             display: flex;
         }
+        .mini-input
+        {
+            width:9rem;
+        }
+        .ancho_50
+        {
+    
+            width:19.5rem;
+        }
+        .ancho_70
+        {
+    
+            width: 26.5rem;
+        }
+     
     }
 @media  screen and (max-width:850px) and (min-width:752px) {
     td{
@@ -113,8 +208,8 @@ label{
     .form-control
     {
       
-        height: 30px;   
-        font-size: 12px;
+        height: 37px;   
+        font-size: 16px;
         padding-top: 1px;
         padding-bottom: 1px;
     }
@@ -123,22 +218,22 @@ label{
     .ancho_10
     {
 
-        width: 15rem;
+        width: 14.5rem;
     }
     .ancho_50
     {
 
-        width: 21rem;
+        width: 22.5rem;
     }
     .ancho_70
     {
 
-        width: 27rem;
+        width: 30rem;
     }
     .ancho_total
     {
 
-        width:42.8rem;
+        width:45.8rem;
     }
 
     .mini-input
@@ -155,6 +250,10 @@ label{
  {
          
    width:13.7rem;
+ }
+ .contenedor
+ {
+     font-size: 16px;
  }
 }
 

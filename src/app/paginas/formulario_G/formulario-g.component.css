@@ -36,7 +36,7 @@
 table
 {
     margin-left:10px;
-    width: 41rem;
+    width: 39rem;
     border-color: #fff;
 }
 
@@ -152,15 +152,11 @@ tr
     }
 @media  screen and (max-width: 850px)  and (min-width: 768px) {
  
-    table
-    {
   
-        width: 37rem;
-     
-    }
     .contenedor
     {
         margin-left: 22px;
+        font-size: 18px;
 
     }
     .div_responsivo {
@@ -168,6 +164,16 @@ tr
         display: inline-block;
      margin-top: 10px;
      
+    }
+    .espacio
+    {
+        width: 25rem;
+    }
+    .tabla_responsiva{
+        width: 47rem;
+    }
+    table{
+        width: 47rem;
     }
 }
 @media  screen and (max-width: 1024px) and (min-width: 850px)  {

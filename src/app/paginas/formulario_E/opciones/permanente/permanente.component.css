@@ -105,16 +105,7 @@ table
 
 }
 }
-@media  screen and (max-width:701px)   and (min-width: 320px){
-
-    table
-  {
-    width: 35.4rem;
-
-  }
-  }
-
-  @media  screen and (max-width:320px)   {
+@media  screen and (max-width:701px)   {
 
     table
   {
@@ -122,3 +113,4 @@ table
 
   }
   }
+

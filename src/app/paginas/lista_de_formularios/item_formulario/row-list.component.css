@@ -37,7 +37,7 @@
     border:hidden;
     }
     table {
-    border: 1px solid #000;
+    border: 1px solid var(--col-bordes);
     border-collapse:unset;
     }
  
@@ -63,4 +63,25 @@
 {
   margin:unset;
 }
+ tr
+ {
+   cursor: pointer;
+ }
+
+@media  screen and (max-width: 800px)   {
  
+  .table_style
+  {
+
+      margin:unset;
+      padding: unset;
+
+  }
+  
+  table
+  {
+    border:unset;
+    border-top:1px solid var(--col-bordes);
+    border-bottom:1px solid var(--col-bordes);
+  }
+}

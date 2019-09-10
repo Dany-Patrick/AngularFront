@@ -9,7 +9,7 @@ table
 }
 .marcador
 {
-    border-bottom:4px solid #fff;
+    border-bottom:5px solid #fff;
 }
 td{
     width: 53px;
@@ -49,5 +49,11 @@ margin-top:15px;
         width: 4%;
       
     }
- 
+    table
+    {
+  
+        font-size: 25px;
+     
+      
+    }
 }

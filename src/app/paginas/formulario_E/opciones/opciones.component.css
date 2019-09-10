@@ -22,7 +22,32 @@
   background-color:grey;
   color: #fff;
 }
-@media  screen and (max-width: 763px)   and (min-width: 701px) {
+@media  screen  and (max-width: 426px) { 
+
+  .table
+{
+  width: 17.4rem;
+  margin-left: 17px;
+
+}
+}
+@media  screen and (max-width: 620px)   and (min-width: 426px)  {
+  .table {
+    width: 23.4rem;
+    margin-left: 3.5rem;
+    margin-bottom: unset;
+}
+}
+  @media  screen and (max-width: 701px)   and (min-width: 620px)  {
+
+    .table
+  {
+    width: 24.4rem;
+    margin-left: 2.5rem;
+
+  }
+  }
+  @media  screen and (max-width: 763px)   and (min-width: 701px) {
 
     .table
   {
@@ -30,22 +55,4 @@
   
   }
   }
-  @media  screen and (max-width: 701px)   and (min-width: 320px)  {
 
-    .table
-  {
-    width: 24.4rem;
-    margin-left: 12rem;
-
-  }
-  }
-
-  @media  screen  and (max-width: 320px) { 
-
-    .table
-  {
-    width: 17.4rem;
-    margin-left: 17px;
-
-  }
-  }

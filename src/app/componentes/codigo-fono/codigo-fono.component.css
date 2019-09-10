@@ -90,7 +90,50 @@ table
     
 
     }
-@media  screen and (max-width: 850px) and (min-width: 450px)  {
+    @media  screen and (max-width: 657px) and (min-width: 450px)  {
+        .ancho_50
+        {
+    
+            width: 20.1rem;
+        }
+        .ancho_70
+        {
+    
+            width: 23.1rem;
+        }
+        .ancho_total
+        {
+    
+            width:42.8rem;
+        }
+        .form-control
+        {
+    
+            width:13.7rem;
+            height: 30px;
+                font-size: 12px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+       
+        }
+        td{
+            display: flex;
+            
+    width: 115px;
+    
+        }
+       
+        .mini-input
+        {
+            width:8.8rem;
+        }
+        .codigo-fono
+        {
+            width:9.4rem;
+        }
+
+    }
+@media  screen and (max-width: 850px) and (min-width: 657px)  {
     
     .ancho_50
     {
@@ -111,14 +154,15 @@ table
     {
 
         width:13.7rem;
-        height: 30px;
-            font-size: 12px;
+        height: 37px;
+            font-size: 16px;
             padding-top: 2px;
             padding-bottom: 2px;
    
     }
     td{
         display: flex;
+
     }
    
     .mini-input

@@ -1,6 +1,62 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
+<div class="contenedor">
+       
+    <div class="div_responsivo" style="overflow-x:auto;"> 
+        <subtitulo [titulo]="'H1. subproducto de proceso de astillado (%)'"></subtitulo>
+        <table >
 
+                <tr>
+                        <th  class="esquina_izquierda">Perdidas</th>
+                        <th class="celda_subtitulo"> Aserrín</th>
+                        <th class="celda_subtitulo">Corteza n</th>
+                        <th class="celda_subtitulo">Desclasificación</th>
+                        <th class="esquina_derecha">Otros</th>
+
+            
+            
+                    </tr>
+                    <tr>
+                            <td class="sin_borde_abajo">Especie 1</td>
+                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                 
+                        </tr>
+     
+                            <tr>
+                                    <td class="sin_borde_abajo">Especie 2</td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                </tr>
+                                <tr>
+                                        <td class="sin_borde_abajo">Especie n </td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                    </tr>
+                                    <tr>
+                                            <td class="sin_borde_abajo">Destino</td>
+                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
+                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
+                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
+                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
+                                        </tr>
+                        
+            </table>
+</div>
+ 
+</div>
+<br>
+<div align="center" class="btn_enviar" >
+   
+    <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
+
+</div>
 <footer>
     <menu-footer></menu-footer>
     </footer>

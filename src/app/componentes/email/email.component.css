@@ -91,7 +91,32 @@ label{
         }
 /*FORMULARIO A*/
     }
-@media  screen and (max-width:850px) and (min-width:450px) {
+    @media  screen and (max-width:752px) and (min-width:425px) {
+        .ancho_total{
+            width: 39.8rem;
+        }
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        td {
+            display: -webkit-box;
+            display: flex;
+        }
+        .mini-input
+        {
+            width:9rem;
+        }
+        .ancho_50
+        {
+    
+            width:15.5rem;
+        }
+     
+    }
+@media  screen and (max-width:850px) and (min-width:752px) {
     td{
         display: flex;
     }
@@ -99,8 +124,8 @@ label{
     .form-control
     {
       
-        height: 30px;   
-        font-size: 12px;
+        height: 37px;   
+        font-size: 16px;
         padding-top: 1px;
         padding-bottom: 1px;
     }
@@ -114,7 +139,7 @@ label{
     .ancho_50
     {
 
-        width: 21rem;
+        width: 22.3rem;
     }
     .ancho_70
     {

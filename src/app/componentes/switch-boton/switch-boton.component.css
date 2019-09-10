@@ -14,8 +14,8 @@
   position: absolute;
   cursor: pointer;
   top: 0;
-  height: 20px;
-  width: 80px;
+  height: 26px;
+  width: 84px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -27,10 +27,10 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 14px;
+  height: 16px;
   width: 14px;
-  left: 3px;
-  bottom: 3px;
+  left: 6px;
+  bottom: 5px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -71,7 +71,7 @@ input:checked + .slider:before {
   color: white;
   position: absolute;
   transform: translate(-50%,-50%);
-  top: 49%;
+  top: 51%;
   left: 62%;
   font-size: 14px;
   font-family: Verdana, sans-serif;
@@ -107,7 +107,24 @@ input:checked + .slider .off
   
 }
 @media  screen and (max-width:850px) and (min-width:450px) {
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    height: 32px;
+    width: 100px;
 
+    
+  }
+  .slider:before {
+    left: 4px;
+
+    height: 21px;
+
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(77px);
+  }
 }
 
 

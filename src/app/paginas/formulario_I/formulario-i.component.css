@@ -2,6 +2,8 @@
 .label_input
 {
     width: 30rem;
+    padding-bottom:10px;
+    padding-top:10px;
 }
 table
 {
@@ -9,12 +11,7 @@ table
 
 }
 
-.contenedor
-{
-  
-  font-size: 12px;
 
-}
 .div_responsivo {
     box-sizing: border-box;
     display: table-cell;
@@ -44,14 +41,9 @@ table
     }
     .label_input
 {
-    width: 27rem;
+    width: 40rem;
 }
-    .contenedor
-    {
-      
-      font-size: 12px;
-    
-    }
+
 }
 @media  screen and (max-width: 1140px)  and (min-width:850px) {
 
