@@ -1,12 +1,8 @@
-
-
-
-
 <div>
     <table>
         <tr>
-          <td [style.display]="ocultar ? 'none' : 'inline-block'">  <label for="text" [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
-          <td><input [ngClass]="clase_input" id="text" type="email"    class="form-control" [style.width.px]="input_ancho"></td>
+            <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label for="text" [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
+            <td><input [(ngModel)]="value" [ngClass]="clase_input" id="text" type="email" class="form-control" [style.width.px]="input_ancho"></td>
         </tr>
-      </table>                 
-    </div>
+    </table>
+</div>

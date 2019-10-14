@@ -11,7 +11,6 @@ url:string = 'https://danytest.infor.cl/api/AstillaTipoSeccion';
 
   getData() 
   {
-     
     return this.httpClient.get(this.url); //url
 
   }

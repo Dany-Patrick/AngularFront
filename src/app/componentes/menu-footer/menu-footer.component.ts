@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { ItemService } from 'src/app/paginas/lista_de_formularios/item_formulario/item-service.service';
+import { ItemService } from 'src/app/servicios/item-service.service';
 
 @Component({
   selector: 'menu-footer',
@@ -16,7 +16,6 @@ export class MenuFooterComponent implements OnInit {
   ngOnInit() {
     this.getData();
 
-    this.getVerFormularioActual();
   }
 
   getData() {
@@ -25,12 +24,5 @@ export class MenuFooterComponent implements OnInit {
 
   
     }
-    getVerFormularioActual()
-    {
-        //obtiene la ruta actual para validar que formulario vemos
-      var str = window.location.hash;
-      var splitted = str.split("_", 2); 
-      this.formulario = splitted[1];
 
-    }
 }

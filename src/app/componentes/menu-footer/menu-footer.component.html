@@ -2,7 +2,7 @@
 <div>
 <table>
   <tr >
-    <td  [ngClass]="{'marcador': datas.seccion == formulario}" *ngFor="let datas of data" routerLink="/formulario_{{datas.seccion}}" >{{datas.seccion}} </td>
+    <td  routerLinkActive="marcador" *ngFor="let datas of data" routerLink="/formulario_{{datas.seccion}}" >{{datas.seccion}} </td>
   </tr>
 </table>
 <div>

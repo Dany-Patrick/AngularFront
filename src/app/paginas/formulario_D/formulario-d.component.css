@@ -161,7 +161,12 @@ table
   background-color: lightgrey;
 
 }
-    .div_responsivo {
+
+.btn
+{
+  font-size: 15px;
+}
+.div_responsivo {
   
 
         display: inline-block;
@@ -181,10 +186,13 @@ table
     height: 39px;
     width: 41px;
 }
+.tabla_0, .tabla_1 , .tabla_2 , .tabla_3{
+    height: 338px;
+}
 .sin_borde_abajo
 {
   border-bottom: unset ;
-  height: 39px;
+  height: 54px;
   width: 14.5rem;
 }
 .tabla_2 td

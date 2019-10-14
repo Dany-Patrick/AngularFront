@@ -10,13 +10,22 @@ td
 }
 .form-inline
 {
-  margin-bottom:10px;
-
-
- 
-    
+  margin-bottom:10px;  
 }
-
+.btn
+{
+  font-size: 15px;
+}
+@media  screen and (max-width: 850px)  
+  {
+    .contenedor
+    {
+      
+      font-size: 15px;
+    
+    }
+  
+  }
 @media  screen and (max-width: 1140px)  and (min-width:850px) {
     
 

@@ -38,7 +38,7 @@ import { FormularioHComponent } from './paginas/formulario_H/formulario-h.compon
 import { FormularioIComponent } from './paginas/formulario_I/formulario-i.component';
 import { FormularioJComponent } from './paginas/formulario_J/formulario-j.component';
 import { MenuFooterComponent } from './componentes/menu-footer/menu-footer.component';
-import { ItemService } from './paginas/lista_de_formularios/item_formulario/item-service.service';
+import { ItemService } from './servicios/item-service.service';
 import { CheckboxComponent } from './componentes/checkbox/checkbox.component';
 import { SubtituloComponent } from './componentes/subtitulo/subtitulo.component';
 import { EmailComponent } from './componentes/email/email.component';

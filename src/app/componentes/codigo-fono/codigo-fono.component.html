@@ -1,14 +1,12 @@
-        
-               
- <table>
+<table>
     <tr>
-      <td> <label  [ngClass]="clase_label" for="dropdown" [style.width.px]="label_ancho" >{{titulo}}</label></td>
-      <td><select  [ngClass]="clase_input" class="form-control" id="dropdown" [style.width.px]="input_ancho">
-         <option  value="Seleccione...">Seleccione...</option>
-         <option  value="Seleccione...">1</option>
-         <option  value="Seleccione...">2</option>
-         <option  value="Seleccione...">3</option>
-         <option  value="Seleccione...">4</option>
-       </select> </td>
+        <td> <label [ngClass]="clase_label" for="dropdown" [style.width.px]="label_ancho">{{titulo}}</label></td>
+        <td><select [(ngModel)]="value" [ngClass]="clase_input" class="form-control" id="dropdown" [style.width.px]="input_ancho">
+
+        <option value="56 (9)">56 (9)</option>
+        <option value="56 (4)">56 (4)</option>
+        <option value="56 (2)">56 (2)</option>
+        <option value="56 (6)">56 (6)</option>
+      </select> </td>
     </tr>
-  </table>            
+</table>

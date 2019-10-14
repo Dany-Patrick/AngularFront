@@ -1,14 +1,8 @@
-
-       <div>
-          <table>
-              <tr>
-                <td > <label [style.width.px]="label_ancho" [ngClass]="clase_label"  >  {{titulo}} </label> </td>
-                <td >     <input [ngClass]="clase_input" type="checkbox"  ></td>
-                </tr>
-          </table>
-          </div>
-    
-
-   
-         
-   
+<div>
+    <table>
+        <tr>
+            <td> <label [style.width.px]="label_ancho" [ngClass]="clase_label">  {{titulo}} </label> </td>
+            <td> <input [(ngModel)]="value" [ngClass]="clase_input" type="checkbox"></td>
+        </tr>
+    </table>
+</div>
