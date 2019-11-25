@@ -1,9 +1,11 @@
-<div class="row">
-    <div class="col-sm-3">
-        <label>input-porcentaje</label>
+<div align="center">
+    <table>
+        <tr>
+            <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label for="text" [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
+            <td [style.display]="form_c ? 'block' : 'inline-block'"><input [(ngModel)]="value" id="text" type="text" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4">
 
-    </div>
-    <div class="col-sm-9">
-        <input [(ngModel)]="value" type="number" class="form-control">
-    </div>
+            </td>
+        </tr>
+
+    </table>
 </div>

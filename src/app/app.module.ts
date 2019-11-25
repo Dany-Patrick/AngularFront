@@ -38,14 +38,15 @@ import { FormularioHComponent } from './paginas/formulario_H/formulario-h.compon
 import { FormularioIComponent } from './paginas/formulario_I/formulario-i.component';
 import { FormularioJComponent } from './paginas/formulario_J/formulario-j.component';
 import { MenuFooterComponent } from './componentes/menu-footer/menu-footer.component';
-import { ItemService } from './servicios/item-service.service';
+import { ApiService } from './servicios/api.service';
 import { CheckboxComponent } from './componentes/checkbox/checkbox.component';
 import { SubtituloComponent } from './componentes/subtitulo/subtitulo.component';
 import { EmailComponent } from './componentes/email/email.component';
 import { PermanenteComponent } from './paginas/formulario_E/opciones/permanente/permanente.component';
 import { TemporalComponent } from './paginas/formulario_E/opciones/temporal/temporal.component';
 import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.component';
-
+import { Ast_Encuesta_service } from "./index_db/metodos/ast_encuesta_db.service";
+import { DexieService } from "./servicios/dexie.service";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.comp
     HeaderComponent,
     SubNavComponent,
     HomeComponent,
+    
     ListSurveyComponent,
     NavbarComponent,
     TitleComponent,
@@ -94,7 +96,7 @@ import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.comp
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [ItemService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [DexieService,Ast_Encuesta_service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {   }

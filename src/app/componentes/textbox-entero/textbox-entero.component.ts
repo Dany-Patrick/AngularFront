@@ -12,7 +12,7 @@ export class TextboxEnteroComponent implements OnInit {
 
   required: boolean;
   ocultar: boolean;
-
+  form_c: boolean;
 
 
 
@@ -29,6 +29,9 @@ export class TextboxEnteroComponent implements OnInit {
   ngOnInit() {
     if (this.titulo == "") {
       this.ocultar = true;
+    }
+    if (this.clase_input == "form_input_c") {
+      this.form_c = true;
     }
   }
 

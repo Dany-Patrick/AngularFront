@@ -20,7 +20,7 @@ export class TextboxListaDesplegableComponent implements OnInit, ControlValueAcc
 
   required: boolean;
   ocultar: boolean;
-
+  form_c: boolean;
 
 
 
@@ -94,7 +94,9 @@ export class TextboxListaDesplegableComponent implements OnInit, ControlValueAcc
       this.ocultar = true;
     }
   
-  console.log(this.RegionesYcomunas.length);
+    if (this.clase_input == "form_input_c") {
+      this.form_c = true;
+    }
 
   }
 

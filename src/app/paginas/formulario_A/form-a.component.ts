@@ -1,8 +1,7 @@
 import { Component, OnInit, Output, EventEmitter}   from '@angular/core';
 import { FormControl , FormGroup, ReactiveFormsModule, FormBuilder, Validators, NgForm} from '@angular/forms';
-import { FormsModule } from '@angular/forms';
-import { TextboxTextoComponent } from '../../componentes/textbox-texto/textbox-texto.component';
 
+import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-form-a',
   templateUrl: './form-a.component.html',
@@ -10,9 +9,8 @@ import { TextboxTextoComponent } from '../../componentes/textbox-texto/textbox-t
 })
 export class FormAComponent implements OnInit {
 
-
   forma:FormGroup;
-  constructor() {
+  constructor(private httpClient:HttpClient) {
 
 
       this.forma = new FormGroup({
@@ -62,6 +60,8 @@ export class FormAComponent implements OnInit {
 
 
   ngOnInit() {
+//Función que se va a ejecutar al iniciar el componente principal
+   
 
   }
 
@@ -71,5 +71,9 @@ export class FormAComponent implements OnInit {
      console.log(this.forma.value);
 
   }
+    
+
+
+
 
 }

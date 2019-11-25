@@ -1,445 +1,689 @@
 <app-navbar></app-navbar>
-<app-title  [formulario]=true></app-title>
+<app-title [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
     <subtitulo [titulo]="'D1. Abastecimiento de astillos sin corteza'"></subtitulo>
 
 
-    <div class="div_responsivo"> 
-        <table class="table botones" >
+    <div class="div_responsivo">
+        <table class="table botones">
             <tr>
-                    <th class="celda_titulo " [ngClass]="consumo_activo"  (click)="cambiarFormulario('consumo')">Consumo</th>
-                    <th class="celda_titulo " [ngClass]="origen_activo"   (click)="cambiarFormulario('origen')" >Origen</th>    
-                    <th class="celda_titulo " [ngClass]="regiones_activo"  (click)="cambiarFormulario('regiones')" >Regiones</th>    
+                <th class="celda_titulo " [ngClass]="consumo_activo" (click)="cambiarFormulario('consumo')">Consumo</th>
+                <th class="celda_titulo " [ngClass]="origen_activo" (click)="cambiarFormulario('origen')">Origen</th>
+                <th class="celda_titulo " [ngClass]="regiones_activo" (click)="cambiarFormulario('regiones')">Regiones</th>
             </tr>
         </table>
-        <table class="tabla_0"  >
+        <table class="tabla_0">
 
-            <tr >
-                    <th  class="esquina_izquierda">Tipo de abastecimineto</th>
+            <tr>
+                <th class="esquina_izquierda">Tipo de abastecimineto</th>
 
-                </tr>
-                <tr>
-                        <td class="sin_borde_abajo">Desechos aserradero s/c</td>
-                    </tr>
-                    <tr>
-                            <td class="sin_borde_abajo">Desechos aserradero c/c</td>
-                        </tr>
-                        <tr>
-                                <td class="sin_borde_abajo">Desecho bosques</td>
-     
-                            </tr>
-                            <tr>
-                                    <td class="sin_borde_abajo">Rollizos pulpables s/c</td>
-                                </tr>
-                                <tr>
-                                        <td class="sin_borde_abajo">Desecho aserraderos c/c</td>        
-                                    </tr>
-                                    <tr>
-                                            <td class="sin_borde_abajo">Total</td>
-                                        </tr>
-         
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Desechos aserradero s/c</td>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Desechos aserradero c/c</td>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Desecho bosques</td>
+
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Rollizos pulpables s/c</td>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Desecho aserraderos c/c</td>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Total</td>
+            </tr>
+
         </table>
-<table class="tabla_1"  [ngStyle]="{display:boton_1_activo}"  >
-   
-    <tr >
+        <table class="tabla_1" [ngStyle]="{display:boton_1_activo}">
 
-            <th class="celda_subtitulo"> Consumo (%)</th>
-            <th class="celda_subtitulo"> Consumo </th>
-            <th  class="esquina_subtitulo">Unidad</th>
-   
+            <tr>
 
-        </tr>
-        <tr>
-
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
+                <th class="celda_subtitulo"> Consumo (%)</th>
+                <th class="celda_subtitulo"> Consumo </th>
+                <th class="esquina_subtitulo">Unidad</th>
 
 
-     
             </tr>
             <tr>
 
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-         
-                </tr>
-                <tr>
-
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-                   
-                    </tr>
-                    <tr>
-
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-                 
-                        </tr>
-                        <tr>
-
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                                <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-     
-                            </tr>
-                            <tr>
-
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                         
-        
-                                </tr>
- 
-</table>
-<table class="tabla_2"  [ngStyle]="{display:boton_2_activo}"  >
-
-    <tr >
-            <th class="celda_subtitulo"> Propio (%)</th>
-            <th class="esquina_subtitulo"> Terceros (%)</th>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
 
 
 
-        </tr>
-        <tr>
- 
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-
-     
             </tr>
             <tr>
-   
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
 
-         
-                </tr>
-                <tr>
-      
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-                   
-                    </tr>
-                    <tr>
-
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-                 
-                        </tr>
-                        <tr>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-     
-                            </tr>
-                            <tr>
-                                <td ></td>
-     
-
-     
-                            </tr>
-                
- 
-</table>
-<table class="tabla_3" [ngStyle]="{display:boton_3_activo}"  >
-
-    <tr >
-
-            <th class="celda_subtitulo"> IV</th>
-            <th class="celda_subtitulo"> VI</th>
-            <th class="celda_subtitulo"> VIII</th>
-            <th class="celda_subtitulo"> IX</th>
-            <th class="celda_subtitulo"> X</th>
-            <th class="celda_subtitulo"> XI</th>
-            <th class="celda_subtitulo"> XII</th>
-            <th class="celda_subtitulo"> RM</th>
-            <th class="celda_subtitulo"> XIV</th>
-            <th class="esquina_derecha"> Total</th>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
 
 
-        </tr>
-        <tr>
-
-
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-
-     
             </tr>
             <tr>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-         
-                </tr>
-                <tr>
 
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                   
-                    </tr>
-                    <tr>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
 
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                 
-                        </tr>
-                        <tr>
 
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-     
-                            </tr>
-                            <tr>
-                                <td ></td>
-     
+            </tr>
+            <tr>
 
-     
-                            </tr>
-                
-              
- 
-</table>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+
+        </table>
+        <table class="tabla_2" [ngStyle]="{display:boton_2_activo}">
+
+            <tr>
+                <th class="celda_subtitulo"> Propio (%)</th>
+                <th class="esquina_subtitulo"> Terceros (%)</th>
+
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td></td>
+
+
+
+            </tr>
+
+
+        </table>
+        <table class="tabla_3" [ngStyle]="{display:boton_3_activo}">
+
+            <tr>
+
+                <th class="celda_subtitulo"> IV</th>
+                <th class="celda_subtitulo"> VI</th>
+                <th class="celda_subtitulo"> VIII</th>
+                <th class="celda_subtitulo"> IX</th>
+                <th class="celda_subtitulo"> X</th>
+                <th class="celda_subtitulo"> XI</th>
+                <th class="celda_subtitulo"> XII</th>
+                <th class="celda_subtitulo"> RM</th>
+                <th class="celda_subtitulo"> XIV</th>
+                <th class="esquina_derecha"> Total</th>
+
+
+            </tr>
+            <tr>
+
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+
+
+
+            </tr>
+
+
+
+        </table>
+    </div>
+    <subtitulo [titulo]="'D1. Abastecimiento de astillos con corteza'"></subtitulo>
+
+
+    <div class="div_responsivo">
+        <table class="table botones">
+            <tr>
+                <th class="celda_titulo " [ngClass]="consumo_activo_2" (click)="cambiarFormulario_2('consumo')">Consumo</th>
+                <th class="celda_titulo " [ngClass]="origen_activo_2" (click)="cambiarFormulario_2('origen')">Origen</th>
+                <th class="celda_titulo " [ngClass]="regiones_activo_2" (click)="cambiarFormulario_2('regiones')">Regiones</th>
+            </tr>
+        </table>
+        <table class="tabla_0">
+            <tr>
+                <th class="esquina_izquierda">Tipo de abastecimiento</th>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Desechos aserradero c/c</td>
+            </tr>
+
+            <tr>
+                <td class="sin_borde_abajo">Desecho bosques</td>
+
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Rollizos pulpables c/c</td>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo">Total</td>
+            </tr>
+
+        </table>
+        <table class="tabla_1" [ngStyle]="{display:boton_5_activo}">
+
+            <tr>
+
+                <th class="celda_subtitulo"> Consumo (%)</th>
+                <th class="celda_subtitulo"> Consumo </th>
+                <th class="esquina_subtitulo">Unidad</th>
+
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+
+        </table>
+        <table class="tabla_2" [ngStyle]="{display:boton_6_activo}">
+
+            <tr>
+                <th class="celda_subtitulo"> Propio (%)</th>
+                <th class="esquina_subtitulo"> Terceros (%)</th>
+
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td></td>
+
+
+
+            </tr>
+
+
+        </table>
+        <table class="tabla_3" [ngStyle]="{display:boton_7_activo}">
+
+            <tr>
+
+                <th class="celda_subtitulo"> IV</th>
+                <th class="celda_subtitulo"> VI</th>
+                <th class="celda_subtitulo"> VIII</th>
+                <th class="celda_subtitulo"> IX</th>
+                <th class="celda_subtitulo"> X</th>
+                <th class="celda_subtitulo"> XI</th>
+                <th class="celda_subtitulo"> XII</th>
+                <th class="celda_subtitulo"> RM</th>
+                <th class="celda_subtitulo"> XIV</th>
+                <th class="esquina_derecha"> Total</th>
+
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+                <td>
+                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+
+
+
+            </tr>
+
+
+
+        </table>
+
+
+    </div>
+
 </div>
-<subtitulo [titulo]="'D1. Abastecimiento de astillos con corteza'"></subtitulo>
+<div class="btn_enviar" align="center"> <button type="submit" class="btn btn-success btn-lg">FINALIZAR FORMULARIO</button></div>
 
-
-<div class="div_responsivo"> 
-    <table class="table botones" >
-        <tr>
-                <th class="celda_titulo "  [ngClass]="consumo_activo_2"  (click)="cambiarFormulario_2('consumo')">Consumo</th>
-                <th class="celda_titulo "  [ngClass]="origen_activo_2"   (click)="cambiarFormulario_2('origen')" >Origen</th>    
-                <th class="celda_titulo " [ngClass]="regiones_activo_2"   (click)="cambiarFormulario_2('regiones')" >Regiones</th>    
-        </tr>
-    </table>
-    <table class="tabla_0" >
-        <tr>
-            <th class="esquina_izquierda">Tipo de abastecimiento</th>
-        </tr>
-            <tr>
-                    <td class="sin_borde_abajo">Desechos aserradero c/c</td>
-                </tr>
-
-                    <tr>
-                            <td class="sin_borde_abajo">Desecho bosques</td>
- 
-                        </tr>
-                        <tr>
-                                <td class="sin_borde_abajo">Rollizos pulpables c/c</td>
-                            </tr>
-                                <tr>
-                                        <td class="sin_borde_abajo">Total</td>
-                                    </tr>
-     
-    </table>
-<table class="tabla_1"  [ngStyle]="{display:boton_5_activo}" >
-
-<tr >
-      
-    <th class="celda_subtitulo"> Consumo (%)</th>
-    <th class="celda_subtitulo"> Consumo </th>
-    <th  class="esquina_subtitulo">Unidad</th>
-
-
-    </tr>
-
- 
-            <tr>
-
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-               
-                </tr>
-                <tr>
-
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
-             
-                    </tr>
-                    <tr>
-
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable></td>
-
- 
-                        </tr>
-                        <tr>
-
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                     
-    
-                            </tr>
-
-</table>
-<table class="tabla_2"  [ngStyle]="{display:boton_6_activo}" >
-
-<tr >
-        <th class="celda_subtitulo"> Propio (%)</th>
-        <th class="esquina_subtitulo"> Terceros (%)</th>
-
-
-
-    </tr>
-            <tr>
-  
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-               
-                </tr>
-                <tr>
-
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
-             
-                    </tr>
-                    <tr>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico></td>
-
- 
-                        </tr>
-                        <tr>
-                            <td ></td>
- 
-
- 
-                        </tr>
-            
-
-</table>
-<table class="tabla_3"  [ngStyle]="{display:boton_7_activo}">
-
-<tr >
-
-        <th class="celda_subtitulo"> IV</th>
-        <th class="celda_subtitulo"> VI</th>
-        <th class="celda_subtitulo"> VIII</th>
-        <th class="celda_subtitulo"> IX</th>
-        <th class="celda_subtitulo"> X</th>
-        <th class="celda_subtitulo"> XI</th>
-        <th class="celda_subtitulo"> XII</th>
-        <th class="celda_subtitulo"> RM</th>
-        <th class="celda_subtitulo"> XIV</th>
-        <th class="esquina_derecha"> Total</th>
-
-
-    </tr>
-
-            <tr>
-
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                    <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-               
-                </tr>
-                <tr>
-
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                        <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-             
-                    </tr>
-                    <tr>
-
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico></td>
- 
-                        </tr>
-                        <tr>
-                            <td ></td>
- 
-
- 
-                        </tr>
-            
-          
-
-</table>
-
-
-</div>
-
-</div>
-<div class="btn_enviar" align="center">     <button type="submit" class="btn btn-success btn-lg">FINALIZAR FORMULARIO</button></div>
-  
 <footer>
     <menu-footer></menu-footer>
-    </footer>
+</footer>

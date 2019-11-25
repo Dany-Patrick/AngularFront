@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter}   from '@angular/core';
+import { FormControl , FormGroup, ReactiveFormsModule, FormBuilder, Validators, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-c',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario-c.component.css']
 })
 export class FormularioCComponent implements OnInit {
+  forma:FormGroup;
+  constructor() {
 
-  constructor() { }
+
+      this.forma = new FormGroup({
+      })
+
+
+   }
+
 
   ngOnInit() {
+
+  }
+
+  guardar()
+  {
+
+     console.log(this.forma.value);
+
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ItemService } from '../../../servicios/item-service.service';
+import { ApiService } from '../../../servicios/api.service';
 @Component({
   selector: 'app-row-list',
   templateUrl: './row-list.component.html',
@@ -10,7 +10,7 @@ import { ItemService } from '../../../servicios/item-service.service';
 
 export class RowListComponent implements OnInit {
   data: Object[];
-  constructor( private httpClient:HttpClient, private router: Router ,private apiService: ItemService) {  }
+  constructor( private httpClient:HttpClient, private router: Router ,private apiService: ApiService) {  }
 
   ngOnInit() {
     this.getData();

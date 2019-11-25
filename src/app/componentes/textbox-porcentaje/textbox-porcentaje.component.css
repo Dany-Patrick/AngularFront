@@ -1,21 +1,259 @@
-label{
-    margin-top:8px ;
-    margin-bottom:unset ;
-    margin-right: 5px;
- 
-}
-div{
-    display: flex;
-    margin-top: 20px;
+label {
+    display: inline-block;
+    width: 158px;
+    margin-top: 3px;
 }
 
- /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
- @media screen and (max-width: 868px) {
-  
-    div
-    {   
-     
-        display: flex;
-    flex-wrap: wrap;
+.form-control {
+    height: unset;
+    padding: unset;
+    width: 200px;
+}
+
+
+/*FORMULARIO A*/
+
+.mini-input {
+    width: 106px;
+}
+
+.mini-label {
+    width: 65px;
+}
+
+.label_largo {
+    width: 180px;
+}
+
+.fono {
+    width: 97px;
+}
+
+
+/*FORMULARIO A*/
+
+
+/*FORMULARIO B*/
+
+
+/*FORMULRAIO C*/
+
+.input_form_c4 {
+    width: 75px;
+}
+
+@media screen and (max-width: 361px) {
+    .form-control {
+        width: 17rem;
     }
-   }
+    td {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-width:361px) {
+    td {
+        display: flex;
+    }
+    .form-control {
+        width: 22rem;
+        height: 30px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    /*FORMULARIO A*/
+    .fono {
+        width: 5rem;
+        margin-top: 15px;
+    }
+    .mini-input {
+        width: 10rem;
+    }
+    .fono {
+        margin-top: 33px;
+        width: 9.4rem;
+    }
+    /*FORMULARIO A*/
+}
+
+@media screen and (max-width: 570px) and (min-width: 426px) {
+    .ancho_total {
+        width: 22rem;
+    }
+    .form-control {
+        height: 30px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    td {
+        display: -webkit-box;
+        display: flex;
+    }
+    .mini-input {
+        width: 10.5rem;
+    }
+    .ancho_50 {
+        width: 15.5rem;
+    }
+    .ancho_70 {
+        width: 18.5rem;
+    }
+}
+
+@media screen and (max-width: 687px) and (min-width: 570px) {
+    .contenedor {
+        font-size: 13px;
+    }
+    .ancho_total {
+        width: 32rem;
+    }
+    .form-control {
+        height: 30px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    td {
+        display: -webkit-box;
+        display: flex;
+    }
+    .mini-input {
+        width: 7rem;
+    }
+    .ancho_50 {
+        width: 15.5rem;
+    }
+    .ancho_70 {
+        width: 20.5rem;
+    }
+    .ancho_10 {
+        width: 169px;
+    }
+}
+
+@media screen and (max-width:752px) and (min-width:687px) {
+    .ancho_total {
+        width: 39.8rem;
+    }
+    .form-control {
+        height: 30px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    td {
+        display: -webkit-box;
+        display: flex;
+    }
+    .mini-input {
+        width: 9rem;
+    }
+    .ancho_50 {
+        width: 19.5rem;
+    }
+    .ancho_70 {
+        width: 26.5rem;
+    }
+}
+
+@media screen and (max-width:850px) and (min-width:752px) {
+    td {
+        display: flex;
+    }
+    .form-control {
+        height: 37px;
+        font-size: 16px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    /*FORMULARIO A*/
+    .ancho_10 {
+        width: 14.5rem;
+    }
+    .ancho_50 {
+        width: 22.5rem;
+    }
+    .ancho_70 {
+        width: 30rem;
+    }
+    .ancho_total {
+        width: 45.8rem;
+    }
+    .mini-input {
+        width: 9.5rem;
+    }
+    .fono {
+        margin-top: 19px;
+        width: 10.3rem;
+    }
+    /*FORMULARIO A*/
+    .input_form_f {
+        width: 13.7rem;
+    }
+    .contenedor {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 850px) {
+    .form-control {
+        width: 131px;
+        font-size: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    label {
+        width: 88px;
+    }
+    /*FORMULARIO A*/
+    .mini-input {
+        width: 65px;
+    }
+    .label_largo {
+        width: 101px;
+    }
+    .mini-label {
+        width: 34px;
+    }
+    .fono {
+        width: 66px;
+    }
+    /*FORMULARIO A*/
+}
+
+@media screen and (max-width: 1552px) and (min-width: 1140px) {
+    .form-control {
+        width: 150px;
+        font-size: 11px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    label {
+        width: 110px;
+    }
+    /*FORMULARIO A*/
+    .mini-input {
+        width: 74px;
+    }
+    .label_largo {
+        width: 180px;
+    }
+    .mini-label {
+        width: 48px;
+    }
+    .fono {
+        width: 70px;
+    }
+    /*FORMULARIO A*/
+    .label_form_b {
+        width: 20rem;
+    }
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+        font-size: unset;
+    }
+}

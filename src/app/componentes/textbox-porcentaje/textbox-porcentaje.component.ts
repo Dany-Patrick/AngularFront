@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-textbox-porcentaje',
+  selector: 'textbox-porcentaje',
   templateUrl: './textbox-porcentaje.component.html',
   styleUrls: ['./textbox-porcentaje.component.css']
 })
@@ -12,7 +12,7 @@ export class TextboxPorcentajeComponent implements OnInit {
 
   required: boolean;
   ocultar: boolean;
-
+  form_c:boolean;
 
 
 
@@ -29,6 +29,9 @@ export class TextboxPorcentajeComponent implements OnInit {
   ngOnInit() {
     if (this.titulo == "") {
       this.ocultar = true;
+    }
+    if (this.clase_input == "form_input_c") {
+      this.form_c = true;
     }
   }
 

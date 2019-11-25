@@ -1,6 +1,598 @@
 <app-navbar></app-navbar>
-<app-title  [formulario]=true></app-title>
+<app-title [formulario]=true></app-title>
+<form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
 
-<footer>
-    <menu-footer></menu-footer>
-    </footer>
+
+
+
+    <subtitulo [titulo]="'C1. Cuantificación de la producción'"></subtitulo>
+    <div class="contenedor">
+        <div class="div_responsivo">
+            <span><b>a) Producción SIN corteza</b></span>
+            <table>
+
+                <tr>
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+                    <td class="td_form_c_unidad">
+                        <lista-desplegable [titulo]="'Unidad'" [clase_label]="'label_form_c_unidad'" [clase_input]="'input_form_c_unidad'"></lista-desplegable>
+                    </td>
+
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Producción proyectada'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+
+
+                    <td class="td_form_c_variacion">
+                        <textbox-numerico [titulo]="'Variación (%)'" [clase_label]="'label_form_c_variacion'" [clase_input]="'input_form_c_variacion'"> </textbox-numerico>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="div_responsivo">
+            <span><b>b) Producción SIN corteza</b></span>
+            <table>
+
+                <tr>
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+                    <td class="td_form_c_unidad">
+                        <lista-desplegable [titulo]="'Unidad'" [clase_label]="'label_form_c_unidad'" [clase_input]="'input_form_c_unidad'"></lista-desplegable>
+                    </td>
+
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Producción proyectada'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+
+
+                    <td class="td_form_c_variacion">
+                        <textbox-numerico [titulo]="'Variación (%)'" [clase_label]="'label_form_c_variacion'" [clase_input]="'input_form_c_variacion'"> </textbox-numerico>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="div_responsivo">
+            <span><b>c) Antecedentes turnos</b></span>
+            <table>
+
+                <tr>
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Producción/turno'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+                    <td class="td_form_c_unidad">
+                        <lista-desplegable [titulo]="'Unidad'" [clase_label]="'label_form_c_unidad'" [clase_input]="'input_form_c_unidad_c1'"></lista-desplegable>
+                    </td>
+
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Capacidad maxima/turno'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                    </td>
+
+                    <td class="td_form_c_unidad">
+                        <lista-desplegable [titulo]="'Unidad'" [clase_label]="'label_form_c_unidad'" [clase_input]="'input_form_c_unidad_c1'"></lista-desplegable>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_responsivo">
+            <span><b></b></span>
+            <table>
+                <tr>
+
+
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'Días trabajados/mes'" [clase_label]="'label_form_c'" [clase_input]="'input_form_antecedentes_turno'"></textbox-numerico>
+                    </td>
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'N° turnos/día'" [clase_label]="'label_form_c'" [clase_input]="'input_form_antecedentes_turno'"></textbox-numerico>
+                    </td>
+                    <td class="td_form_c">
+                        <textbox-numerico [titulo]="'N° horas/turno'" [clase_label]="'label_form_c'" [clase_input]=" 'input_form_antecedentes_turno' "></textbox-numerico>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    <div class="contenedor">
+        <div class="div_responsivo">
+            <table class="boton_a_la_derecha">
+                <tr>
+                    <td> <span><b>Meses trabajados (meses_turno)</b></span></td>
+                    <td class="td_c2">
+                        <checkbox [titulo]=" 'Todos' " [clase_label]=" 'ancho_25' "></checkbox>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="div_responsivo">
+            <table>
+                <tr>
+
+
+                    <td>
+                        <checkbox [titulo]=" 'Enero' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Febrero' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Marzo' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Abril' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="div_responsivo_c1">
+            <table>
+
+                <tr>
+
+
+                    <td>
+                        <checkbox [titulo]=" 'Mayo' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Junio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_responsivo_c1_2">
+            <table>
+                <tr>
+                    <td>
+                        <checkbox [titulo]=" 'Julio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Agosto' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="div_responsivo_c1_3">
+            <table>
+
+                <tr>
+
+
+                    <td>
+                        <checkbox [titulo]=" 'Mayo' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Junio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Julio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+                    <td>
+                        <checkbox [titulo]=" 'Agosto' " [clase_label]=" 'ancho_25_c' "></checkbox>
+
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <subtitulo [titulo]="'C2. Producción por especie. '"></subtitulo>
+    <div class="contenedor">
+        <table class="tabla_0">
+            <tr>
+                <td colspan="2 "></td>
+                <td class="td_c2">
+                    <lista-desplegable [titulo]=" '' " [clase_input]=" 'input_form_c'"></lista-desplegable>
+                </td>
+
+            </tr>
+        </table>
+        <table class="tabla ">
+
+            <tr>
+                <th class="esquina_izquierda ">Especie</th>
+                <th class="celda_subtitulo ">S/C(%)</th>
+                <th class="celda_subtitulo ">C/C(%)</th>
+                <th class="esquina_derecha ">Borrar</th>
+            </tr>
+            <tr>
+                <td class="sin_borde_abajo ">Especie 1</td>
+                <td class="sin_borde_abajo ">
+                    <textbox-porcentaje [titulo]=" '' " [clase_input]=" 'input_form_c3' "></textbox-porcentaje>
+                </td>
+                <td class="sin_borde_abajo ">
+                    <textbox-porcentaje [titulo]=" '' " [clase_input]=" 'input_form_c3' "></textbox-porcentaje>
+                </td>
+                <td class="sin_borde_abajo " align="center "><img src="assets/icons/trash.png"></td>
+            </tr>
+
+
+        </table>
+
+    </div>
+    <subtitulo [titulo]=" 'C3. Destino de la producción por especie' "></subtitulo>
+    <div class="contenedor">
+        <div class="div_responsivo ">
+            <span><b>a) Astillas SIN corteza</b></span>
+            <table class="tabla ">
+
+                <tr>
+                    <th class="esquina_izquierda ">Destino</th>
+                    <th class="celda_subtitulo ">Especie 1</th>
+                    <th class="celda_subtitulo ">Especie 2</th>
+                    <th class="celda_subtitulo ">Especie 3</th>
+                    <th class="esquina_derecha ">Especie n</th>
+
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Exportación</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Exportación indirecta</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Planta celulosa</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Planta tableros</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Combustible</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Punto cogerenación</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Criadero de animales</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Total</td>
+                </tr>
+
+
+
+            </table>
+        </div>
+        <div class="div_responsivo ">
+            <span><b>b) Astillas SIN corteza</b></span>
+            <table class="tabla ">
+
+                <tr>
+                    <th class="esquina_izquierda ">Destino</th>
+                    <th class="celda_subtitulo ">Especie 1</th>
+                    <th class="celda_subtitulo ">Especie 2</th>
+                    <th class="celda_subtitulo ">Especie 3</th>
+                    <th class="esquina_derecha ">Especie n</th>
+
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Exportación</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Exportación indirecta</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Planta celulosa</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Planta tableros</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Combustible</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Punto cogerenación</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Criadero de animales</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Total</td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </div>
+
+        <subtitulo [titulo]=" 'C4. Destino de la producción por especie' "></subtitulo>
+
+        <div class="div_responsivo ">
+            <span><b>a) Astillas SIN corteza</b></span>
+            <table class="tabla ">
+
+                <tr>
+                    <th class="esquina_izquierda ">Especie</th>
+                    <th class="celda_subtitulo ">Precio</th>
+                    <th class="celda_subtitulo ">Unidad</th>
+                    <th class="celda_subtitulo ">C.H.(%)</th>
+                    <th class="esquina_derecha ">Puesto</th>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Especie 1</td>
+                    <td class="sin_borde_abajo ">
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <lista-desplegable [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <textbox-porcentaje [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <lista-desplegable [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                    </td>
+                </tr>
+
+
+
+
+
+            </table>
+        </div>
+
+        <div class="div_responsivo ">
+            <span><b>a) Astillas CON corteza</b></span>
+            <table class="tabla ">
+
+                <tr>
+                    <th class="esquina_izquierda ">Especie</th>
+                    <th class="celda_subtitulo ">Precio</th>
+                    <th class="celda_subtitulo ">Unidad</th>
+                    <th class="celda_subtitulo ">C.H.(%)</th>
+                    <th class="esquina_derecha ">Puesto</th>
+                </tr>
+                <tr>
+                    <td class="sin_borde_abajo ">Especie 1</td>
+                    <td class="sin_borde_abajo ">
+                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <lista-desplegable [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <textbox-porcentaje [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
+                    </td>
+                    <td class="sin_borde_abajo ">
+                        <lista-desplegable [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                    </td>
+                </tr>
+
+
+
+
+
+            </table>
+        </div>
+    </div>
+</form>
+<div class="btn_enviar " align="center "> <button type="submit " class="btn btn-success btn-lg ">FINALIZAR FORMULARIO</button></div>
+
+<menu-footer>
+</menu-footer>

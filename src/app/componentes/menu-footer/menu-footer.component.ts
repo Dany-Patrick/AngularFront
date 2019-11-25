@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { ItemService } from 'src/app/servicios/item-service.service';
+import { ApiService } from 'src/app/servicios/api.service';
 
 @Component({
   selector: 'menu-footer',
@@ -10,7 +10,7 @@ export class MenuFooterComponent implements OnInit {
  data: Object[];
   clase_td:string;
   formulario:string;
-  constructor(private apiService: ItemService) { }
+  constructor(private apiService: ApiService) { }
 
  
   ngOnInit() {
@@ -20,9 +20,7 @@ export class MenuFooterComponent implements OnInit {
 
   getData() {
     this.apiService.getData().subscribe(((data: any[]) => {this.data = JSON.parse(JSON.stringify(data));}));
-    
-
-  
+      
     }
 
 }

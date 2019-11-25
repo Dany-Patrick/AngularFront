@@ -20,7 +20,7 @@ export class TextboxNumericoComponent implements OnInit , ControlValueAccessor{
 
   required: boolean;
   ocultar: boolean;
-
+  form_c: boolean;
 
 
 
@@ -37,6 +37,9 @@ export class TextboxNumericoComponent implements OnInit , ControlValueAccessor{
   ngOnInit() {
     if (this.titulo == "") {
       this.ocultar = true;
+    }
+    if (this.clase_input == "form_input_c") {
+      this.form_c = true;
     }
   }
 

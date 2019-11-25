@@ -27,6 +27,31 @@ label {
 }
 
 
+/*FORMULRAIO C*/
+
+.input_form_c_unidad_c1 {
+    width: 157px;
+}
+
+.input_form_c {
+    width: 185px;
+}
+
+.input_form_c4 {
+    width: 75px;
+}
+
+.input_form_c_unidad {
+    width: 73px;
+}
+
+.label_form_c_unidad {
+    width: 73px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+
 /*FORMULARIO D*/
 
 .input_form_d {
@@ -167,6 +192,13 @@ label {
     .input_form_h {
         width: 8.1rem;
     }
+    /*Formulario C*/
+    .input_form_c_unidad {
+        width: 150px;
+    }
+    .input_form_c_unidad_c1 {
+        width: 150px;
+    }
 }
 
 @media screen and (max-width: 1165px) and (min-width: 850px) {
@@ -221,5 +253,20 @@ label {
     /*FORMULARIO H*/
     .input_form_h {
         width: 9.1rem;
+    }
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+    }
+    .label_form_c {
+        margin-top: 5px;
+        margin-bottom: 4px;
+    }
+    .label_form_c_unidad {
+        margin-top: 5px;
+        margin-bottom: 4px;
+    }
+    .input_form_c_unidad {
+        width: 73px;
     }
 }

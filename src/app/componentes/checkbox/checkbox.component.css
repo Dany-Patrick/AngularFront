@@ -1,85 +1,61 @@
-table
-{
+table {
     margin-left: 11px;
 }
-input
-{
+
+input {
     width: 25px;
     height: 25px;
-    margin-top:7px;
-    margin-right:7px;
-
+    margin-top: 7px;
+    margin-right: 7px;
 }
-.ancho_25
-{
+
+.ancho_25 {
     width: 120px;
-
-  
+    margin: unset;
 }
 
- label
-{
+.ancho_25_c {
+    width: 120px;
+    margin: unset;
+}
 
-
+label {
     justify-content: unset;
-    
 }
-@media  screen and (max-width:850px){
-  .ancho_50
-  {
+
+@media screen and (max-width:850px) {
+    .ancho_50 {
         width: 14rem;
-  }
-
- 
+    }
+    /*Formulario C*/
+    .ancho_25_c {
+        width: 146px;
+    }
 }
 
-@media  screen and (max-width: 1140px)  and (min-width:850px) {
-    
-    input
-    {
+@media screen and (max-width: 1140px) and (min-width:850px) {
+    input {
         width: 15px;
         height: 15px;
-        margin-top:3px;
-
-    
+        margin-top: 3px;
     }
-    .ancho_25
-    {
+    .ancho_25 {
         width: 70px;
-    
-      
     }
-    .ancho_50
-    {
+    .ancho_50 {
         width: 110px;
-    
-      
     }
+}
 
-  
-  }
-  @media  screen and (max-width: 1552px) and (min-width: 1140px)  {
-    
-  
-  
-    input
-    {
+@media screen and (max-width: 1552px) and (min-width: 1140px) {
+    input {
         width: 20px;
         height: 20px;
-
-    
     }
-    .ancho_25
-    {
+    .ancho_25 {
         width: 90px;
-    
-      
     }
-    .ancho_50
-    {
+    .ancho_50 {
         width: 150px;
-    
-      
     }
-  
-  }
+}

@@ -1,8 +1,15 @@
+<div>
+    <table>
+        <tr>
 
-<div>
-<table>
-  <tr >
-    <td  routerLinkActive="marcador" *ngFor="let datas of data" routerLink="/formulario_{{datas.seccion}}" >{{datas.seccion}} </td>
-  </tr>
-</table>
-<div>
+            <a *ngFor="let datas of data ">
+                <ng-container *ngIf="datas.SUBSECCION == 0 ">
+                    <td routerLinkActive="marcador " routerLink="/formulario_{{datas.SECCION}}">
+                        {{datas.SECCION}}
+                    </td>
+                </ng-container>
+            </a>
+
+        </tr>
+    </table>
+    <div>

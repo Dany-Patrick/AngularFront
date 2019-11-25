@@ -1,32 +1,36 @@
+<div class="row" *ngFor="let datas of data">
+    <ng-container *ngIf="datas.SUBSECCION == 0">
+        <table class="table_style" routerLink="/formulario_{{datas.SECCION}}">
 
-<div class="row"  *ngFor="let datas of data" >
- 
-  <table  class="table_style" routerLink="/formulario_{{datas.seccion}}">
-     
-    <tr>
-      <td class="td1" rowspan="3"> <span class="dot">{{datas.seccion}} </span> </td>
-      <td class="td2"   ><span class="centered">  </span></td>
-      <td class="td3"  rowspan="3"> 
-         <div class="card bg-success  text-center">
-      
-          xx/yy
-         
-        </div></td>
-    </tr>
-    <tr>
-      
-        <td ><span >{{datas.descripcion}}</span></td>
-        
-      </tr>
-      <tr>
-        
-          <td class="td2">
-            
-            </td>
-         
-         
-      </tr>
-  </table>
+            <tr>
+
+                <td class="td1" rowspan="3"> <span class="dot">{{datas.SECCION}} </span> </td>
+
+                <td class="td2"><span class="centered">  </span></td>
+                <td class="td3" rowspan="3">
+                    <div class="card bg-success  text-center">
+
+                        xx/yy
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td><span>{{datas.DESCRIPCION}}</span></td>
+
+
+            </tr>
+            <tr>
+
+                <td class="td2">
+
+                </td>
+
+
+            </tr>
+        </table>
+
+    </ng-container>
 
 </div>
-

@@ -1,13 +1,4 @@
-<app-navbar>
-
-
-
-
-
-
-
-
-</app-navbar>
+<app-navbar></app-navbar>
 <app-title [formulario]=true></app-title>
 <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
     <div class="contenedor animated fadeIn fast">
@@ -15,7 +6,7 @@
         <subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>
         <div class="form-inline">
             <lista-desplegable formControlName="region" [titulo]="'Región'"></lista-desplegable>
-            <lista-desplegable [region_seleccionada]="forma.controls['region'].value" formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
+            <lista-desplegable formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
             <lista-desplegable formControlName="comuna" [titulo]="'Comuna'"></lista-desplegable>
         </div>
 
@@ -112,7 +103,7 @@
 
     </div>
 
-    <h1>{{region_seleccionada}}</h1>
+
     <!--
        <p>fono_numero_1: {{ fono_numero_1 }}</p>
        <p>codigo_fono_2: {{ codigo_fono_2}}</p>

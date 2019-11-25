@@ -43,6 +43,26 @@ input {
 /*FORMULARIO B*/
 
 
+/*FORMULARIO C*/
+
+.label_form_c {
+    width: 178px;
+}
+
+.input_form_c3 {
+    width: 55px;
+}
+
+.input_form_c4 {
+    width: 75px;
+}
+
+.input_form_c {
+    width: 185px;
+    height: 24px;
+}
+
+
 /*FORMULARIO D*/
 
 .input_form_d {
@@ -99,6 +119,21 @@ input {
     /*FORMULARIO B*/
     .label_form_b {
         width: 20rem;
+    }
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+        font-size: unset;
+    }
+    .input_form_c3 {
+        width: 55px;
+        font-size: unset;
+    }
+    .label_form_c {
+        width: 178px;
+    }
+    .input_form_c {
+        width: 175px;
     }
     /*FORMULARIO D*/
     .input_form_d {
@@ -199,7 +234,35 @@ input {
         margin-top: 24px;
         width: 11.8rem;
     }
-    /*FORMULARIO A*/
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+        font-size: unset;
+        height: 37px;
+    }
+    .input_form_c3 {
+        width: 80px;
+        font-size: unset;
+        height: 37px;
+    }
+    .label_form_c {
+        width: 178px;
+    }
+    .input_form_c {
+        width: 235px;
+        height: 37px;
+    }
+    .input_form_c_variacion {
+        width: 150px;
+        height: 37px;
+    }
+    .label_form_c_variacion {
+        width: 113px;
+    }
+    .input_form_antecedentes_turno {
+        width: 261px;
+        height: 37px;
+    }
     /*FORMULARIO F*/
     .input_form_f {
         width: 13.7rem;
