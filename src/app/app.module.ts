@@ -45,7 +45,7 @@ import { EmailComponent } from './componentes/email/email.component';
 import { PermanenteComponent } from './paginas/formulario_E/opciones/permanente/permanente.component';
 import { TemporalComponent } from './paginas/formulario_E/opciones/temporal/temporal.component';
 import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.component';
-import { Ast_Encuesta_service } from "./index_db/metodos/ast_encuesta_db.service";
+import { Ast_Encuesta_Service } from "./index_db/metodos/ast_encuesta.service";
 import { DexieService } from "./servicios/dexie.service";
 
 @NgModule({
@@ -96,7 +96,7 @@ import { DexieService } from "./servicios/dexie.service";
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [DexieService,Ast_Encuesta_service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [DexieService,Ast_Encuesta_Service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {   }

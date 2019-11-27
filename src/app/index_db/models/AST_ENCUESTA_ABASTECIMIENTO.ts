@@ -1,4 +1,5 @@
 
+
 export class AST_ENCUESTA_ABASTECIMIENTO  {
     ID_ENCUESTA: number;
     PRODUCTO: number;
@@ -6,12 +7,12 @@ export class AST_ENCUESTA_ABASTECIMIENTO  {
     TIPO_ABASTECIMIENTO: number;
     PORCENTAJE_CONSUMO_ANUAL: number;
     CONSUMO_ANUAL: number;
-    UNIDAD_CONSUMO_ANUAL: number;
-    CONSUMO_ANUAL_M3: number;
-    PORCENTAJE_ORIGEN_PROPIO: number;
-    PORCENTAJE_ORIGEN_TERCERO: number;
-    CONSUMO_PROPIO_M3: number;
-    CONSUMO_TERCEROS_M3: number;
+    UNIDAD_CONSUMO_ANUAL?: number | null;
+    CONSUMO_ANUAL_M3?: number | null;
+    PORCENTAJE_ORIGEN_PROPIO?: number | null;
+    PORCENTAJE_ORIGEN_TERCERO?: number | null;
+    CONSUMO_PROPIO_M3?: number | null;
+    CONSUMO_TERCEROS_M3?: number | null;
 
     constructor(
         ID_ENCUESTA: number,

@@ -1,79 +1,76 @@
 
-
-import { AST_ENCUESTA_ABASTECIMIENTO } from '../models/AST_ENCUESTA_ABASTECIMIENTO';
-
 export  class AST_ENCUESTA {
 
     
-    ID_ENCUESTA: number;
-    ANO: number;
-    RUT_EMPRESA: number;
-    CODIGO_UNIDAD: number;
-    REGION: number;
-    PROVINCIA: number;
-    COMUNA: number;
-    SELECCION: string;
-    TIPO_MOVILIDAD: string;
-    TIPO_PLANTA: string;
-    TIPO_EQUIPO: string;
-    SITUACION: string;
-    CAUSA_PARALIZACION: number;
-    SITUACION_ACTUAL: string;
-    NOMBRE_PROPIETARIO: string;
-    NOMBRE_GERENTE: string;
-    ANOS_EXPERIENCIA: any;
-    C_ENCUESTADOR: number;
-    FECHA_ENCUESTA: string;
-    NOMBRE_ENCUESTADO: string;
-    CARGO_ENCUESTADO: number;
-    OBS: string;
-    PRODUCCION_ANUAL: number;
-    UNIDAD_PROD_ANUAL: number;
-    PRODUCCION_M3: number;
-    PRODUCCION_ANUAL_SC: number;
-    UNIDAD_PROD_ANUAL_SC: number;
-    PRODUCCION_SC_M3: number;
-    PRODUCCION_ANUAL_CC: number;
-    UNIDAD_PROD_ANUAL_CC: number;
-    PRODUCCION_CC_M3: number;
-    PRODUCCION_TURNO: number;
-    UNIDAD_PROD_TURNO: number;
-    PRODUCCION_TURNO_M3: number;
-    CAPACIDAD_MAXIMA_TURNO: number;
-    UNIDAD_CAP_MAXIMA_TURNO: number;
-    CAPACIDAD_MAXIMA_TURNO_M3: number;
-    CAPACIDAD_ANUAL: number;
-    UNIDAD_CAP_ANUAL: any;
-    CAPACIDAD_ANUAL_M3: number;
-    MESES_TRABAJADOS: number;
-    DIAS_TRAB_MES: number;
-    TURNOS_DIA: number;
-    HORAS_TURNO: number;
-    PRODUCCION_ESTIMADA: number;
-    UNIDAD_PROD_ESTIMADA: number;
-    PRODUCCION_ESTIMADA_M3: number;
-    PRODUCCION_ESTIMADA_SC: number;
-    UNIDAD_PROD_ESTIMADA_SC: number;
-    PRODUCCION_ESTIMADA_SC_M3: number;
-    PRODUCCION_ESTIMADA_CC: number;
-    UNIDAD_PROD_ESTIMADA_CC: number;
-    PRODUCCION_ESTIMADA_CC_M3: number;
-    VARIACION_PRODUCCION_ESTIMADA: number;
-    VARIACION_PRODUCCION_ESTIMADA_CC: number;
-    VARIACION_PRODUCCION_ESTIMADA_SC: number;
-    CODIGO_ANTIGUO: number;
-    VOLUMEN_M3: number;
-    ESTRATO: any;
-    USUARIO_INGRESO: number;
-    EMAIL_ENCUESTADO: string;
-    CELULAR_ENCUESTADO: string;
-    ROTACION_OPERARIOS: any;
-    NOMBRE_EMPRESA_TRAVES: any;
-    FECHA_ACTUALIZACION: any;
-    COMPLETITUD: any;
-    CAUSA_DESAPARECIDO: any;
-    ESTADO_ENCUESTA: string;
-    AST_ENCUESTA_ABASTECIMIENTO : AST_ENCUESTA_ABASTECIMIENTO;
+  ID_ENCUESTA: number;
+  ANO: number;
+  RUT_EMPRESA: number;
+  CODIGO_UNIDAD: number;
+  REGION: number;
+  PROVINCIA: number;
+  COMUNA: number;
+  SELECCION: string;
+  TIPO_MOVILIDAD: string;
+  TIPO_PLANTA: string;
+  TIPO_EQUIPO: string;
+  SITUACION: string;
+  CAUSA_PARALIZACION?: number  | null;
+  SITUACION_ACTUAL: string;
+  NOMBRE_PROPIETARIO: string;
+  NOMBRE_GERENTE: string;
+  ANOS_EXPERIENCIA?: any  | null;
+  C_ENCUESTADOR?: number | null;
+  FECHA_ENCUESTA?: string | null;
+  NOMBRE_ENCUESTADO: string;
+  CARGO_ENCUESTADO?: number | null;
+  OBS: string;
+  PRODUCCION_ANUAL?: number  | null;
+  UNIDAD_PROD_ANUAL?: number  | null;
+  PRODUCCION_M3?: number  | null;
+  PRODUCCION_ANUAL_SC?: number  | null;
+  UNIDAD_PROD_ANUAL_SC?: number  | null;
+  PRODUCCION_SC_M3?: number  | null;
+  PRODUCCION_ANUAL_CC?: number  | null;
+  UNIDAD_PROD_ANUAL_CC?: number  | null;
+  PRODUCCION_CC_M3?: number  | null;
+  PRODUCCION_TURNO?: number  | null;
+  UNIDAD_PROD_TURNO?:number  | null;
+  PRODUCCION_TURNO_M3?: number  | null;
+  CAPACIDAD_MAXIMA_TURNO?: number  | null;
+  UNIDAD_CAP_MAXIMA_TURNO?: number  | null;
+  CAPACIDAD_MAXIMA_TURNO_M3?: number  | null;
+  CAPACIDAD_ANUAL?: number  | null
+  UNIDAD_CAP_ANUAL?: any   | null;
+  CAPACIDAD_ANUAL_M3:number  | null;
+  MESES_TRABAJADOS?: number  | null;
+  DIAS_TRAB_MES?: number  | null;
+  TURNOS_DIA?: number  | null;
+  HORAS_TURNO : number  | null;
+  PRODUCCION_ESTIMADA?: number  | null;
+  UNIDAD_PROD_ESTIMADA?: number  | null;
+  PRODUCCION_ESTIMADA_M3?: number  | null;
+  PRODUCCION_ESTIMADA_SC?: number  | null;
+  UNIDAD_PROD_ESTIMADA_SC?: number  | null;
+  PRODUCCION_ESTIMADA_SC_M3?: number  | null;
+  PRODUCCION_ESTIMADA_CC?: number  | null;
+  UNIDAD_PROD_ESTIMADA_CC?: number  | null;
+  PRODUCCION_ESTIMADA_CC_M3?: number  | null;
+  VARIACION_PRODUCCION_ESTIMADA?: number  | null;
+  VARIACION_PRODUCCION_ESTIMADA_CC?: number  | null;
+  VARIACION_PRODUCCION_ESTIMADA_SC?: number  | null;
+  CODIGO_ANTIGUO?: number  | null;
+  VOLUMEN_M3?: number  | null;
+  ESTRATO?: any  | null;
+  USUARIO_INGRESO: number;
+  EMAIL_ENCUESTADO: string;
+  CELULAR_ENCUESTADO: string;
+  ROTACION_OPERARIOS?: any  | null;
+  NOMBRE_EMPRESA_TRAVES?: any  | null;
+  FECHA_ACTUALIZACION?: any  | null;
+  COMPLETITUD?: any  | null;
+  CAUSA_DESAPARECIDO?: any  | null;
+  ESTADO_ENCUESTA: string;
+
     constructor(
         ID_ENCUESTA: number,
         ANO: number,
@@ -142,8 +139,8 @@ export  class AST_ENCUESTA {
         FECHA_ACTUALIZACION: any,
         COMPLETITUD: any,
         CAUSA_DESAPARECIDO: any,
-        ESTADO_ENCUESTA: string,
-        AST_ENCUESTA_ABASTECIMIENTO : any
+        ESTADO_ENCUESTA: string
+   
         ) {
 
 
@@ -215,7 +212,7 @@ export  class AST_ENCUESTA {
             this.FECHA_ACTUALIZACION= FECHA_ACTUALIZACION,
             this.COMPLETITUD= COMPLETITUD,
             this.CAUSA_DESAPARECIDO= CAUSA_DESAPARECIDO,
-            this.ESTADO_ENCUESTA= ESTADO_ENCUESTA,
-            this.AST_ENCUESTA_ABASTECIMIENTO = AST_ENCUESTA_ABASTECIMIENTO
+            this.ESTADO_ENCUESTA= ESTADO_ENCUESTA
+       
     }
 }
