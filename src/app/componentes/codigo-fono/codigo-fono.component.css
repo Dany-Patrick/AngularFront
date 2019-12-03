@@ -1,0 +1,249 @@
+
+label{
+    display: inline-block;
+    width:158px;
+}
+.form-control
+{
+    padding: unset;
+    width:200px;
+    height: 26px;
+    font-size: unset;
+}
+
+table
+{
+    margin-left: 11px;
+}
+
+.mini-input
+{
+    width:108px;
+}
+
+
+.mini-label
+{
+    width:65px;
+}
+
+    
+    
+.label_largo
+{
+    
+  width:180px;
+
+}
+
+
+.codigo-fono
+    {
+        width: 90px;
+     
+    }
+
+    
+
+    @media  screen and (max-width: 425px) {
+        .codigo-fono{
+            width: 10rem;
+        
+           }
+   
+        .ancho_10
+        {
+    
+            width: 210px;
+        }
+        .ancho_50
+        {
+    
+            width: 20.1rem;
+        }
+        .ancho_70
+        {
+    
+            width: 27rem;
+        }
+        .ancho_total
+        {
+    
+            width:17rem;
+        }
+        td{
+            display: flex;
+        }
+      
+        .form-control
+        {
+            width:10rem;
+            height: 30px;   
+            font-size: 12px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        .mini-input
+        {
+            width:10rem;
+        }
+    
+
+    }
+    @media  screen and (max-width: 657px) and (min-width: 450px)  {
+        .ancho_50
+        {
+    
+            width: 20.1rem;
+        }
+        .ancho_70
+        {
+    
+            width: 23.1rem;
+        }
+        .ancho_total
+        {
+    
+            width:42.8rem;
+        }
+        .form-control
+        {
+    
+            width:13.7rem;
+            height: 30px;
+                font-size: 12px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+       
+        }
+        td{
+            display: flex;
+            
+    width: 115px;
+    
+        }
+       
+        .mini-input
+        {
+            width:8.8rem;
+        }
+        .codigo-fono
+        {
+            width:9.4rem;
+        }
+
+    }
+@media  screen and (max-width: 850px) and (min-width: 657px)  {
+    
+    .ancho_50
+    {
+
+        width: 20.1rem;
+    }
+    .ancho_70
+    {
+
+        width: 23.1rem;
+    }
+    .ancho_total
+    {
+
+        width:42.8rem;
+    }
+    .form-control
+    {
+
+        width:13.7rem;
+        height: 37px;
+            font-size: 16px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+   
+    }
+    td{
+        display: flex;
+
+    }
+   
+    .mini-input
+    {
+        width:8.8rem;
+    }
+    .codigo-fono
+    {
+        width:9.4rem;
+    }
+ }
+ @media  screen and (max-width: 1165px) and (min-width: 850px) {
+  
+    .form-control
+    {
+    
+        width:131px;
+        height: 22px;
+    }
+    label
+    {
+        width:88px;
+    }
+
+   
+    .mini-input
+    {
+        width:62px;
+    }
+
+.label_largo
+{
+    
+  width:150px;
+
+}
+.mini-label
+{
+    width:48px;
+}
+.codigo-fono
+{
+    width: 52px;
+}
+
+
+
+  }
+  @media  screen and (max-width: 1552px) and (min-width: 1166px)   {
+    .form-control
+    {
+    
+        width:150px;
+      
+    }
+    label
+    {
+        width:110px;
+    }
+
+   
+    .mini-input
+    {
+        width:74px;
+    }
+
+.label_largo
+{
+    
+  width:180px;
+
+}
+.mini-label
+{
+    width:48px;
+}
+
+.codigo-fono
+    {
+        width: 67px;
+     
+    }
+  }
+

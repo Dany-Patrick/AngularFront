@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>AngularProyectFront</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1976d2">
+
+</head>
+
+<body>
+
+
+
+
+    <app-root></app-root>
+
+    <script>
+
+       
+
+function box_group(id)
+{
+    var boxes_1 = document.getElementsByClassName("grupo_1").length;
+    var boxes_2 = document.getElementsByClassName("grupo_2").length;
+    var boxes_3 = document.getElementsByClassName("grupo_3").length;
+    var boxes_4 = document.getElementsByClassName("grupo_4").length;
+
+    if(id <= 2)
+    {
+       
+        for(var i = 1; i < boxes_1 +1  ; i++)
+    {      console.log(i);
+        if(id != i)
+        {        
+            document.getElementById(i).checked = false;
+        }     
+    }
+    }
+
+    if(id >= 3 && id <= 6 )
+    {
+    for(var i = 3; i < boxes_2 +3  ; i++)
+    {     
+        if(id != i)
+        {        
+            document.getElementById(i).checked = false;
+        }     
+    }
+}
+if(id >= 7 && id <= 13 )
+    {
+    for(var i = 7; i < boxes_3 +6  ; i++)
+    {     
+        if(id != i)
+        {        
+            document.getElementById(i).checked = false;
+        }     
+    }
+}
+if(id >= 13 && id <= 16 )
+    {
+    for(var i = 13; i < boxes_4 +4  ; i++)
+    {     
+        if(id != i)
+        {        
+            document.getElementById(i).checked = false;
+        }     
+    }
+}    
+
+    }
+       		
+
+              
+ 
+
+
+    
+
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "190px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

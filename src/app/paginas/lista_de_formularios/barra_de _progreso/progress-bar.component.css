@@ -1,0 +1,24 @@
+.progress_style
+{
+    margin: 5px;
+    border-radius: unset;
+    background-color: rgb(104, 104, 104);
+    z-index: -1;
+    height:30px
+}
+.bar_style
+{
+  
+    height:30px
+}
+.overlapping
+{
+  top:-1px;
+}
+p{
+    margin-top: -32px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #fff;
+}

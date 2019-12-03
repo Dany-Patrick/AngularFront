@@ -1,0 +1,8 @@
+<div>
+    <table>
+        <tr>
+            <td> <label [style.width.px]="label_ancho" [ngClass]="clase_label">  {{titulo}} </label> </td>
+            <td> <input [(ngModel)]="value"  [ngClass]="clase_input" type="checkbox" [id]="id"  [disabled]="disable" onclick="box_group(this.id)"></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+<div>
+    <table>
+        <tr>
+
+            <a *ngFor="let datas of data ">
+                <ng-container *ngIf="datas.SUBSECCION == 0 ">
+                    <td routerLinkActive="marcador "   [routerLink]="['/formulario' , datas.SECCION ,id_encuesta]">
+                        {{datas.SECCION}}
+                    </td>
+                </ng-container>
+            </a>
+
+        </tr>
+    </table>
+    <div>

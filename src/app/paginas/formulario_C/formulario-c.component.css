@@ -1,0 +1,135 @@
+.contenedor {
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.tabla {
+    width: 34.6rem;
+}
+
+.tabla_0 {
+    width: 54.6rem;
+}
+
+.td_form_c {
+    width: 192px;
+}
+
+.td_form_c_unidad {
+    width: 83px;
+}
+
+.td_form_c_variacion {
+    width: 122px;
+}
+
+.div_responsivo,
+.div_responsivo_c1 {
+    box-sizing: border-box;
+    display: table-cell;
+    padding-right: 0px;
+}
+
+.div_responsivo_c1_2 {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 0px;
+}
+
+.div_responsivo_c1_3 {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 2rem;
+}
+
+.sin_borde_arriba {
+    border-top: unset;
+}
+
+.sin_borde_abajo {
+    border-bottom: unset;
+    height: 38px;
+}
+
+.esquina_izquierda {
+    border-left: 1px solid;
+    font-weight: normal;
+    background-color: lightgrey;
+}
+
+.esquina_derecha {
+    border-right: 1px solid;
+    font-weight: normal;
+    background-color: lightgrey;
+}
+
+.celda_subtitulo {
+    background-color: lightgrey;
+    font-weight: normal;
+}
+
+td,
+th {
+    padding: 4px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+
+table th {
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+table {
+    border-color: #fff;
+    margin-left: unset;
+}
+
+span {
+    color: green;
+    margin-left: 5px;
+}
+
+.boton_a_la_derecha {
+    width: 89.7rem;
+}
+
+@media screen and (max-width: 1552px) and (min-width: 1140px) {
+    .boton_a_la_derecha {
+        width: 66.2rem;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 426px) {
+    .div_responsivo {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .div_responsivo_c1 {
+        display: inline-block;
+        padding-right: 0px;
+    }
+    .col-2 {
+        display: table;
+    }
+    .boton_a_la_derecha {
+        width: 50.3rem;
+    }
+    .div_responsivo {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .td_form_c_variacion {
+        width: 122px;
+    }
+    .tabla {
+        width: 50.6rem;
+    }
+    .td_c2 {
+        width: 174px;
+    }
+    .tabla_0 {
+        width: 51rem;
+    }
+}

@@ -1,0 +1,133 @@
+<app-navbar></app-navbar>
+<app-title  [formulario]=true></app-title>
+<div class="contenedor animated fadeIn fast">
+       
+
+
+        <div class="div_responsivo"> 
+                <subtitulo [titulo]="'G1. Tipo Maquinaria'"></subtitulo>
+                <table class="tabla_responsiva"> 
+                <tr>
+                        <th style="border-top:unset; border-bottom: unset;"> Tipo maquinaria</th>
+                        <td class="espacio"></td>
+                        <th style="border-top:unset; border-bottom: unset;"> Cantidad</th>
+                    </tr>
+            <tr>
+                    <td class="label_input">Disco astillador</td>
+                    <td class="espacio"></td>
+                     <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+            </tr>
+            <tr>
+                    <td class="label_input">Tambor</td>
+                    <td class="espacio"></td>
+                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"  ></textbox-numerico></td>
+            
+                </tr>
+                <tr>
+                        <td class="label_input">Platos troncoconicos</td>
+                        <td class="espacio"></td>
+                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+
+                    </tr>
+                    <tr>
+                            <td class="label_input">Aletas</td>
+                            <td class="espacio"></td>
+                            <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
+     
+                        </tr>
+                        <tr>
+                                <td class="label_input">Aserradora-Astilladora</td>
+                                <td class="espacio"></td>
+                                <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
+         
+                            </tr>
+                            <tr>
+                                    <td class="label_input">Conteadroa-Astilladora</td>
+                                    <td class="espacio"></td>
+                                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
+             
+                                </tr>
+                                <tr>
+                                        <td class="label_input">Aletas</td>
+                                        <td class="espacio"></td>
+                                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
+                 
+                                    </tr>
+        </table>
+    </div>
+
+    <div class="div_responsivo" style="overflow-x:auto;"> 
+            <subtitulo [titulo]="'G2. Relación Insumo / Producto'"></subtitulo>
+            <table >
+
+                    <tr>
+                            <th  class="esquina_izquierda">Especialización</th>
+                            <th class="celda_subtitulo"> Hombres</th>
+                            <th class="celda_subtitulo">Mujeres</th>
+                            <th class="celda_subtitulo">Mujeres</th>
+                            <th class="esquina_derecha">N° Meses</th>
+                
+                
+                        </tr>
+                        <tr>
+                                <td class="sin_borde_abajo">Profesionales</td>
+                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                     
+                            </tr>
+                            <tr>
+                                    <td class="sin_borde_abajo">Técnicos</td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                </tr>
+                                <tr>
+                                        <td class="sin_borde_abajo">Operarios calificados</td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                    </tr>
+                                    <tr>
+                                            <td class="sin_borde_abajo">Operarios no calificados</td>
+                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        </tr>
+                                        <tr>
+                                                <td class="sin_borde_abajo">Administrativos</td>
+                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            </tr>
+                                            <tr>
+                                                    <td class="sin_borde_abajo">Administrativos</td>
+                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                </tr>
+                                                <tr>
+                                                        <td class="sin_borde_abajo">Total</td>
+                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    </tr>
+                </table>
+</div>
+     
+</div>
+<br>
+<div align="center" class="btn_enviar" >
+   
+    <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
+
+</div>
+
+<menu-footer></menu-footer>

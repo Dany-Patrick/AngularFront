@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+<app-title  [formulario]=true></app-title>
+<div class="contenedor animated fadeIn fast">
+        <subtitulo [titulo]="'F1. Inversiones'"></subtitulo>
+
+
+        <div class="div_responsivo"> 
+                <table> 
+                <tr>
+                        <td colspan="2">  <b>Inversiones realizadas ano_proceso</b></td>
+                    
+                    </tr>
+            <tr>
+                    <td class="label_input">Seleccione tipo de moneda</td>
+                <td> <lista-desplegable   [titulo]="''" [clase_input]="'input_form_f'"></lista-desplegable></td>
+            </tr>
+            <tr>
+                    <td class="label_input">Maquinaria y equipos</td>
+                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'" ></textbox-numerico></td>
+            
+                </tr>
+                <tr>
+                        <td class="label_input">Instalaciones</td>
+                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+
+                    </tr>
+                    <tr>
+                            <td class="label_input">Total</td>
+                            <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"> </textbox-numerico></td>
+     
+                        </tr>
+        </table>
+    </div>
+    <div class="div_responsivo"> 
+            <table> 
+            <tr>
+                    <td colspan="2">  <b>Inversiones proyectadas ano_proceso + 1</b></td>
+                
+                </tr>
+        <tr>
+                <td class="label_input">Seleccione tipo de moneda</td>
+            <td> <lista-desplegable   [titulo]="''" [clase_input]="'input_form_f'"></lista-desplegable></td>
+        </tr>
+        <tr>
+                <td class="label_input">Maquinaria y equipos</td>
+                <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+        
+            </tr>
+            <tr>
+                    <td class="label_input">Instalaciones</td>
+                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+
+                </tr>
+                <tr>
+                        <td class="label_input">Total</td>
+                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+ 
+                    </tr>
+    </table>
+</div>
+     
+</div>
+<br>
+<div align="center" class="btn_enviar" >
+   
+    <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
+
+</div>
+
+<menu-footer></menu-footer>

@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td> <label [ngClass]="clase_label" for="dropdown" [style.width.px]="label_ancho">{{titulo}}</label></td>
+        <td><select [(ngModel)]="value" [ngClass]="clase_input" class="form-control" id="dropdown" [style.width.px]="input_ancho">
+
+        <option value="9">9</option>
+        <option value="4">4</option>
+        <option value="2">2</option>
+        <option value="6">6</option>
+      </select> </td>
+    </tr>
+</table>

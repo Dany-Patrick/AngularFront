@@ -1,0 +1,58 @@
+
+.celda_titulo
+{
+  background-color: lightgrey;
+  color: #000;
+  text-align: center;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  width: 8rem;
+  padding: 0.3rem;
+  cursor: pointer;
+
+}.table
+{
+    width: 33rem;
+    margin-left: 13rem;
+  margin-bottom: unset;
+}
+.activo
+{
+  background-color:grey;
+  color: #fff;
+}
+@media  screen  and (max-width: 426px) { 
+
+  .table
+{
+  width: 17.4rem;
+  margin-left: 17px;
+
+}
+}
+@media  screen and (max-width: 620px)   and (min-width: 426px)  {
+  .table {
+    width: 23.4rem;
+    margin-left: 3.5rem;
+    margin-bottom: unset;
+}
+}
+  @media  screen and (max-width: 701px)   and (min-width: 620px)  {
+
+    .table
+  {
+    width: 24.4rem;
+    margin-left: 2.5rem;
+
+  }
+  }
+  @media  screen and (max-width: 763px)   and (min-width: 701px) {
+
+    .table
+  {
+    width: 29rem;
+  
+  }
+  }
+

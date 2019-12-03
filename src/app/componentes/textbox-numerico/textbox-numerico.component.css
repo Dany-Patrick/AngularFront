@@ -1,0 +1,392 @@
+label {
+    display: inline-block;
+    width: 158px;
+    margin-top: 3px;
+}
+
+td {
+    padding: unset;
+    vertical-align: unset;
+    border-top: unset;
+}
+
+.form-control {
+    height: unset;
+    padding: unset;
+    width: 200px;
+}
+
+input {
+    text-align: center;
+}
+
+
+/*FORMULARIO A*/
+
+.mini-input {
+    width: 106px;
+}
+
+.mini-label {
+    width: 65px;
+}
+
+.label_largo {
+    width: 180px;
+}
+
+.fono {
+    width: 97px;
+}
+
+
+/*FORMULARIO B*/
+
+
+/*FORMULARIO C*/
+
+.label_form_c {
+    width: 178px;
+}
+
+.input_form_c3 {
+    width: 55px;
+}
+
+.input_form_c4 {
+    width: 75px;
+}
+
+.input_form_c {
+    width: 185px;
+    height: 24px;
+}
+
+
+/*FORMULARIO D*/
+
+.input_form_d {
+    width: 6rem;
+}
+
+.porcentaje {
+    width: 2rem;
+}
+
+
+/*FORMULARIO E*/
+
+.input_form_e_permanente {
+    width: 9rem;
+}
+
+.input_form_e_temporal {
+    width: 7rem;
+}
+
+
+/*FORMULARIO G*/
+
+.input_form_g {
+    width: 7rem;
+}
+
+@media screen and (max-width: 1552px) and (min-width: 1140px) {
+    .form-control {
+        width: 150px;
+        font-size: 11px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    label {
+        width: 110px;
+    }
+    /*FORMULARIO A*/
+    .mini-input {
+        width: 74px;
+    }
+    .label_largo {
+        width: 180px;
+    }
+    .mini-label {
+        width: 48px;
+    }
+    .fono {
+        height: 27px;
+        width: 70px;
+    }
+    /*FORMULARIO A*/
+    /*FORMULARIO B*/
+    .label_form_b {
+        width: 20rem;
+    }
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+        font-size: unset;
+    }
+    .input_form_c3 {
+        width: 55px;
+        font-size: unset;
+    }
+    .label_form_c {
+        width: 178px;
+    }
+    .input_form_c {
+        width: 175px;
+    }
+    /*FORMULARIO D*/
+    .input_form_d {
+        width: 5rem;
+    }
+    .porcentaje {
+        width: 2rem;
+    }
+    /*FORMULARIO E*/
+    .input_form_e_temporal {
+        width: 95px;
+    }
+    /*FORMULARIO E*/
+    /*FORMULARIO G*/
+    .input_form_g {
+        width: 7rem;
+    }
+    /*FORMULARIO G*/
+}
+
+@media screen and (max-width: 1140px) and (min-width: 850px) {
+    .form-control {
+        width: 131px;
+        font-size: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    label {
+        width: 88px;
+    }
+    /*FORMULARIO A*/
+    .mini-input {
+        width: 65px;
+    }
+    .label_largo {
+        width: 101px;
+    }
+    .mini-label {
+        width: 34px;
+    }
+    .fono {
+        width: 66px;
+    }
+    /*FORMULARIO A*/
+    /*FORMULARIO D*/
+    .input_form_d {
+        width: 3rem;
+    }
+    .porcentaje {
+        width: 2rem;
+    }
+    /*FORMULARIO E*/
+    .input_form_e_permanente {
+        width: 10rem;
+    }
+    .input_form_e_temporal {
+        width: 7rem;
+    }
+    /*FORMULARIO E*/
+    /*FORMULARIO G*/
+    .input_form_g {
+        width: 5rem;
+    }
+    /*FORMULARIO H*/
+    .input_form_h {
+        width: 9.1rem;
+    }
+}
+
+@media screen and (max-width:850px) and (min-width:753px) {
+    td {
+        display: flex;
+    }
+    .form-control {
+        height: 22px;
+        font-size: 16px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    /*FORMULARIO A*/
+    .ancho_10 {
+        width: 15rem;
+    }
+    .ancho_50 {
+        width: 21rem;
+    }
+    .ancho_70 {
+        width: 27rem;
+    }
+    .ancho_total {
+        width: 42.8rem;
+    }
+    .mini-input {
+        width: 9.5rem;
+    }
+    .fono {
+        height: 37px;
+        margin-top: 24px;
+        width: 11.8rem;
+    }
+    /*FORMULARIO C*/
+    .input_form_c4 {
+        width: 75px;
+        font-size: unset;
+        height: 37px;
+    }
+    .input_form_c3 {
+        width: 80px;
+        font-size: unset;
+        height: 37px;
+    }
+    .label_form_c {
+        width: 178px;
+    }
+    .input_form_c {
+        width: 235px;
+        height: 37px;
+    }
+    .input_form_c_variacion {
+        width: 150px;
+        height: 37px;
+    }
+    .label_form_c_variacion {
+        width: 113px;
+    }
+    .input_form_antecedentes_turno {
+        width: 261px;
+        height: 37px;
+    }
+    /*FORMULARIO F*/
+    .input_form_f {
+        width: 13.7rem;
+    }
+    /*FORMULARIO D*/
+    .input_form_d {
+        margin-top: 7px;
+        width: 9rem;
+        height: 38px;
+    }
+    .porcentaje {
+        margin-top: 7px;
+        width: 2.5rem;
+        height: 38px;
+    }
+    /*FORMULARIO E*/
+    .input_form_e_permanente {
+        width: 8rem;
+    }
+    .input_form_e_temporal {
+        width: 6rem;
+    }
+    /*FORMULARIO E*/
+    /*FORMULARIO G*/
+    .input_form_g {
+        height: 27px;
+        width: 7rem;
+    }
+    /*FORMULARIO H*/
+    .input_form_h {
+        height: 27px;
+        width: 8.1rem;
+    }
+}
+
+@media screen and (max-width:753px) and (min-width:637px) {
+    .fono {
+        height: 29px;
+        margin-top: 19px;
+        width: 7.7rem;
+    }
+    .input_form_e_permanente {
+        width: 9rem;
+    }
+    /*FORMULARIO H*/
+    .input_form_h {
+        height: 27px;
+        width: 8.1rem;
+    }
+}
+
+@media screen and (max-width:637px) and (min-width:425px) {
+    /*FORMULARIO H*/
+    .input_form_h {
+        height: 27px;
+        width: 5.1rem;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width:320px) {
+    td {
+        display: flex;
+    }
+    .form-control {
+        width: 9rem;
+        height: 30px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    /*FORMULARIO A*/
+    .fono {
+        width: 5rem;
+        margin-top: 15px;
+    }
+    .mini-input {
+        width: 10rem;
+    }
+    .fono {
+        margin-top: 33px;
+        width: 9.4rem;
+    }
+    /*FORMULARIO A*/
+    /*FORMULARIO D*/
+    .porcentaje {
+        width: 2rem;
+    }
+    .input_form_d {
+        width: 4rem;
+    }
+    /*FORMULARIO E*/
+    .input_form_e_permanente {
+        width: 69px;
+        height: unset;
+    }
+    .input_form_e_temporal {
+        width: 87px;
+        height: unset;
+    }
+    /*FORMULARIO E*/
+    /*FORMULARIO G*/
+    .input_form_g {
+        width: 3rem;
+    }
+    /*FORMULARIO F*/
+    .input_form_f {
+        width: 6rem;
+    }
+    /*FORMULARIO F*/
+    .input_form_h {
+        width: 8rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    /*FORMULARIO E*/
+    .input_form_e_permanente {
+        width: 66px;
+    }
+    .input_form_e_temporal {
+        width: 35px;
+    }
+    /*FORMULARIO H*/
+    .input_form_h {
+        width: 3rem;
+    }
+}

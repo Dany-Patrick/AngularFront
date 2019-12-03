@@ -1,0 +1,299 @@
+
+.sin_borde_arriba
+{
+    border-top: unset  ; 
+}
+.sin_borde_abajo
+{
+  border-bottom: unset ;
+  width: 15rem;
+}
+
+.esquina_izquierda
+{
+  border-left: 1px solid;
+
+  background-color: lightgrey;
+}
+.esquina_derecha
+{
+  border-right: 1px solid;
+
+  background-color: lightgrey;
+}
+.celda_subtitulo
+{
+  background-color: lightgrey;
+ 
+}
+.espacio
+{
+    width:15rem;
+}
+.label_input
+{
+    width: 15rem;
+}
+table
+{
+    margin-left:10px;
+
+    border-color: #fff;
+}
+
+.contenedor
+{
+    font-size: 12px;
+
+}
+tr
+{
+    height: 34px;
+}
+
+
+ table th {
+
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+}
+
+.div_responsivo {
+    box-sizing: border-box;
+    display: table-cell;
+    padding-right:2rem;
+ 
+ 
+}
+@media  screen and (max-width: 321px)   {
+    .div_responsivo {
+     
+        display: inline-block;
+     margin-top: 10px;
+     padding-right:unset;
+    }
+  
+    .tabla_responsiva
+    {
+        width: 18rem;
+    }
+    .espacio
+    {
+        width:0rem;
+    }
+    .label_input
+    {
+        width: 14rem;
+    }
+    table
+    {
+  
+        width: 10rem;
+     
+    }
+    .celda_subtitulo
+    {
+        width:12rem ;
+    }
+    }
+@media  screen and (max-width: 511px)  and (min-width: 321px)   {
+    .div_responsivo {
+     
+        display: inline-block;
+     margin-top: 10px;
+     padding-right:unset;
+    }
+  
+    .tabla_responsiva
+    {
+        width: 18rem;
+    }
+    .espacio
+    {
+        width:0rem;
+    }
+    .label_input
+    {
+        width: 14rem;
+    }
+    table
+    {
+  
+        width: 25rem;
+     
+    }
+    .celda_subtitulo
+    {
+        width:12rem ;
+    }
+    }
+@media  screen and (max-width: 768px)  and (min-width: 511px) {
+    .div_responsivo {
+     
+        display: inline-block;
+     margin-top: 10px;
+     padding-right:unset;
+    }
+  
+    .tabla_responsiva
+    {
+        width: 23rem;
+    }
+    .espacio
+    {
+        width:6rem;
+    }
+    .label_input
+    {
+        width: 10rem;
+    }
+    .celda_subtitulo
+    {
+        width:24rem ;
+    }
+
+    
+    table
+    {
+  
+        width: 30rem;
+     
+    }
+    }
+@media  screen and (max-width: 850px)  and (min-width: 768px) {
+ 
+  
+    .contenedor
+    {
+        margin-left: 22px;
+        font-size: 14px;
+
+    }
+    .div_responsivo {
+     
+        display: inline-block;
+     margin-top: 10px;
+     
+    }
+    .espacio
+    {
+        width: 25rem;
+    }
+    .tabla_responsiva{
+        width: 47rem;
+    }
+    table{
+        width: 46rem;
+    }
+    .sin_borde_abajo
+    {
+        border-bottom: unset;
+        width: 7rem;
+    }
+}
+@media  screen and (max-width: 1024px) and (min-width: 850px)  {
+    .div_responsivo {
+  
+
+     
+        display: inline-block;
+     margin-top: 10px;
+     
+    }
+    .tabla_responsiva
+    {
+        width: 41rem;
+    }
+    .espacio
+    {
+        width:27rem;
+    }
+    .label_input
+    {
+        width: 15rem;
+    }
+}
+  @media  screen and (max-width: 1032px) and (min-width: 1024px)  {
+    .tabla_responsiva
+    {
+        width: 18rem;
+    }
+    .espacio
+    {
+        width:0rem;
+    }
+    .label_input
+    {
+        width: 7rem;
+    }
+
+
+    }
+    @media  screen and (max-width: 1140px)  and (min-width:1032px) {
+     
+        
+        .label_input
+        {
+            width: 13rem;
+        }
+    
+       
+        .tabla_responsiva
+        {
+            width: 20rem;
+        }
+        .div_responsivo {
+    
+            padding-right:unset;
+    
+        }
+        .espacio
+        {
+            width:1rem;
+        }
+      }
+  @media  screen and (max-width: 1295px) and (min-width: 1140px)  {
+    .tabla_responsiva
+    {
+        width: 22rem;
+    }
+    .espacio
+    {
+        width:0rem;
+    }
+    .label_input
+    {
+        width: 11rem;
+    }
+
+
+    }
+  @media  screen and (max-width: 1440px) and (min-width: 1295px)  {
+    .tabla_responsiva
+    {
+        width: 30rem;
+    }
+    .div_responsivo {
+
+        padding-right:4rem;
+
+    }
+  
+      }
+
+  @media  screen and (max-width: 1552px) and (min-width: 1440px)  {
+
+  
+    .tabla_responsiva
+    {
+        width: 34rem;
+    }
+    .div_responsivo {
+
+        padding-right:7rem;
+
+    }
+  }
+

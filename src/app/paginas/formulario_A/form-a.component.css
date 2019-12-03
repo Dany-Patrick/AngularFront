@@ -1,0 +1,182 @@
+.ng-invalid:not(form) {
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+textbox,
+lista-desplegable,
+email,
+textbox-numerico {
+    margin-left: 11px;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: unset;
+}
+
+span {
+    color: var(--col-verdeClaro);
+}
+
+td,
+tr {
+    border-top: unset;
+}
+
+.boton {
+    background-color: grey;
+    border-color: grey;
+    margin-left: 15px;
+}
+
+.btn-gps {
+    background-color: green;
+    border: 0px;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+
+.img-gps {
+    width: 17px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    height: 22px;
+}
+
+.label_switch {
+    margin-left: 15px;
+    margin-right: 19px;
+}
+
+.form-inline {
+    margin-bottom: 10px;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 375px) {
+    .btn-gps {
+        margin-top: 15px;
+        width: 16.5rem;
+    }
+    .boton {
+        width: 16.5rem;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    .contenedor {
+        margin-left: 12px;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (max-width: 426px) and (min-width:361px) {
+    .btn-gps {
+        margin-top: 15px;
+        width: 21.5rem;
+    }
+    switch-boton {
+        margin-left: 9rem;
+        margin-top: 10px;
+    }
+    .boton {
+        width: 21.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 687px) and (min-width: 426px) {
+    .contenedor {
+        margin-left: 26px;
+    }
+    .btn-gps {
+        margin-top: 1.4rem;
+    }
+    .boton {
+        margin-left: 11rem;
+        margin-top: 1rem;
+    }
+    .label_switch {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 766px) and (min-width: 687px) {
+    .btn-gps {
+        margin-top: 1.4rem;
+    }
+    .boton {
+        margin-left: 15rem;
+        margin-top: 1rem;
+    }
+    .label_switch {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 850px) and (min-width: 766px) {
+    .label_switch {
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    switch-boton {
+        margin-bottom: 22px;
+    }
+    .contenedor {
+        margin-left: 22px;
+        font-size: 16px;
+    }
+    .btn-gps {
+        width: 48px;
+        height: 42px;
+        margin-top: 0.5rem;
+    }
+    .boton {
+        margin-left: 15rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        height: 40px;
+        width: 278px;
+        border-radius: 4px;
+    }
+    .img-gps {
+        width: 16px;
+        height: 25px;
+    }
+    .btn {
+        font-size: 15px;
+    }
+    .btn_enviar {
+        font-size: 16px;
+        margin-top: 1rem;
+    }
+    .form-inline {
+        margin-bottom: unset;
+    }
+    textbox,
+    lista-desplegable,
+    email,
+    textbox-numerico,
+    codigo-fono {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1166px) and (min-width:850px) {
+    .contenedor {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 1552px) and (min-width: 1113px) {
+    .contenedor {
+        font-size: 12px;
+    }
+}

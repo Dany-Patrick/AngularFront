@@ -1,0 +1,50 @@
+
+.margin_unset
+{
+    margin: 5px;
+}
+
+table
+{
+    width: 100% ; 
+    border-bottom: 1pt solid black; 
+    cursor: pointer;
+   
+}
+.under_td
+{
+    font-size: 14px;
+  
+}
+
+.td2
+{
+   text-align: right;
+ 
+}
+.td1
+{
+    font-size: 17px;
+ 
+}
+@media only screen and (max-width: 991px) {
+
+
+}
+@media only screen and (max-width: 480px) {
+    .under_td
+{
+    font-size: 10px;
+  
+}
+.td1
+{
+    font-size: 12px;
+ 
+}
+.td2
+{
+    font-size: 12px;
+
+}
+}

@@ -1,0 +1,94 @@
+  /* You can add global styles to this file, and also import other style files */
+  :root {
+    --col-verdeObscuro: rgba(0, 102, 52,1);
+    --col-verdeClaro: rgba(3, 142, 3,1) ;
+    --col-bordes: rgba(199,199,196,1);
+    --tex-texto: Verdana, Arial, Helvetica, sans-serif;
+    --col-texto: rgba(10,10,10,1);
+    --texto: 11px  ;
+  }
+
+   
+    .contenedor{
+      margin-top:5px;
+      margin-left:5px;
+      margin-right:5px;
+      font-size: 14px;
+  }
+     
+     body
+     {
+       font-family: var(--tex-texto); 
+       margin: 0;
+       margin-bottom: 40px;
+       }
+ 
+       html {
+        min-height: 100%;
+        position: relative;
+      }
+      .btn_enviar
+      {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+      }
+      switch-boton
+      {
+
+        height: 23px;
+      }
+
+      
+      .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+      
+      .fast {
+        -webkit-animation-duration: 0.4s;
+        animation-duration: 0.4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+      
+        to {
+          opacity: 1;
+        }
+      }
+      
+      .fadeIn {
+        animation-name: fadeIn;
+      }
+
+@media  screen and (max-width: 425px)   {
+        
+
+}
+@media  screen and (max-width:850px) and (min-width:450px) {
+  switch-boton
+  {
+
+    height: 7px;
+  }
+
+  
+
+}
+
+
+
+@media  screen and (max-width: 1140px)  and (min-width: 850px)  {
+
+}
+
+
+
+@media  screen and (max-width: 1552px) and (min-width: 1140px) {
+}

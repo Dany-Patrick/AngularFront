@@ -1,0 +1,41 @@
+.nav_style
+{
+   margin-left: unset; 
+    background-color: var(--col-verdeClaro);
+    width: 100%;
+
+}
+table
+{
+    border-collapse: unset;
+}
+tr{
+    margin:10px;
+}
+p{
+    padding-left: 1rem; 
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+}
+.dot {
+    background: var(--col-verdeObscuro);
+    border-radius: 45px;
+   display: inline-block;
+   margin: 7px;
+    text-align: center;
+   width: 45px; 
+   height: 45px;
+  }
+  .pencil-img
+  {
+      margin: 8px;
+  }
+  .td1
+  {
+    width: 95%;
+  }

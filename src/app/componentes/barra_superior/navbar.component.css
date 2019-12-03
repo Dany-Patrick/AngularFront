@@ -1,0 +1,36 @@
+.nav_style
+{
+    background-color: var(--col-verdeObscuro);
+    padding: unset;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.navbar-text
+{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 1.5rem;
+}
+.navbar-img-right
+{
+    margin-right: 1.5%
+}
+.clickeable
+{
+    cursor: pointer;
+}
+.collapse
+{
+    display: contents;
+}
+
+@media  screen and (max-width: 320px)  {
+    .navbar-text
+    {
+         font-size: 11px;
+    }
+
+}

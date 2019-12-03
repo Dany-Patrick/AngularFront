@@ -1,0 +1,16 @@
+<div class="row margin_unset" *ngFor=" let fila of AST_ENCUESTA_List , index as id">
+
+  <table [routerLink]="['/lista_de_formularios', fila.ID_ENCUESTA ]  ">
+    
+    <tr>
+      <td class="td1">{{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.CODIGO_UNIDAD }}  - {{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.RAZON_SOCIAL}}</td>
+      <td rowspan="2" class="td2">Porcentaje %</td>
+    </tr>
+    <tr>
+       <td class="under_td" >{{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.NOMBRE_EMPRESA}}<br> {{fila.NOMBRE_ENCUESTADO}} - Cargo contacto -  {{fila.CELULAR_ENCUESTADO}} </td>
+    
+     </tr>
+  
+    </table>
+   
+ </div>
