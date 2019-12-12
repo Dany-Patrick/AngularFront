@@ -17,7 +17,8 @@ td {
 }
 
 input {
-    text-align: center;
+    text-align: right;
+    height: 25px;
 }
 
 
@@ -99,7 +100,7 @@ input {
         padding-bottom: 2px;
     }
     label {
-        width: 110px;
+        width: 118px;
     }
     /*FORMULARIO A*/
     .mini-input {
@@ -113,7 +114,7 @@ input {
     }
     .fono {
         height: 27px;
-        width: 70px;
+        width: 86px;
     }
     /*FORMULARIO A*/
     /*FORMULARIO B*/
@@ -227,7 +228,7 @@ input {
         width: 42.8rem;
     }
     .mini-input {
-        width: 9.5rem;
+        width: 5.5rem;
     }
     .fono {
         height: 37px;

@@ -5,43 +5,43 @@
 
         <subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>
         <div class="form-inline">
-            <lista-desplegable formControlName="region" [titulo]="'Región'"></lista-desplegable>
-            <lista-desplegable formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
-            <lista-desplegable formControlName="comuna" [titulo]="'Comuna'"></lista-desplegable>
+            <lista-desplegable  [valido]="valido_1" formControlName="region" [titulo]="'Región'" [clase_input]="'ancho_25'"></lista-desplegable>
+            <lista-desplegable [seleccion_regional]="forma.get('region').value" [valido]="valido_2" [clase_input]="'ancho_25'" formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
+            <lista-desplegable [seleccion_regional]="forma.get('region').value" [clase_input]="'ancho_25'"  [seleccion_provincia]="forma.get('provincia').value" [valido]="valido_3" formControlName="comuna" [titulo]="'Comuna'"></lista-desplegable>
         </div>
 
         <div class="form-inline">
-            <textbox formControlName="localidad" [titulo]="'Localidad'" [clase_input]="'ancho_total'"></textbox>
-            <textbox formControlName="huso" [titulo]="'Huso'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
-            <lista-desplegable formControlName="zona" [titulo]="'Zona'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></lista-desplegable>
-            <textbox formControlName="utmx" [titulo]="'UTM X'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
-            <textbox formControlName="utmy" [titulo]="'UTM Y'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
+            <textbox [valido]="valido_4" formControlName="localidad" [titulo]="'Localidad'" [clase_input]="'ancho_total'"></textbox>
+            <textbox [valido]="valido_5" formControlName="huso" [titulo]="'Huso'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
+            <lista-desplegable [valido]="valido_6" formControlName="zona" [titulo]="'Zona'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></lista-desplegable>
+            <textbox [valido]="valido_7" formControlName="utmx" [titulo]="'UTM X'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
+            <textbox [valido]="valido_8" formControlName="utmy" [titulo]="'UTM Y'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
             <button class="btn-gps"><img class="img-gps"  src="assets\icons\icon_place.png"></button>
         </div>
         <div class="form-inline">
-            <textbox formControlName="rut_empresa" [titulo]="'Rut empresa'" [clase_input]="'ancho_50'"></textbox>
-            <textbox formControlName="nombre_propietario" [titulo]="'Nombre propietario'" [clase_input]="'ancho_50'"></textbox>
-            <textbox formControlName="razon_social" [titulo]="'Razón social'" [clase_input]="'ancho_total'"></textbox>
-            <button class="btn-primary boton ">CAMBIAR RAZÓN SOCIAL</button>
+            <textbox [valido]="valido_9" formControlName="rut_empresa" [titulo]="'Rut empresa'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_10" formControlName="nombre_propietario" [titulo]="'Nombre propietario'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_11" formControlName="razon_social" [titulo]="'Razón social'" [clase_input]="'ancho_total'"></textbox>
+            <button class="btn-primary boton">CAMBIAR RAZÓN SOCIAL</button>
         </div>
         <div class="form-inline">
-            <textbox formControlName="nombre_planta" [titulo]="'Nombre planta'" [clase_input]="'ancho_50'"></textbox>
-            <textbox formControlName="ciudad_planta" [titulo]="'Ciudad planta'" [clase_input]="'ancho_50'"></textbox>
-            <textbox formControlName="direccion_planta" [titulo]="'Dirección planta'" [clase_input]="'ancho_total'"></textbox>
+            <textbox [valido]="valido_12" formControlName="nombre_planta" [titulo]="'Nombre planta'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_13" formControlName="ciudad_planta" [titulo]="'Ciudad planta'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_14" formControlName="direccion_planta" [titulo]="'Dirección planta'" [clase_input]="'ancho_total'"></textbox>
         </div>
         <div class="form-inline">
-            <codigo-fono formControlName="codigo_fono_1_planta" [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico formControlName="num_fono_1_planta" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
-            <codigo-fono formControlName="codigo_fono_2_planta" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico formControlName="num_fono_2_planta" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
-            <email formControlName="email_planta" [titulo]="'Email planta'" [clase_input]="'ancho_50'"></email>
-            <textbox formControlName="casilla_planta" [titulo]="'Casilla planta'" [clase_input]="'ancho_50'"></textbox>
+            <codigo-fono [valido]="valido_15" [seleccion_regional]="forma.get('region').value"  [seleccion_provincia]="forma.get('provincia').value" formControlName="codigo_fono_1_planta" [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <textbox-numerico [valido]="valido_16" formControlName="num_fono_1_planta" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
+            <codigo-fono [valido]="valido_17" formControlName="codigo_fono_2_planta" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <textbox-numerico [valido]="valido_18" formControlName="num_fono_2_planta" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
+            <email  [valido]="valido_19" formControlName="email_planta" [titulo]="'Email planta'" [clase_input]="'ancho_50'"></email>
+            <textbox [valido]="valido_20" formControlName="casilla_planta" [titulo]="'Casilla planta'" [clase_input]="'ancho_50'"></textbox>
         </div>
 
         <subtitulo [titulo]="'A2. Antecedente de la gerencia'"></subtitulo>
         <div class="form-inline">
 
-            <textbox formControlName="nombre_gerente" [titulo]="'Nombre gerente'" [clase_input]="'ancho_total'"></textbox>
+            <textbox  [valido]="valido_21" formControlName="nombre_gerente" [titulo]="'Nombre gerente'" [clase_input]="'ancho_total'"></textbox>
 
 
             <span class="label_switch">¿Los datos de la gerencia son los mismo datos de la planta?</span>
@@ -50,54 +50,54 @@
 
         <div class="form-inline">
 
-            <lista-desplegable formControlName="region_gerencia" [titulo]="'Región'"></lista-desplegable>
-            <lista-desplegable formControlName="provincia_gerencia" [titulo]="'Provincia'"></lista-desplegable>
-            <lista-desplegable formControlName="comuna_gerencia" [titulo]="'Comuna'"></lista-desplegable>
+            <lista-desplegable  [valido]="valido_22" [clase_input]="'ancho_25'" formControlName="region_gerencia" [titulo]="'Región'" ></lista-desplegable>
+            <lista-desplegable [valido]="valido_23" [clase_input]="'ancho_25'" [seleccion_regional]="forma.get('region_gerencia').value"  formControlName="provincia_gerencia" [titulo]="'Provincia'"></lista-desplegable>
+            <lista-desplegable [valido]="valido_24"  [clase_input]="'ancho_25'" [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value" formControlName="comuna_gerencia" [titulo]="'Comuna'"></lista-desplegable>
 
         </div>
         <div class="form-inline">
 
 
-            <textbox formControlName="direccion_gerencia" [titulo]="'Dirección gerencia'" [clase_input]="'ancho_total'"></textbox>
-            <textbox formControlName="ciudad_gerencia" [titulo]="'Ciudad gerencia'" [clase_input]="'ancho_50'"></textbox>
-            <textbox formControlName="casilla_gerencia" [titulo]="'Casilla gerencia'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_25" formControlName="direccion_gerencia" [titulo]="'Dirección gerencia'" [clase_input]="'ancho_total'"></textbox>
+            <textbox [valido]="valido_26" formControlName="ciudad_gerencia" [titulo]="'Ciudad gerencia'" [clase_input]="'ancho_50'"></textbox>
+            <textbox [valido]="valido_27" formControlName="casilla_gerencia" [titulo]="'Casilla gerencia'" [clase_input]="'ancho_50'"></textbox>
         </div>
 
 
         <div class="form-inline">
 
 
-            <codigo-fono formControlName="codigo_fono_1_gerencia" [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico formControlName="num_fono_1_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
-            <codigo-fono formControlName="codigo_fono_2_gerencia" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico formControlName="num_fono_2_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
-            <email formControlName="casilla_gerencia" [titulo]="'Email gerencia'" [clase_input]="'ancho_50'"></email>
-            <textbox formControlName="web" [titulo]="'Web'" [clase_input]="'ancho_50'"></textbox>
+            <codigo-fono [valido]="valido_28" formControlName="codigo_fono_1_gerencia"  [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value"  [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <textbox-numerico [valido]="valido_29" formControlName="num_fono_1_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
+            <codigo-fono [valido]="valido_30" formControlName="codigo_fono_2_gerencia" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <textbox-numerico [valido]="valido_31" formControlName="num_fono_2_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
+            <email [valido]="valido_32" formControlName="email_gerencia" [titulo]="'Email gerencia'" [clase_input]="'ancho_50'"></email>
+            <textbox [valido]="valido_33" formControlName="web" [titulo]="'Web'" [clase_input]="'ancho_50'"></textbox>
         </div>
 
         <subtitulo [titulo]="'A3. Antecedentes del encuestado'"></subtitulo>
         <div class="form-inline">
 
 
-            <lista-desplegable formControlName="nombre_encuestador" [titulo]="'Nombre encuestador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></lista-desplegable>
-            <textbox formControlName="fecha" [titulo]="'Fecha'" [clase_input]="'ancho_10'"></textbox>
+            <lista-desplegable [valido]="valido_34" formControlName="nombre_encuestador" [titulo]="'Nombre encuestador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></lista-desplegable>
+            <textbox [valido]="valido_35" formControlName="fecha" [titulo]="'Fecha'" [clase_input]="'ancho_10'"></textbox>
         </div>
         <div class="form-inline">
 
 
 
-            <textbox formControlName="nombre_encuestado" [titulo]="'Nombre encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></textbox>
-            <lista-desplegable formControlName="cargo" [titulo]="'Cargo'"></lista-desplegable>
+            <textbox [valido]="valido_36" formControlName="nombre_encuestado" [titulo]="'Nombre encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></textbox>
+            <lista-desplegable [valido]="valido_37" formControlName="cargo" [clase_input]="'ancho_25'" [titulo]="'Cargo'"></lista-desplegable>
 
         </div>
         <div class="form-inline">
 
 
 
-            <email formControlName="email_encuestado" [titulo]="'Email encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_50'"></email>
+            <email [valido]="valido_38" formControlName="email_encuestado" [titulo]="'Email encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_50'"></email>
 
-            <codigo-fono formControlName="codigo_fono_1_encuestado" [titulo]="'Fono'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico formControlName="num_fono_1_encuestado" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
+            <codigo-fono [valido]="valido_39" formControlName="codigo_fono_1_encuestado" [titulo]="'Fono'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <textbox-numerico [valido]="valido_40" formControlName="num_fono_1_encuestado" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
         </div>
 
 

@@ -23,7 +23,7 @@ export class EmailComponent implements OnInit, ControlValueAccessor  {
 
 
 
-
+  @Input() valido: boolean;
 
   @Input() titulo: string;
   @Input() label_ancho: any;

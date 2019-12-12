@@ -8,9 +8,10 @@
             <td *ngIf="clase_input != 'input_form_c_unidad' && clase_input != 'input_form_c_unidad_c1'"   >
               
             
-                <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
+                <select  [(ngModel)]="value"  [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
                  <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
                 </select> 
+
             </td>
             <td [style.display]="'block' " *ngIf="clase_input == 'input_form_c_unidad' "  >
               
@@ -27,7 +28,14 @@
                         </select> 
                     </td>
         </tr>
-
+        <tr >
+                <td>
+                       
+                </td>
+            <td>
+                    <b *ngIf="valido == false " class="requerido" >* is required </b> &nbsp;
+            </td>
+        </tr>
     </table>
 
 </div>

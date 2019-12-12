@@ -8,7 +8,11 @@
     --texto: 11px  ;
   }
 
-   
+  .requerido
+  {
+      color:red;
+      font-size: 9.5px;
+  }
     .contenedor{
       margin-top:5px;
       margin-left:5px;

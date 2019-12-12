@@ -24,7 +24,7 @@ export class TextboxNumericoComponent implements OnInit , ControlValueAccessor{
 
 
 
-
+  @Input() valido: boolean;
   @Input() titulo: string;
   @Input() label_ancho: any;
   @Input() input_ancho: any;
@@ -72,6 +72,7 @@ export class TextboxNumericoComponent implements OnInit , ControlValueAccessor{
     if (value) {
       this.value = value;
     }
-  }etDisabledState?(isDisabled: boolean): void;
+  }
+  setDisabledState?(isDisabled: boolean): void;
 
 }

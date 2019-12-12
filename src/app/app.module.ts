@@ -10,7 +10,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RowComponent } from './paginas/inicio/filas/row.component';
 import { HeaderComponent } from './paginas/inicio/cabecera/header.component';
-import { SubNavComponent } from './paginas/inicio/barra_de_navegación/sub-nav.component';
+import { SubNavComponent } from './paginas/inicio/barra_de_navegacion/sub-nav.component';
 import { HomeComponent } from './paginas/inicio/home.component';
 import { ListSurveyComponent } from './paginas/lista_de_formularios/list-survey.component';
 import { NavbarComponent } from './componentes/barra_superior/navbar.component';
@@ -45,7 +45,7 @@ import { EmailComponent } from './componentes/email/email.component';
 import { PermanenteComponent } from './paginas/formulario_E/opciones/permanente/permanente.component';
 import { TemporalComponent } from './paginas/formulario_E/opciones/temporal/temporal.component';
 import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.component';
-import { Ast_Encuesta_Service } from "./index_db/metodos/ast_encuesta.service";
+import { Metodos_service } from "./index_db/metodos/metodos.service";
 import { DexieService } from "./servicios/dexie.service";
 
 @NgModule({
@@ -96,7 +96,7 @@ import { DexieService } from "./servicios/dexie.service";
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [DexieService,Ast_Encuesta_Service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [DexieService,Metodos_service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {   }

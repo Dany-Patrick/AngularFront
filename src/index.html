@@ -36,44 +36,42 @@ function box_group(id)
     {
        
         for(var i = 1; i < boxes_1 +1  ; i++)
-    {      console.log(i);
+    {     
         if(id != i)
         {        
             document.getElementById(i).checked = false;
         }     
     }
-    }
-
-    if(id >= 3 && id <= 6 )
+    }else if(id >= 3 && id <= 6 )
     {
     for(var i = 3; i < boxes_2 +3  ; i++)
     {     
+    
         if(id != i)
         {        
             document.getElementById(i).checked = false;
         }     
     }
-}
-if(id >= 7 && id <= 13 )
-    {
-    for(var i = 7; i < boxes_3 +6  ; i++)
-    {     
-        if(id != i)
-        {        
-            document.getElementById(i).checked = false;
-        }     
-    }
-}
-if(id >= 13 && id <= 16 )
-    {
-    for(var i = 13; i < boxes_4 +4  ; i++)
-    {     
-        if(id != i)
-        {        
-            document.getElementById(i).checked = false;
-        }     
-    }
-}    
+} else  if(id >= 7 && id <= 12 )
+            {
+            for(var i = 7; i < boxes_3 +7  ; i++)
+            {        
+                if(id != i)
+                {        
+                    document.getElementById(i).checked = false;
+                }     
+            }
+        }
+    else if(id >= 13 && id <= 16 )
+            {
+            for(var i = 13; i < boxes_4 +13  ; i++)
+            {     
+                if(id != i)
+                {        
+                    document.getElementById(i).checked = false;
+                }     
+            }
+        }
 
     }
        		

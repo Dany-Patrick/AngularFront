@@ -5,8 +5,13 @@ export class DexieService extends Dexie {
   constructor() {
     super('app_db_Astillas');
     this.version(1).stores({
-      //Nombre de la base de datos con una key autoincrementable
-      AST_ENCUESTA: 'ID_ENCUESTA'
+      //Nombre de la base de datos con una key autoincrementable ++ID
+      AST_ENCUESTA: 'ID_ENCUESTA',
+      PEF_TREGION: 'ORDEN',
+      PEF_TPROVINCIA: '++ID',
+      PEF_TCOMUNA: '++ID',
+      PEF_TCARGOS: '++ID',
+      AST_ENCUESTADOR: 'C_ENCUESTADOR'
 
     });
   }

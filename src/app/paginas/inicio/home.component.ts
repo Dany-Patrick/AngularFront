@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AST_ENCUESTA } from '../../index_db/models/AST_ENCUESTA';
-import {Ast_Encuesta_Service} from '../../index_db/metodos/ast_encuesta.service';
-
 
 
 @Component({
@@ -11,13 +8,13 @@ import {Ast_Encuesta_Service} from '../../index_db/metodos/ast_encuesta.service'
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private ast_encuesta: Ast_Encuesta_Service) { }
+  constructor() { }
 
   ngOnInit() {
 
-    this.ast_encuesta.crear_tablas();
-
-
+  
+  
+  
   }
  
     

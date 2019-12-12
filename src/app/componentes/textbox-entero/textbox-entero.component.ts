@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-textbox-entero',
   templateUrl: './textbox-entero.component.html',
   styleUrls: ['./textbox-entero.component.css']
 })
-export class TextboxEnteroComponent implements OnInit {
+export class TextboxEnteroComponent implements OnInit, ControlValueAccessor {
   nombre: string;
 
   id: string;
@@ -64,5 +65,6 @@ export class TextboxEnteroComponent implements OnInit {
     if (value) {
       this.value = value;
     }
-  }etDisabledState?(isDisabled: boolean): void;
+  }
+  setDisabledState?(isDisabled: boolean): void;
 }

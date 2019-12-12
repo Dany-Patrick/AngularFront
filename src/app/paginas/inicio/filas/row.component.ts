@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import {Router, ActivatedRoute } from '@angular/router';
 import { AST_ENCUESTA } from 'src/app/index_db/models/AST_ENCUESTA';
-import { Ast_Encuesta_Service } from 'src/app/index_db/metodos/ast_encuesta.service';
+import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
 
 @Component({
   selector: 'app-row',
@@ -16,7 +16,7 @@ id_encuesta: any;
 
  AST_ENCUESTA_List: Array<AST_ENCUESTA> = []; 
   
-  constructor(private router: Router,private ast_encuesta: Ast_Encuesta_Service) { }
+  constructor(private router: Router,private ast_encuesta: Metodos_service) { }
 
 
   ngOnInit() {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'checkbox',
@@ -13,7 +13,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class CheckboxComponent implements OnInit {
+export class CheckboxComponent implements OnInit, ControlValueAccessor {
 
   nombre: string;
 

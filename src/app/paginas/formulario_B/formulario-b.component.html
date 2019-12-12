@@ -3,7 +3,7 @@
 <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
 <div class="contenedor animated fadeIn fast">
 
-<subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>     
+<subtitulo [titulo]="'B1. Clasificación del equipo'"></subtitulo>     
 
 <div class="form-inline" >
     <checkbox formControlName="movil" [titulo]="'Móvil'" [clase_label]="'ancho_25'" [clase_input]="'grupo_1'" [id]="1" ></checkbox>
@@ -12,17 +12,18 @@
   
 
 
-<subtitulo [titulo]="'B2. Situación año_proceso(situación)'"></subtitulo>     
+<subtitulo [titulo]="'B2. Situación actual'"></subtitulo>     
 <div class="form-inline" >
-    <checkbox formControlName="paralizado" [titulo]="'Paralizado'" [clase_input]="'grupo_2'"  [clase_label]="'ancho_25'"  [id]="3" ></checkbox>
-    <checkbox formControlName="trabajando"[titulo]="'Trabajando'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="4"  ></checkbox>
-    <checkbox formControlName="nuevo"[titulo]="'Nuevo'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="5" ></checkbox>
-    <checkbox formControlName="desaparecido"[titulo]="'Desaparecido'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="6" ></checkbox>
+    <checkbox (click)="mostrar_b3('P')" formControlName="b2_paralizado" [titulo]="'Paralizado'" [clase_input]="'grupo_2'"  [clase_label]="'ancho_25'"  [id]="3" ></checkbox>
+    <checkbox (click)="mostrar_b3('T')"formControlName="b2_trabajando"[titulo]="'Trabajando'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="4"  ></checkbox>
+    <checkbox (click)="mostrar_b3('N')"formControlName="b2_nuevo"[titulo]="'Nuevo'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="5" ></checkbox>
+    <checkbox (click)="mostrar_b3('D')" formControlName="b2_desaparecido"[titulo]="'Desaparecido'"  [clase_input]="'grupo_2'" [clase_label]="'ancho_25'" [id]="6" ></checkbox>
 </div> 
   
-
-<subtitulo [titulo]="'B3. Causa paralización (causa_paralización)'"></subtitulo>     
+<div  *ngIf="situacion == 'P' || situacion == 'D' ">
+<subtitulo [titulo]="'B3. Causa paralización'"></subtitulo>     
 <div class="form-inline" >
+ 
       <checkbox formControlName="falta_capital_de_trabajo"[titulo]="'Falta capital de trabajo'" [clase_input]="'grupo_3'" [clase_label]="'ancho_50'" [id]="7" ></checkbox>
       <checkbox formControlName="falta_mercado"[titulo]="'Falta mercado'"   [clase_input]="'grupo_3'"  [clase_label]="'ancho_50'"  [id]="8" ></checkbox>
       <checkbox formControlName="falta_abastecimiento"[titulo]="'Falta abastecimiento'" [clase_input]="'grupo_3'"   [clase_label]="'ancho_50'" [id]="9" ></checkbox>
@@ -30,13 +31,13 @@
       <checkbox formControlName="fuerza_mayor"[titulo]="'Fuerza mayor'" [clase_label]="'ancho_50'" [id]="11"  [clase_input]="'grupo_3'" ></checkbox>
       <checkbox formControlName="legales_y_de_gestión"[titulo]="'Legales y de gestión'" [clase_label]="'ancho_50'" [id]="12" [clase_input]="'grupo_3'"  ></checkbox>
     </div> 
-
-<subtitulo [titulo]="'B4. Situación ano_procesc +1 (Situación actual)'"></subtitulo>      
+  </div>
+<subtitulo [titulo]="'B4. Situación futura'"></subtitulo>      
 <div class="form-inline" >
-      <checkbox formControlName="paralizado"[titulo]="'Paralizado'" [clase_label]="'ancho_25'" [id]="13"  [clase_input]="'grupo_4'" ></checkbox>
-      <checkbox formControlName="trabajando"[titulo]="'Trabajando'" [clase_label]="'ancho_25'" [id]="14" [clase_input]="'grupo_4'"></checkbox>
-      <checkbox formControlName="nuevo"[titulo]="'Nuevo'" [clase_label]="'ancho_25'" [id]="15" [clase_input]="'grupo_4'"></checkbox>
-      <checkbox formControlName="desaparecido"[titulo]="'Desaparecido'" [clase_label]="'ancho_25'" [clase_input]="'grupo_4'" [id]="16"></checkbox>
+      <checkbox formControlName="b4_paralizado" [titulo]="'Paralizado'" [clase_label]="'ancho_25'" [id]="13"  [clase_input]="'grupo_4'" ></checkbox>
+      <checkbox formControlName="b4_trabajando"  [titulo]="'Trabajando'" [clase_label]="'ancho_25'" [id]="14" [clase_input]="'grupo_4'"></checkbox>
+      <checkbox formControlName="b4_nuevo" [titulo]="'Nuevo'" [clase_label]="'ancho_25'" [id]="15" [clase_input]="'grupo_4'"></checkbox>
+      <checkbox formControlName="b4_desaparecido" [titulo]="'Desaparecido'" [clase_label]="'ancho_25'" [clase_input]="'grupo_4'" [id]="16"></checkbox>
     </div> 
 
 

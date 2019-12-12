@@ -32,7 +32,7 @@ export class TextboxTextoComponent implements OnInit , ControlValueAccessor{
   @Input() clase_input: string;
   @Input() clase_label: string;
   @Input("value")   valor: any;
-
+  @Input() valido: boolean;
   constructor() { }
 
   ngOnInit() {

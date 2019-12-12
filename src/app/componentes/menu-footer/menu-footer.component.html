@@ -3,7 +3,7 @@
         <tr>
 
             <a *ngFor="let datas of data ">
-                <ng-container *ngIf="datas.SUBSECCION == 0 ">
+                <ng-container *ngIf="datas.SUBSECCION == 0 && datas.SECCION != 'J'">
                     <td routerLinkActive="marcador "   [routerLink]="['/formulario' , datas.SECCION ,id_encuesta]">
                         {{datas.SECCION}}
                     </td>

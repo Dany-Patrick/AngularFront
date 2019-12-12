@@ -8,6 +8,7 @@ label {
     height: unset;
     padding: unset;
     width: 200px;
+    height: 26px;
 }
 
 
@@ -167,7 +168,7 @@ label {
     }
     /*FORMULARIO A*/
     .ancho_10 {
-        width: 14.5rem;
+        width: 21.5rem;
     }
     .ancho_50 {
         width: 22.5rem;
@@ -228,7 +229,7 @@ label {
         padding-bottom: 2px;
     }
     label {
-        width: 110px;
+        width: 118px;
     }
     /*FORMULARIO A*/
     .mini-input {
@@ -238,7 +239,7 @@ label {
         width: 180px;
     }
     .mini-label {
-        width: 48px;
+        width: 54px;
     }
     .fono {
         width: 70px;

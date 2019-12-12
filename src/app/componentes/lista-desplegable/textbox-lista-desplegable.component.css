@@ -5,7 +5,7 @@ label {
 
 .form-control {
     padding: unset;
-    width: 200px;
+    width: 131px;
     height: 26px;
     font-size: unset;
 }
@@ -19,7 +19,7 @@ label {
 }
 
 .label_largo {
-    width: 180px;
+    width: 101px;
 }
 
 .codigo-fono {
@@ -162,15 +162,21 @@ label {
     .ancho_70 {
         width: 23.1rem;
     }
+    .ancho_25 {
+        width: 14.7rem;
+    }
     .ancho_total {
         width: 42.8rem;
     }
     .form-control {
-        width: 14.7rem;
+      
         height: 37px;
         font-size: 16px;
         padding-top: 2px;
         padding-bottom: 2px;
+    }
+    .label_largo {
+        width: 169px;
     }
     td {
         display: flex;
@@ -213,7 +219,8 @@ label {
         width: 62px;
     }
     .label_largo {
-        width: 150px;
+        width: 101px;
+    padding-top: 5px;
     }
     .mini-label {
         width: 48px;
@@ -232,7 +239,8 @@ label {
         width: 150px;
     }
     label {
-        width: 110px;
+        width: 118px;
+        padding-top: 3px;
     }
     .mini-input {
         width: 74px;

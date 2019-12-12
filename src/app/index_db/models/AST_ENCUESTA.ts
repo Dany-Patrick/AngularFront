@@ -1,84 +1,95 @@
 
   export class AST_ENCUESTA  {
-      AST_ENCUESTA_EQUIVALENCIA: ASTENCUESTAEQUIVALENCIA[];
-      AST_ENCUESTA_INGRESO_SECCION: ASTENCUESTAINGRESOSECCION;
-      AST_ENCUESTA_INVERSION: ASTENCUESTAINVERSION[];
-      AST_ENCUESTA_MAQUINARIA: ASTENCUESTAMAQUINARIA[];
-      AST_ENCUESTA_OBSERVACION_SECCION: ASTENCUESTAOBSERVACIONSECCION[];
-      AST_ENCUESTA_OCUPACION: ASTENCUESTAOCUPACION[];
-      AST_ENCUESTA_PERDIDA: any[];
-      AST_ENCUESTA_ESPECIE_C: ASTENCUESTAESPECIEC[];
-      AST_ENCUESTA_SUBPRODUCTO_DESTINO: ASTENCUESTASUBPRODUCTODESTINO[];
-      AST_ENCUESTA_CERTIFICACION: ASTENCUESTACERTIFICACION;
-      PEF_EMPRESA_UNIDAD_ASTILLAS: PEFEMPRESAUNIDADASTILLAS;
-      ID_ENCUESTA: number;
-      ANO: number;
-      RUT_EMPRESA: number;
-      CODIGO_UNIDAD: number;
-      REGION: number;
-      PROVINCIA: number;
-      COMUNA: number;
-      SELECCION: string;
-      TIPO_MOVILIDAD: string;
-      TIPO_PLANTA: string;
-      TIPO_EQUIPO: string;
-      SITUACION: string;
-      CAUSA_PARALIZACION?: number | null;
-      SITUACION_ACTUAL: string;
-      NOMBRE_PROPIETARIO: string;
-      NOMBRE_GERENTE: string;
-      ANOS_EXPERIENCIA?: any | null;
-      C_ENCUESTADOR: number;
-      FECHA_ENCUESTA: string;
-      NOMBRE_ENCUESTADO: string;
-      CARGO_ENCUESTADO: number;
-      OBS: string;
-      PRODUCCION_ANUAL?: number | null;
-      UNIDAD_PROD_ANUAL?: number | null;
-      PRODUCCION_M3?: number | null;
-      PRODUCCION_ANUAL_SC?: number | null;
-      UNIDAD_PROD_ANUAL_SC?: number | null;
-      PRODUCCION_SC_M3?: number | null;
-      PRODUCCION_ANUAL_CC?: number | null;
-      UNIDAD_PROD_ANUAL_CC?: number | null;
-      PRODUCCION_CC_M3?: number | null;
-      PRODUCCION_TURNO?: number | null;
-      UNIDAD_PROD_TURNO?: number | null;
-      PRODUCCION_TURNO_M3?: number | null;
-      CAPACIDAD_MAXIMA_TURNO?: number | null;
-      UNIDAD_CAP_MAXIMA_TURNO?: number | null;
-      CAPACIDAD_MAXIMA_TURNO_M3?: number | null;
-      CAPACIDAD_ANUAL?: number | null;
-      UNIDAD_CAP_ANUAL?: any | null;
-      CAPACIDAD_ANUAL_M3: number;
-      MESES_TRABAJADOS?: number | null;
-      DIAS_TRAB_MES?: number | null;
-      TURNOS_DIA?: number | null;
-      HORAS_TURNO?: number | null;
-      PRODUCCION_ESTIMADA?: number | null;
-      UNIDAD_PROD_ESTIMADA?: number | null;
-      PRODUCCION_ESTIMADA_M3?: number | null;
-      PRODUCCION_ESTIMADA_SC?: number | null;
-      UNIDAD_PROD_ESTIMADA_SC?: number | null;
-      PRODUCCION_ESTIMADA_SC_M3?: number | null;
-      PRODUCCION_ESTIMADA_CC?: number | null;
-      UNIDAD_PROD_ESTIMADA_CC?: number | null;
-      PRODUCCION_ESTIMADA_CC_M3?: number | null;
-      VARIACION_PRODUCCION_ESTIMADA?: number | null;
-      VARIACION_PRODUCCION_ESTIMADA_CC?: number | null;
-      VARIACION_PRODUCCION_ESTIMADA_SC?: number | null;
-      CODIGO_ANTIGUO?: number | null;
-      VOLUMEN_M3?: number | null;
-      ESTRATO?: any | null;
-      USUARIO_INGRESO: number;
-      EMAIL_ENCUESTADO: string;
-      CELULAR_ENCUESTADO: string;
-      ROTACION_OPERARIOS?: any | null;
-      NOMBRE_EMPRESA_TRAVES?: any | null;
-      FECHA_ACTUALIZACION?: any | null;
-      COMPLETITUD?: any | null;
-      CAUSA_DESAPARECIDO?: any | null;
-      ESTADO_ENCUESTA: string;
+    AST_ENCUESTA_EQUIVALENCIA: AST_ENCUESTA_EQUIVALENCIA[];
+    AST_ENCUESTA_INGRESO_SECCION: AST_ENCUESTA_INGRESO_SECCION;
+    AST_ENCUESTA_INVERSION: AST_ENCUESTA_INVERSION[];
+    AST_ENCUESTA_MAQUINARIA: AST_ENCUESTA_MAQUINARIA[];
+    AST_ENCUESTA_OBSERVACION_SECCION: AST_ENCUESTA_OBSERVACION_SECCION[];
+    AST_ENCUESTA_OCUPACION: AST_ENCUESTA_OCUPACION[];
+    AST_ENCUESTA_PERDIDA: any[];
+    AST_ENCUESTA_SUBPRODUCTO_DESTINO: AST_ENCUESTA_SUBPRODUCTO_DESTINO[];
+    AST_ENCUESTA_CERTIFICACION: AST_ENCUESTA_CERTIFICACION;
+    PEF_EMPRESA_UNIDAD_ASTILLAS: PEF_EMPRESA_UNIDAD_ASTILLAS;
+    AST_ENCUESTA_PRECIO: AST_ENCUESTA_PRECIO[];
+    AST_ENCUESTA_PRODUCCION_ESPECIE_2: AST_ENCUESTA_PRODUCCION_ESPECIE_2[];
+    AST_ENCUESTA_SUBPRODUCTO: AST_ENCUESTA_SUBPRODUCTO[];
+    ID_ENCUESTA: number;
+    ANO: number;
+    RUT_EMPRESA: number;
+    CODIGO_UNIDAD: number;
+    REGION: number;
+    PROVINCIA: number;
+    COMUNA: number;
+    SELECCION: string;
+    TIPO_MOVILIDAD: string;
+    TIPO_PLANTA: string;
+    TIPO_EQUIPO: string;
+    SITUACION: string;
+    CAUSA_PARALIZACION?: number | null;
+    SITUACION_ACTUAL: string;
+    NOMBRE_PROPIETARIO: string;
+    NOMBRE_GERENTE: string;
+    ANOS_EXPERIENCIA?: any | null;
+    C_ENCUESTADOR: number;
+    FECHA_ENCUESTA: string;
+    NOMBRE_ENCUESTADO: string;
+    CARGO_ENCUESTADO: number;
+    OBS: string;
+    PRODUCCION_ANUAL?: number | null;
+    UNIDAD_PROD_ANUAL?: number | null;
+    PRODUCCION_M3?: number | null;
+    PRODUCCION_ANUAL_SC?: number | null;
+    UNIDAD_PROD_ANUAL_SC?: number | null;
+    PRODUCCION_SC_M3?: number | null;
+    PRODUCCION_ANUAL_CC?: number | null;
+    UNIDAD_PROD_ANUAL_CC?: number | null;
+    PRODUCCION_CC_M3?: number | null;
+    PRODUCCION_TURNO?: number | null;
+    UNIDAD_PROD_TURNO?: number | null;
+    PRODUCCION_TURNO_M3?: number | null;
+    CAPACIDAD_MAXIMA_TURNO?: number | null;
+    UNIDAD_CAP_MAXIMA_TURNO?: number | null;
+    CAPACIDAD_MAXIMA_TURNO_M3?: number | null;
+    CAPACIDAD_ANUAL?: number | null;
+    UNIDAD_CAP_ANUAL?: any | null;
+    CAPACIDAD_ANUAL_M3: number;
+    MESES_TRABAJADOS?: number | null;
+    DIAS_TRAB_MES?: number | null;
+    TURNOS_DIA?: number | null;
+    HORAS_TURNO?: number | null;
+    PRODUCCION_ESTIMADA?: number | null;
+    UNIDAD_PROD_ESTIMADA?: number | null;
+    PRODUCCION_ESTIMADA_M3?: number | null;
+    PRODUCCION_ESTIMADA_SC?: number | null;
+    UNIDAD_PROD_ESTIMADA_SC?: number | null;
+    PRODUCCION_ESTIMADA_SC_M3?: number | null;
+    PRODUCCION_ESTIMADA_CC?: number | null;
+    UNIDAD_PROD_ESTIMADA_CC?: number | null;
+    PRODUCCION_ESTIMADA_CC_M3?: number | null;
+    VARIACION_PRODUCCION_ESTIMADA?: number | null;
+    VARIACION_PRODUCCION_ESTIMADA_CC?: number | null;
+    VARIACION_PRODUCCION_ESTIMADA_SC?: number | null;
+    CODIGO_ANTIGUO?: number | null;
+    VOLUMEN_M3?: number | null;
+    ESTRATO?: any | null;
+    USUARIO_INGRESO: number;
+    EMAIL_ENCUESTADO: string;
+    CELULAR_ENCUESTADO: string;
+    ROTACION_OPERARIOS?: any | null;
+    NOMBRE_EMPRESA_TRAVES?: any | null;
+    FECHA_ACTUALIZACION?: string | null;
+    COMPLETITUD?: number | null;
+    CAUSA_DESAPARECIDO?: any | null;
+    ESTADO_ENCUESTA: string;
+    MESES_TRABAJADOS_DETALLE?: any | null;
+
+
+
+
+
+
+
+ 
 
       constructor(ID_ENCUESTA: number,
         ANO: number,
@@ -223,7 +234,7 @@
   }
 
 
-    export interface ASTENCUESTAEQUIVALENCIA {
+    export interface AST_ENCUESTA_EQUIVALENCIA {
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -238,7 +249,7 @@
         OTRAS?: any | null;
     }
   
-    export interface ASTENCUESTAINGRESOSECCION {
+    export interface AST_ENCUESTA_INGRESO_SECCION {
         ID_ENCUESTA: number;
         SECCION_A: boolean;
         SECCION_B: boolean;
@@ -255,7 +266,7 @@
         FECHA?: any | null;
     }
   
-    export interface ASTENCUESTAINVERSION {
+    export interface AST_ENCUESTA_INVERSION {
         ID_ENCUESTA: number;
         TIPO_INVERSION: number;
         MONTO_INVERSION: number;
@@ -264,19 +275,19 @@
         MONEDA_PROYECTADO?: number | null;
     }
   
-    export interface ASTENCUESTAMAQUINARIA {
+    export interface AST_ENCUESTA_MAQUINARIA {
         ID_ENCUESTA: number;
         TIPO_MAQUINA: number;
         CANTIDAD: number;
     }
   
-    export interface ASTENCUESTAOBSERVACIONSECCION {
+    export interface AST_ENCUESTA_OBSERVACION_SECCION {
         ID_ENCUESTA: number;
         SECCION: string;
         OBS: string;
     }
   
-    export interface ASTENCUESTAOCUPACION {
+    export interface AST_ENCUESTA_OCUPACION {
         ID_ENCUESTA: number;
         TIPO_PERSONAL: number;
         ESPECIALIZACION: number;
@@ -287,7 +298,7 @@
         MESES: number;
     }
   
-    export interface ASTENCUESTAABASTECIMIENTOORIGEN {
+    export interface AST_ENCUESTA_ABASTECIMIENTO_ORIGEN {
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -297,8 +308,8 @@
         VOLUMEN_M3: number;
     }
   
-    export interface ASTENCUESTAABASTECIMIENTO {
-        AST_ENCUESTA_ABASTECIMIENTO_ORIGEN: ASTENCUESTAABASTECIMIENTOORIGEN[];
+    export interface AST_ENCUESTA_ABASTECIMIENTO {
+        AST_ENCUESTA_ABASTECIMIENTO_ORIGEN: AST_ENCUESTA_ABASTECIMIENTO_ORIGEN[];
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -313,7 +324,7 @@
         CONSUMO_TERCEROS_M3: number;
     }
   
-    export interface ASTENCUESTAPRECIO {
+    export interface AST_ENCUESTA_PRECIO {
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -323,7 +334,7 @@
         PUESTO_EN?: number | null;
     }
   
-    export interface ASTENCUESTADESTINOPRODUCCION2 {
+    export interface AST_ENCUESTA_DESTINO_PRODUCCION_2 {
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -333,8 +344,8 @@
         ATRAVESDE: string;
     }
   
-    export interface ASTENCUESTAPRODUCCIONESPECIE2 {
-        AST_ENCUESTA_DESTINO_PRODUCCION_2: ASTENCUESTADESTINOPRODUCCION2[];
+    export interface AST_ENCUESTA_PRODUCCION_ESPECIE_2 {
+        AST_ENCUESTA_DESTINO_PRODUCCION_2: AST_ENCUESTA_DESTINO_PRODUCCION_2[];
         ID_ENCUESTA: number;
         PRODUCTO: number;
         ESPECIE: number;
@@ -342,37 +353,37 @@
         PRODUCCION_M3: number;
     }
   
-    export interface ASTENCUESTASUBPRODUCTO {
+    export interface AST_ENCUESTA_SUBPRODUCTO {
         ID_ENCUESTA: number;
         TIPO_SUBPRODUCTO: number;
         ESPECIE: number;
         PORCENTAJE: number;
     }
   
-    export interface ASTENCUESTAESPECIEC {
-        AST_ENCUESTA_ABASTECIMIENTO: ASTENCUESTAABASTECIMIENTO[];
-        AST_ENCUESTA_PRECIO: ASTENCUESTAPRECIO[];
-        AST_ENCUESTA_PRODUCCION_ESPECIE_2: ASTENCUESTAPRODUCCIONESPECIE2[];
-        AST_ENCUESTA_SUBPRODUCTO: ASTENCUESTASUBPRODUCTO[];
+    export interface AST_ENCUESTA_ESPECIE_C {
+        AST_ENCUESTA_ABASTECIMIENTO: AST_ENCUESTA_ABASTECIMIENTO[];
+        AST_ENCUESTA_PRECIO: AST_ENCUESTA_PRECIO[];
+        AST_ENCUESTA_PRODUCCION_ESPECIE_2: AST_ENCUESTA_PRODUCCION_ESPECIE_2[];
+        AST_ENCUESTA_SUBPRODUCTO: AST_ENCUESTA_SUBPRODUCTO[];
         ID_ENCUESTA: number;
         ESPECIE: number;
     }
   
-    export interface ASTTTIPOSUBPRODUCTO {
+    export interface AST_T_TIPO_SUBPRODUCTO {
         TIPO_SUBPRODUCTO: number;
         DESCRIPCION: string;
         ORDEN: number;
         VIGENTE: string;
     }
   
-    export interface ASTENCUESTASUBPRODUCTODESTINO {
-        AST_TTIPO_SUBPRODUCTO: ASTTTIPOSUBPRODUCTO;
+    export interface AST_ENCUESTA_SUBPRODUCTO_DESTINO {
+        AST_TTIPO_SUBPRODUCTO: AST_T_TIPO_SUBPRODUCTO;
         ID_ENCUESTA: number;
         TIPO_SUBPRODUCTO: number;
         DESTINO: number;
     }
   
-    export interface ASTENCUESTACERTIFICACION {
+    export interface AST_ENCUESTA_CERTIFICACION {
         ID_ENCUESTA: number;
         ISO_9000: boolean;
         ISO_14001: boolean;
@@ -383,7 +394,7 @@
         FSC: boolean;
     }
   
-    export interface PEFEMPRESAASTILLAS {
+    export interface PEF_EMPRESA_ASTILLAS {
         RUT_EMPRESA: number;
         DIGITO: string;
         PERSONALIDAD_JURIDICA: string;
@@ -417,8 +428,8 @@
         CIUDAD: string;
     }
   
-    export interface PEFEMPRESAUNIDADASTILLAS {
-        PEF_EMPRESA_ASTILLAS: PEFEMPRESAASTILLAS;
+    export interface PEF_EMPRESA_UNIDAD_ASTILLAS {
+        PEF_EMPRESA_ASTILLAS: PEF_EMPRESA_ASTILLAS;
         CODIGO_UNIDAD: number;
         RUT_EMPRESA: number;
         DIGITO: string;

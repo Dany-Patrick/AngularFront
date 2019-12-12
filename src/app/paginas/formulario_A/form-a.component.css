@@ -1,7 +1,3 @@
-.ng-invalid:not(form) {
-    border: 1px solid red;
-    border-radius: 4px;
-}
 
 textbox,
 lista-desplegable,
@@ -35,6 +31,7 @@ tr {
     border: 0px;
     border-radius: 3px;
     margin-left: 15px;
+    margin-bottom: 19px;
 }
 
 .img-gps {
@@ -51,9 +48,6 @@ tr {
     margin-right: 19px;
 }
 
-.form-inline {
-    margin-bottom: 10px;
-}
 
 
 /*Responsive*/
@@ -140,8 +134,8 @@ tr {
     }
     .boton {
         margin-left: 15rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    
+        margin-bottom: 2rem;
         height: 40px;
         width: 278px;
         border-radius: 4px;
