@@ -15,16 +15,10 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 })
 export class CheckboxComponent implements OnInit, ControlValueAccessor {
 
+
   nombre: string;
-
-
-
   required: boolean;
   ocultar: boolean;
-
-
-
-
   @Input() disable: boolean = false;
   @Input() titulo: string;
   @Input() label_ancho: any;
@@ -32,6 +26,7 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
   @Input() clase_input: string;
   @Input() clase_label: string;
   @Input("value")   valor: any;
+
   @Input()   id: any;
 
   constructor() { }

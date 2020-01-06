@@ -16,6 +16,7 @@ label {
 
 .mini-label {
     width: 65px;
+    margin-top: 3px;
 }
 
 .label_largo {
@@ -28,7 +29,10 @@ label {
 
 
 /*FORMULRAIO C*/
-
+.input_agregar_especie
+{
+    width: 207px;
+}
 .input_form_c_unidad_c1 {
     width: 157px;
 }
@@ -39,6 +43,7 @@ label {
 
 .input_form_c4 {
     width: 75px;
+    margin-top: 7px;
 }
 
 .input_form_c_unidad {
@@ -47,7 +52,7 @@ label {
 
 .label_form_c_unidad {
     width: 73px;
-    margin-top: 5px;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -119,7 +124,7 @@ label {
 @media screen and (max-width:637px) and (min-width:426px) {
     /*FORMULARIO H*/
     .input_form_h {
-        height: 27px;
+        height: 26px;
         width: 5.1rem;
     }
 }
@@ -153,6 +158,7 @@ label {
         height: 27px;
         width: 8.1rem;
     }
+   
 }
 
 @media screen and (max-width:850px) and (min-width:752px) {
@@ -195,15 +201,23 @@ label {
         width: 2rem;
     }
     /*FORMULARIO H*/
-    .input_form_h {
-        width: 8.1rem;
-    }
+    
     /*Formulario C*/
     .input_form_c_unidad {
         width: 150px;
     }
     .input_form_c_unidad_c1 {
         width: 150px;
+    }
+    .label_form_c_unidad {
+  
+        margin-top: 8px;
+
+    }
+      /*FORMULARIO H*/
+      .input_form_f {
+        height: 27px;
+        width: 14rem;
     }
 }
 
@@ -214,6 +228,7 @@ label {
     }
     label {
         width: 88px;
+        padding-top: 5px;
     }
     .mini-input {
         width: 62px;
@@ -266,12 +281,15 @@ label {
     .input_form_c4 {
         width: 75px;
     }
+    .input_form_c_unidad_c1 {
+        width: 100px;
+    }
     .label_form_c {
         margin-top: 5px;
         margin-bottom: 4px;
     }
     .label_form_c_unidad {
-        margin-top: 5px;
+       
         margin-bottom: 4px;
     }
     .input_form_c_unidad {

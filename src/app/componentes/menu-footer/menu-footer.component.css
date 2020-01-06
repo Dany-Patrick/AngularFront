@@ -2,7 +2,7 @@ table
 {
     color:#fff;
     font-size: 21px;
-    text-align: center;
+
     height: 50px;
     margin: unset;
   
@@ -14,9 +14,9 @@ table
 td{
     width: 53px;
     padding: 10px;
-  
+    text-align: center;
     cursor: pointer;
-    
+    border-top-width: 0px;
 }
 td:hover {
     background-color: var(--col-verdeObscuro);
@@ -45,15 +45,20 @@ margin-top:15px;
     
 @media  screen and (max-width: 850px)  and (min-width: 426px) 
 {
-    td{
-        width: 4%;
-      
-    }
+    
+  
     table
-    {
+    {  
   
         font-size: 25px;
      
       
+    }
+    td{
+  
+        width: 93px;
+      
+
+        
     }
 }

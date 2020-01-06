@@ -47,6 +47,7 @@ import { TemporalComponent } from './paginas/formulario_E/opciones/temporal/temp
 import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.component';
 import { Metodos_service } from "./index_db/metodos/metodos.service";
 import { DexieService } from "./servicios/dexie.service";
+import { FechaComponent } from './componentes/fecha/fecha.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { DexieService } from "./servicios/dexie.service";
     EmailComponent,
     PermanenteComponent,
     TemporalComponent,
-    OpcionesComponent
+    OpcionesComponent,
+    FechaComponent
   ],
   imports: [
     

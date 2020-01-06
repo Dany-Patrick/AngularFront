@@ -4,7 +4,13 @@
     
     <tr>
       <td class="td1">{{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.CODIGO_UNIDAD }}  - {{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.RAZON_SOCIAL}}</td>
-      <td rowspan="2" class="td2">Porcentaje %</td>
+      <ng-container *ngIf="fila.PEF_EMPRESA_UNIDAD_ASTILLAS.CODIGO_UNIDAD < 6440">
+        <td rowspan="2" class="td2">Porcentaje 100%</td>
+            </ng-container>
+            <ng-container *ngIf="fila.PEF_EMPRESA_UNIDAD_ASTILLAS.CODIGO_UNIDAD >= 6440">
+              <td rowspan="2" class="td2">Porcentaje 0%</td>
+                  </ng-container>
+           
     </tr>
     <tr>
        <td class="under_td" >{{ fila.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.NOMBRE_EMPRESA}}<br> {{fila.NOMBRE_ENCUESTADO}} - Cargo contacto -  {{fila.CELULAR_ENCUESTADO}} </td>

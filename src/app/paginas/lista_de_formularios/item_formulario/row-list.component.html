@@ -1,23 +1,44 @@
-<div class="row" *ngFor="let datas of data">
-    <ng-container *ngIf="datas.SUBSECCION == 0">
-        <table class="table_style"  [routerLink]="['/formulario' , datas.SECCION ,id_encuesta]">
+<div class="row"  *ngFor="let option of lista ; let i = index">
+    <ng-container   *ngIf="option[1] == 0 && option[0] != 'J'">
+        <table class="table_style"  [routerLink]="['/formulario' , option[0].toString() ,id_encuesta]">
 
             <tr>
-
-                <td class="td1" rowspan="3"> <span class="dot">{{datas.SECCION}} </span> </td>
+                <td class="td1" rowspan="3"> <span class="dot">{{option[0]}} </span> </td>
 
                 <td class="td2"><span class="centered">  </span></td>
                 <td class="td3" rowspan="3">
                     <div class="card bg-success  text-center">
-
-                        xx/yy
+                        <ng-container *ngIf="option[0] == 'A'">
+                        3/3
+                            </ng-container>
+                            <ng-container *ngIf="option[0] == 'B'">
+                                0/2
+                                    </ng-container>
+                                    <ng-container *ngIf="option[0] == 'C'">
+                                       0/4
+                                            </ng-container>
+                                            <ng-container *ngIf="option[0] == 'D'">
+                                                0/2
+                                                    </ng-container>
+                                                    <ng-container *ngIf="option[0] == 'E'">
+                                                        0/2
+                                                            </ng-container>
+                                                            <ng-container *ngIf="option[0] == 'F'">
+                                                                0/1
+                                                                    </ng-container>   <ng-container *ngIf="option[0] == 'G'">
+                                                                        0/2
+                                                                            </ng-container>   <ng-container *ngIf="option[0] == 'H'">
+                                                                                0/1
+                                                                                    </ng-container>   <ng-container *ngIf="option[0] == 'I'">
+                                                                                       0/1
+                                                                                            </ng-container>
 
                     </div>
                 </td>
             </tr>
             <tr>
 
-                <td><span>{{datas.DESCRIPCION}}</span></td>
+                <td><span>{{option[2]}}</span></td>
 
 
             </tr>

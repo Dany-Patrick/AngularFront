@@ -40,8 +40,12 @@ label {
 
 .input_form_c4 {
     width: 75px;
+    margin-top: 7px;
 }
-
+.input_form_c3 {
+    width: 100px;
+    margin-top: 7px;
+}
 @media screen and (max-width: 361px) {
     .form-control {
         width: 17rem;
@@ -188,6 +192,9 @@ label {
     .fono {
         margin-top: 19px;
         width: 10.3rem;
+    }
+    .input_form_c3{
+        width: 100px;
     }
     /*FORMULARIO A*/
     .input_form_f {

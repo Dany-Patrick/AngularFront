@@ -8,7 +8,7 @@
 }
 
 .tabla_0 {
-    width: 54.6rem;
+    width: 57.6rem;
 }
 
 .td_form_c {
@@ -39,7 +39,7 @@
 .div_responsivo_c1_3 {
     box-sizing: border-box;
     display: inline-block;
-    padding-right: 2rem;
+
 }
 
 .sin_borde_arriba {
@@ -70,7 +70,7 @@
 
 td,
 th {
-    padding: 4px;
+
     border-top-width: 0px;
     border-bottom-width: 0px;
 }
@@ -92,16 +92,10 @@ span {
 }
 
 .boton_a_la_derecha {
-    width: 89.7rem;
+    width: 81.7rem;
 }
-
-@media screen and (max-width: 1552px) and (min-width: 1140px) {
-    .boton_a_la_derecha {
-        width: 66.2rem;
-    }
-}
-
-@media screen and (max-width: 850px) and (min-width: 426px) {
+@media screen and (max-width: 1024px)  {
+     
     .div_responsivo {
         display: inline-block;
         margin-top: 10px;
@@ -114,7 +108,40 @@ span {
         display: table;
     }
     .boton_a_la_derecha {
-        width: 50.3rem;
+        width: 46rem;
+    }
+    .div_responsivo {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .td_form_c_variacion {
+        width: 122px;
+    }
+    .tabla {
+        width: 46.6rem;
+    }
+    .td_c2 {
+        width: 174px;
+    }
+    .tabla_0 {
+        width: 46rem;
+    }
+}
+@media screen and (max-width: 1321px) and (min-width: 1024px) {
+   
+    .div_responsivo {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .div_responsivo_c1 {
+        display: inline-block;
+        padding-right: 0px;
+    }
+    .col-2 {
+        display: table;
+    }
+    .boton_a_la_derecha {
+        width: 62rem;
     }
     .div_responsivo {
         display: inline-block;
@@ -131,5 +158,11 @@ span {
     }
     .tabla_0 {
         width: 51rem;
+    }
+}
+@media screen and (max-width: 1552px) and (min-width: 1321px) {
+    .boton_a_la_derecha {
+        width: 77.5rem;
+
     }
 }

@@ -18,6 +18,10 @@ export class AppComponent {
     this.ast_encuesta.crear_tabla_pef_tcomuna();
     this.ast_encuesta.crear_tabla_pef_tcargos();
     this.ast_encuesta.crear_tabla_ast_encuestador();
+    this.ast_encuesta.crear_tabla_ase_desaparecido();
+    this.ast_encuesta.crear_tabla_ase_paralizacion();
+    this.ast_encuesta.crear_tabla_ast_seccion();
+    this.ast_encuesta.crear_tabla_pef_tespecie();
   }
  
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { ApiService } from 'src/app/servicios/api.service';
 import { ActivatedRoute } from '@angular/router';
+import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
 
 @Component({
   selector: 'menu-footer',
@@ -12,7 +13,10 @@ export class MenuFooterComponent implements OnInit {
   clase_td:string;
   formulario:string;
   id_encuesta: number;
-  constructor(private apiService: ApiService,private rutaActiva: ActivatedRoute) { }
+  Comunas:any;
+
+  lista: any;
+  constructor(private ast_encuesta: Metodos_service,private rutaActiva: ActivatedRoute) { }
 
  
   ngOnInit() {
@@ -21,8 +25,23 @@ export class MenuFooterComponent implements OnInit {
   }
 
   getData() {
-    this.apiService.getData().subscribe(((data: any[]) => {this.data = JSON.parse(JSON.stringify(data));}));
+    
+    this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
+
+      this.lista = new Array(AST_ENCUESTA_SECCION.length);   
+
+     
+  
+      for(var c = 0; c < AST_ENCUESTA_SECCION.length; c++)
+      {       
+            this.lista[c] = [[AST_ENCUESTA_SECCION[c].SECCION],[AST_ENCUESTA_SECCION[c].SUBSECCION],[AST_ENCUESTA_SECCION[c].DESCRIPCION]];        
+  
+          }
+
+    });
     this.id_encuesta = this.rutaActiva.snapshot.params.id_encuesta;
+  
+
     }
 
 }

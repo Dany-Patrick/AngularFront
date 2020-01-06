@@ -1,44 +1,77 @@
-import { Component, OnInit, Input, forwardRef } from '@angular/core';
+
+
+import { Component, OnInit, Input, Output, EventEmitter, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
 
 @Component({
-  selector: 'switch-boton',
-  templateUrl: './switch-boton.component.html',
-  styleUrls: ['./switch-boton.component.css'],
+  selector: 'fecha',
+  templateUrl: './fecha.component.html',
+  styleUrls: ['./fecha.component.css'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => SwitchBotonComponent),
+      useExisting: forwardRef(() => FechaComponent),
       multi: true
     }
   ]
 })
-export class SwitchBotonComponent implements OnInit  , ControlValueAccessor {
+export class FechaComponent implements OnInit, ControlValueAccessor {
+
+
+
+
+
+
+
   nombre: string;
 
   id: string;
 
   required: boolean;
   ocultar: boolean;
-  form_c: boolean;
 
 
 
-  @Input() valido: boolean;
+@Input() region_seleccionada : any;
   @Input() titulo: string;
   @Input() label_ancho: any;
   @Input() input_ancho: any;
   @Input() clase_input: string;
   @Input() clase_label: string;
   @Input("value")   valor: any;
+  @Input() seleccion_regional: number;
+  @Input() seleccion_provincia: number;
+  @Input() valido: boolean;
+input_region:any;
+ Regiones:any ;
+ Provincias:any;
+ Comunas:any;
+ @Input() codigo_provincia:string;
+ lista: any;
+ contador_provincias: number = 0;
+ contador :number = 0;
+ select_region:any;
 
-  constructor() { }
+  constructor(private ast_encuesta: Metodos_service) {
+
+
+  }
+
+ 
 
   ngOnInit() {
+
     if (this.titulo == "") {
       this.ocultar = true;
     }
-  
+
+
+ 
+
+
+ 
+ 
   }
 
 
@@ -72,5 +105,6 @@ export class SwitchBotonComponent implements OnInit  , ControlValueAccessor {
     }
   }
   setDisabledState?(isDisabled: boolean): void;
-
 }
+ 
+

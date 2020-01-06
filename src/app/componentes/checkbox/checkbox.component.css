@@ -15,15 +15,27 @@ input {
 }
 
 .ancho_25_c {
-    width: 120px;
+    width: 111px;
     margin: unset;
 }
 
 label {
     justify-content: unset;
 }
-
+.ancho_50 {
+    width: 110px;
+}
 @media screen and (max-width:850px) {
+    .ancho_50 {
+        width: 14rem;
+    }
+    /*Formulario C*/
+    .ancho_25_c {
+        width: 133px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width:850px) {
     .ancho_50 {
         width: 14rem;
     }
@@ -32,11 +44,10 @@ label {
         width: 146px;
     }
 }
-
-@media screen and (max-width: 1140px) and (min-width:850px) {
+@media screen and (max-width: 1140px) and (min-width:1024px) {
     input {
-        width: 15px;
-        height: 15px;
+        width: 23px;
+        height: 23px;
         margin-top: 3px;
     }
     .ancho_25 {
@@ -49,8 +60,8 @@ label {
 
 @media screen and (max-width: 1552px) and (min-width: 1140px) {
     input {
-        width: 20px;
-        height: 20px;
+        width: 23px;
+        height: 23px;
     }
     .ancho_25 {
         width: 90px;

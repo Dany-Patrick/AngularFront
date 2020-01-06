@@ -12,28 +12,25 @@ export class FormularioBComponent implements OnInit {
   AST_ENCUESTA_List: any;
   id_encuesta: any;
   situacion:any;
-
+  checkboxes:any;
+  lista:any;
   constructor(private ast_encuesta: Metodos_service,private rutaActiva: ActivatedRoute ) { }
  
   ngOnInit() {
 
     this.forma = new FormGroup({
-      "movil": new FormControl(false, Validators.required),
-      "permanente": new FormControl(false, Validators.required,),
-      "b2_paralizado": new FormControl(false, Validators.required),
+      "movil": new FormControl(false),
+      "permanente": new FormControl(false),
+      "b2_paralizado": new FormControl(false),
       "b2_trabajando": new FormControl(false),
-      "b2_nuevo": new FormControl(false, Validators.required),
-      "b2_desaparecido": new FormControl(false, Validators.required),
-      "falta_capital_de_trabajo": new FormControl(false, Validators.required),
-      "falta_mercado": new FormControl(false, Validators.required),
-      "falta_abastecimiento": new FormControl(false, Validators.required),
-      "cambio_giro": new FormControl(false),
-      "fuerza_mayor": new FormControl(false, Validators.required),
-      "legales_y_de_gestión": new FormControl(false, Validators.required),
-      "b4_paralizado": new FormControl(false, Validators.required),
+      "b2_nuevo": new FormControl(false),
+      "b2_desaparecido": new FormControl(false),
+      "causa_paralizacion": new FormControl(),
+      "b4_paralizado": new FormControl(false),
       "b4_trabajando": new FormControl(false),
-      "b4_nuevo": new FormControl(false, Validators.required),
-      "b4_desaparecido": new FormControl(false, Validators.required)
+      "b4_nuevo": new FormControl(false),
+      "b4_desaparecido": new FormControl(false),
+      "causa_desaparecido": new FormControl()
     });
     this.id_encuesta = this.rutaActiva.snapshot.params.id_encuesta;
     //Función que se va a ejecutar al iniciar el componente principal
@@ -160,9 +157,51 @@ export class FormularioBComponent implements OnInit {
   }
   mostrar_b3(letra)
   {
+    this.forma.patchValue({causa_paralizacion: false});
     this.situacion = letra;
-    
+    if(this.situacion == "D")
+    {
+     this.ast_encuesta.get_causa_desaparecido().then((ASE_TCAUSA_DESAPARECIDO: any[]) => { //Obtiene la colección de datos local
+   
+       this.checkboxes = new Array(ASE_TCAUSA_DESAPARECIDO.length);   
+       for(var i = 0; i < ASE_TCAUSA_DESAPARECIDO.length; i++)
+       {
+     
+           this.checkboxes[i] = [[ASE_TCAUSA_DESAPARECIDO[i].DESCRIPCION],[ASE_TCAUSA_DESAPARECIDO[i].CAUSA_DESAPARECIDO]];  
+  
+       }
+       this.lista = this.checkboxes;
+     });
+    }
+    if(this.situacion == "P")
+    {
+      this.forma.patchValue({b4_paralizado: false});  
+      this.forma.patchValue({b4_trabajando: false});  
+      this.forma.patchValue({b4_nuevo: false});
+      this.forma.patchValue({b4_desaparecido: false});
+     this.ast_encuesta.get_causa_paralizacion().then((ASE_TCAUSA_PARALIZACION: any[]) => { //Obtiene la colección de datos local
+   
+       this.checkboxes = new Array(ASE_TCAUSA_PARALIZACION.length);   
+       for(var c = 0; c < ASE_TCAUSA_PARALIZACION.length; c++)
+       {
+     
+           this.checkboxes[c] = [[ASE_TCAUSA_PARALIZACION[c].DESCRIPCION],[ASE_TCAUSA_PARALIZACION[c].CAUSA_DESAPARECIDO]];  
+        
+       }
+       this.lista = this.checkboxes;
+     });
+    }
+  
   }
-
+  valor_checbox_paralizacion(valor)
+  {
+    this.forma.patchValue({causa_paralizacion: valor});  
+    this.forma.patchValue({causa_desaparecido: ""});  
+  }
+  valor_checbox_desaparecido(valor)
+  {
+    this.forma.patchValue({causa_desaparecido: valor});  
+    this.forma.patchValue({causa_paralizacion: ""});  
+  }
     
 }

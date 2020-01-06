@@ -5,24 +5,25 @@
 
         <subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>
         <div class="form-inline">
-            <lista-desplegable  [valido]="valido_1" formControlName="region" [titulo]="'Región'" [clase_input]="'ancho_25'"></lista-desplegable>
-            <lista-desplegable [seleccion_regional]="forma.get('region').value" [valido]="valido_2" [clase_input]="'ancho_25'" formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
-            <lista-desplegable [seleccion_regional]="forma.get('region').value" [clase_input]="'ancho_25'"  [seleccion_provincia]="forma.get('provincia').value" [valido]="valido_3" formControlName="comuna" [titulo]="'Comuna'"></lista-desplegable>
+            <lista-desplegable  (change)="cambio()" [valido]="valido_1" formControlName="region" [titulo]="'Región'" [clase_input]="'ancho_25'"></lista-desplegable>
+        
+            <lista-desplegable (change)="cambio_2()"  [value]="this.valor_provincia"  [seleccion_regional]="this.seleccion_regional" [valido]="valido_2" [clase_input]="'ancho_25'" formControlName="provincia" [titulo]="'Provincia'"></lista-desplegable>
+            <lista-desplegable [value]="this.valor_comuna"  [seleccion_regional]="this.seleccion_regional" [seleccion_provincia]="this.seleccion_provincia" [clase_input]="'ancho_25'"  [valido]="valido_3" formControlName="comuna" [titulo]="'Comuna'"></lista-desplegable>
         </div>
 
         <div class="form-inline">
             <textbox [valido]="valido_4" formControlName="localidad" [titulo]="'Localidad'" [clase_input]="'ancho_total'"></textbox>
-            <textbox [valido]="valido_5" formControlName="huso" [titulo]="'Huso'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
+            <lista-desplegable [valido]="valido_5" formControlName="huso" [titulo]="'Huso'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></lista-desplegable>
             <lista-desplegable [valido]="valido_6" formControlName="zona" [titulo]="'Zona'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></lista-desplegable>
             <textbox [valido]="valido_7" formControlName="utmx" [titulo]="'UTM X'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
             <textbox [valido]="valido_8" formControlName="utmy" [titulo]="'UTM Y'" [clase_input]="'mini-input'" [clase_label]="'mini-label'"></textbox>
-            <button class="btn-gps"><img class="img-gps"  src="assets\icons\icon_place.png"></button>
+            <button type="button" (click)="convertLatLngToUtm()" class="btn-gps"><img class="img-gps"  src="assets\icons\icon_place.png"></button>
         </div>
         <div class="form-inline">
             <textbox [valido]="valido_9" formControlName="rut_empresa" [titulo]="'Rut empresa'" [clase_input]="'ancho_50'"></textbox>
             <textbox [valido]="valido_10" formControlName="nombre_propietario" [titulo]="'Nombre propietario'" [clase_input]="'ancho_50'"></textbox>
             <textbox [valido]="valido_11" formControlName="razon_social" [titulo]="'Razón social'" [clase_input]="'ancho_total'"></textbox>
-            <button class="btn-primary boton">CAMBIAR RAZÓN SOCIAL</button>
+            <button type="button" class="btn-primary boton">CAMBIAR RAZÓN SOCIAL</button>
         </div>
         <div class="form-inline">
             <textbox [valido]="valido_12" formControlName="nombre_planta" [titulo]="'Nombre planta'" [clase_input]="'ancho_50'"></textbox>
@@ -45,7 +46,7 @@
 
 
             <span class="label_switch">¿Los datos de la gerencia son los mismo datos de la planta?</span>
-            <switch-boton></switch-boton>
+            <switch-boton  formControlName="switch_boton" (change)="copiar_datos()"></switch-boton>
         </div>
 
         <div class="form-inline">
@@ -67,7 +68,7 @@
         <div class="form-inline">
 
 
-            <codigo-fono [valido]="valido_28" formControlName="codigo_fono_1_gerencia"  [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value"  [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <codigo-fono [valido]="valido_28" formControlName="codigo_fono_1_gerencia"  [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value"  [titulo]="'Fono 1'"   [clase_input]="'codigo-fono'"></codigo-fono>
             <textbox-numerico [valido]="valido_29" formControlName="num_fono_1_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
             <codigo-fono [valido]="valido_30" formControlName="codigo_fono_2_gerencia" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
             <textbox-numerico [valido]="valido_31" formControlName="num_fono_2_gerencia" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
@@ -80,7 +81,7 @@
 
 
             <lista-desplegable [valido]="valido_34" formControlName="nombre_encuestador" [titulo]="'Nombre encuestador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></lista-desplegable>
-            <textbox [valido]="valido_35" formControlName="fecha" [titulo]="'Fecha'" [clase_input]="'ancho_10'"></textbox>
+            <fecha [valido]="valido_35" formControlName="fecha" [titulo]="'Fecha'" [clase_input]="'ancho_10'"></fecha>
         </div>
         <div class="form-inline">
 
@@ -96,7 +97,8 @@
 
             <email [valido]="valido_38" formControlName="email_encuestado" [titulo]="'Email encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_50'"></email>
 
-            <codigo-fono [valido]="valido_39" formControlName="codigo_fono_1_encuestado" [titulo]="'Fono'" [clase_input]="'codigo-fono'"></codigo-fono>
+            <codigo-fono [valido]="valido_39"  [codigo_provincia]="codigo_provincia "  formControlName="codigo_fono_1_encuestado" [titulo]="'Fono'" [clase_input]="'codigo-fono'"></codigo-fono>
+   
             <textbox-numerico [valido]="valido_40" formControlName="num_fono_1_encuestado" [titulo]="''" [clase_input]="'fono'"></textbox-numerico>
         </div>
 

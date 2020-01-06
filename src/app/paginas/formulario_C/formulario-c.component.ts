@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter}   from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input}   from '@angular/core';
 import { FormControl , FormGroup, ReactiveFormsModule, FormBuilder, Validators, NgForm} from '@angular/forms';
 import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
 import { ActivatedRoute } from '@angular/router';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-formulario-c',
@@ -14,6 +15,10 @@ export class FormularioCComponent implements OnInit {
   AST_ENCUESTA_List: any;
   id_encuesta: any;
   situacion:any;
+  todos : any;
+  lista:any = [];
+  contador2:any = 0;
+  @Input() especie_seleccionada:any;
   constructor(private ast_encuesta: Metodos_service,private rutaActiva: ActivatedRoute) {
 
 
@@ -24,34 +29,35 @@ export class FormularioCComponent implements OnInit {
   ngOnInit() {
     
     this.forma = new FormGroup({
-      "produccion_anual_a": new FormControl(0, Validators.required),
-      "unidad_a": new FormControl(0, Validators.required),
-      "produccion_proyectada_a": new FormControl(0, Validators.required),
-      "variacion_a": new FormControl(0, Validators.required),
-      "produccion_anual_b": new FormControl(0, Validators.required),
-      "unidad_b": new FormControl(0, Validators.required),
-      "produccion_proyectada_b": new FormControl(0, Validators.required),
-      "produccion_turno": new FormControl(0, Validators.required),
-      "variacion_b": new FormControl(0, Validators.required),
-      "unidad_c": new FormControl(0, Validators.required),
-      "capacidad_maxima_turno": new FormControl(0, Validators.required),
-      "unidad_c_": new FormControl(0, Validators.required),
-      "dias_trabajados_mes": new FormControl(0, Validators.required),
-      "n_turnos_dia": new FormControl(0, Validators.required),
-      "n_horas_turno": new FormControl(0, Validators.required),
-      "todos": new FormControl(0, Validators.required),
-      "enero": new FormControl(0, Validators.required),
-      "febrero": new FormControl(0, Validators.required),
-      "marzo": new FormControl(0, Validators.required),
-      "abril": new FormControl(0, Validators.required),
-      "mayo": new FormControl(0, Validators.required),
-      "junio": new FormControl(0, Validators.required),
-      "julio": new FormControl(0, Validators.required),
-      "agosto": new FormControl(0, Validators.required),
-      "septiembre": new FormControl(0, Validators.required),
-      "octubre": new FormControl(0, Validators.required),
-      "noviembre": new FormControl(0, Validators.required),
-      "diciembre": new FormControl(0, Validators.required),
+      "produccion_anual_a": new FormControl(),
+      "unidad_a": new FormControl(),
+      "produccion_proyectada_a": new FormControl(),
+      "variacion_a": new FormControl(),
+      "produccion_anual_b": new FormControl(),
+      "unidad_b": new FormControl(),
+      "produccion_proyectada_b": new FormControl(),
+      "produccion_turno": new FormControl(),
+      "variacion_b": new FormControl(),
+      "unidad_c": new FormControl(),
+      "capacidad_maxima_turno": new FormControl(),
+      "unidad_c_": new FormControl(),
+      "dias_trabajados_mes": new FormControl(),
+      "n_turnos_dia": new FormControl(),
+      "n_horas_turno": new FormControl(),
+      "todos": new FormControl(false),
+      "enero": new FormControl(),
+      "febrero": new FormControl(),
+      "marzo": new FormControl(),
+      "abril": new FormControl(),
+      "mayo": new FormControl(),
+      "junio": new FormControl(),
+      "julio": new FormControl(),
+      "agosto": new FormControl(),
+      "septiembre": new FormControl(),
+      "octubre": new FormControl(),
+      "noviembre": new FormControl(),
+      "diciembre": new FormControl(),
+      "agregar_especie": new FormControl()
     });
 
 
@@ -64,42 +70,6 @@ export class FormularioCComponent implements OnInit {
         if(AST_ENCUESTA[i].ID_ENCUESTA == this.id_encuesta)
         {
           
-          this.forma.patchValue({produccion_anual_a: AST_ENCUESTA[i].PRODUCCION_ANUAL_SC});
-          this.forma.patchValue({unidad_a: AST_ENCUESTA[i].UNIDAD_PROD_ANUAL_SC});
-          this.forma.patchValue({produccion_proyectada_a: AST_ENCUESTA[i].PRODUCCION_ESTIMADA_SC});
-          this.forma.patchValue({variacion_a: AST_ENCUESTA[i].VARIACION_PRODUCCION_ESTIMADA_CC});
-
-          this.forma.patchValue({produccion_anual_b: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({unidad_b: AST_ENCUESTA[i].UNIDAD_PROD_ANUAL_CC});
-          this.forma.patchValue({produccion_proyectada_b: AST_ENCUESTA[i].PRODUCCION_TURNO});
-          this.forma.patchValue({variacion_b: AST_ENCUESTA[i].PRODUCCION_ESTIMADA_CC});
-
-          this.forma.patchValue({produccion_turno: AST_ENCUESTA[i].PRODUCCION_TURNO});
-          this.forma.patchValue({unidad_c: AST_ENCUESTA[i].UNIDAD_PROD_TURNO});
-          this.forma.patchValue({capacidad_maxima_turno: AST_ENCUESTA[i].CAPACIDAD_MAXIMA_TURNO});
-          this.forma.patchValue({unidad_c_: AST_ENCUESTA[i].UNIDAD_CAP_MAXIMA_TURNO});
-
-          this.forma.patchValue({dias_trabajados_mes: AST_ENCUESTA[i].DIAS_TRAB_MES});
-          this.forma.patchValue({n_turnos_dia: AST_ENCUESTA[i].TURNOS_DIA});
-          this.forma.patchValue({n_horas_turno: AST_ENCUESTA[i].HORAS_TURNO});
-
-          this.forma.patchValue({todos: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-
-          this.forma.patchValue({enero: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({febrero: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({marzo: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({abril: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-
-          this.forma.patchValue({mayo: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({junio: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-
-          this.forma.patchValue({julio: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({agosto: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-
-          this.forma.patchValue({septiembre: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({octubre: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({noviembre: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
-          this.forma.patchValue({diciembre: AST_ENCUESTA[i].PRODUCCION_ANUAL_CC});
         
           console.log( AST_ENCUESTA[i]);
         }
@@ -111,8 +81,69 @@ export class FormularioCComponent implements OnInit {
   guardar()
   {
 
-     console.log(this.forma.value);
+    
+    if(this.forma.valid)
+    {
+      console.log(this.forma.value);
+    }
+  }
+  activar_todos()
+  {
+    if(this.forma.get("todos").value == true)
+    {
+      this.forma.patchValue({enero: true});
+      this.forma.patchValue({febrero: true});
+      this.forma.patchValue({marzo: true});
+      this.forma.patchValue({abril: true});
+      this.forma.patchValue({mayo: true});
+      this.forma.patchValue({junio: true});
+      this.forma.patchValue({julio: true});
+      this.forma.patchValue({agosto: true});
+      this.forma.patchValue({septiembre: true});
+      this.forma.patchValue({octubre: true});
+      this.forma.patchValue({noviembre: true});
+      this.forma.patchValue({diciembre: true});
+    }
+
 
   }
+  desactivar_todos()
+{
+    this.forma.patchValue({todos: false});
+    this.todos = false;
+  }
 
+  agregar_especie()
+  {
+    this.lista.push([[this.forma.get("agregar_especie").value]]);
+  }
+  borrar_fila(fila)
+  {
+ 
+  if(this.contador2 == 0)
+  {
+    this.especie_seleccionada = "";
+  }
+    var contador =0;
+    var nueva_lista :any = new Array(this.lista.length -1);   ;
+  
+    for(var a = 0; a < this.lista.length; a++)
+    {
+      
+        if(this.lista[a][0][0] != fila)
+        {
+          nueva_lista[contador] = [[this.lista[a][0][0]],[this.lista[a][0][0]]];
+         contador++;
+        }
+      
+  
+    }
+  this.especie_seleccionada += fila.toString()+",";
+    this.lista = nueva_lista;
+    this.contador2++;
+  }
+  contador2_cero()
+  {
+    this.contador2=0;
+  }
 }

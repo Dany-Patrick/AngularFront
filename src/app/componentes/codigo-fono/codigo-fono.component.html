@@ -1,7 +1,7 @@
 <table>
     <tr>
-        <td> <label [ngClass]="clase_label" for="dropdown" [style.width.px]="label_ancho">{{titulo}}</label></td>
-        <td>  <select  [(ngModel)]="value"  [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
+        <td> <label [ngClass]="clase_label"  [style.width.px]="label_ancho">{{titulo}}</label></td>
+        <td>  <select  [(ngModel)]="value"  [ngClass]="clase_input" class="form-control"   [style.width.px]="input_ancho"> 
             <option *ngFor="let option of lista " value="{{option}}">{{option}}</option>  
            </select>  </td>
     </tr>

@@ -2,12 +2,13 @@
 label{
     display: inline-block;
     width:158px;
+    margin-top: 2px;
 }
 .form-control
 {
     padding: unset;
     width:200px;
-    height: 26px;
+    height: 27px;
     font-size: unset;
 }
 
@@ -111,7 +112,7 @@ table
     
             width:13.7rem;
             height: 30px;
-                font-size: 12px;
+               
                 padding-top: 2px;
                 padding-bottom: 2px;
        
@@ -205,6 +206,8 @@ table
 }
 .codigo-fono
 {
+    margin-top:1px;
+    height: 27px;
     width: 52px;
 }
 
@@ -242,6 +245,7 @@ table
 
 .codigo-fono
     {
+        margin-top: 1px;
         width: 52px;
      
     }

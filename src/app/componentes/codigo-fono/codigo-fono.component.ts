@@ -35,6 +35,7 @@ export class CodigoFonoComponent implements OnInit, ControlValueAccessor {
   @Input("value")   valor: any;
   @Input() seleccion_regional: number;
   @Input() seleccion_provincia: number;
+  @Input() codigo_provincia: string ;
   @Input() valido: boolean;
 input_region:any;
  Regiones:any ;
@@ -42,7 +43,7 @@ input_region:any;
  Comunas:any;
 
  lista: any;
- contador_provincias: number = 0;
+
  contador :number = 0;
  select_region:any;
 
@@ -53,34 +54,45 @@ input_region:any;
       this.ocultar = true;
     }
 
-  
-      this.ast_encuesta.get_provincias().then((PEF_TPOVINCIA: any[]) => { //Obtiene la colección de datos local
-  
-  
-        this.Comunas = new Array(PEF_TPOVINCIA.length);   
-        this.contador_provincias = 0;
-
-        for(var c = 0; c < PEF_TPOVINCIA.length; c++)
-        {
-     
-              this.Comunas[c] = PEF_TPOVINCIA[c].CODIGO_AREA;  
-              this.contador_provincias++;
+      if (this.titulo == "Fono") 
+      {
+        this.ast_encuesta.get_provincias().then((PEF_TPOVINCIA: any[]) => { //Obtiene la colección de datos local
+          
          
-        }
-
-  
-
-        var uniqueArray = this.Comunas.filter(function(value, index, self) { 
-          return self.indexOf(value) === index;
-        }); // returns ['a', 1, 2, '1']
-        uniqueArray.push(9);
-        
-        uniqueArray.sort(function(a, b) {
-          return a - b;
+          this.lista = [ this.codigo_provincia, 9 ];
         });
-        this.lista = uniqueArray;
-      });
-
+     
+      
+      
+      }else
+      {
+        this.ast_encuesta.get_provincias().then((PEF_TPOVINCIA: any[]) => { //Obtiene la colección de datos local
+         
+  
+          this.Comunas = new Array(PEF_TPOVINCIA.length);   
+  
+  
+          for(var c = 0; c < PEF_TPOVINCIA.length; c++)
+          {
+       
+                this.Comunas[c] = PEF_TPOVINCIA[c].CODIGO_AREA;  
+         
+           
+          }
+  
+    
+  
+          var uniqueArray = this.Comunas.filter(function(value, index, self) { 
+            return self.indexOf(value) === index;
+          }); // returns ['a', 1, 2, '1']
+          uniqueArray.push(9);
+          
+          uniqueArray.sort(function(a, b) {
+            return a - b;
+          });
+          this.lista = uniqueArray.sort();
+        });
+      }
     
 
 
@@ -115,5 +127,6 @@ input_region:any;
     if (value) {
       this.value = value;
     }
-  }etDisabledState?(isDisabled: boolean): void;
+  }
+  setDisabledState?(isDisabled: boolean): void;
 }

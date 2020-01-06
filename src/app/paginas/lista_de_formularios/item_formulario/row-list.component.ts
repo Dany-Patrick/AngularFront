@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../../../servicios/api.service';
+
+import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
+import { Alert } from 'selenium-webdriver';
 @Component({
   selector: 'app-row-list',
   templateUrl: './row-list.component.html',
@@ -9,10 +11,17 @@ import { ApiService } from '../../../servicios/api.service';
 })
 
 export class RowListComponent implements OnInit {
-  data: Object[];
+ 
   orderId:any;
   id_encuesta : number;
-  constructor( private httpClient:HttpClient, private router: Router ,private apiService: ApiService,private rutaActiva: ActivatedRoute) {  }
+
+  clase_td:string;
+  formulario:string;
+
+  datos:any;
+
+  lista: any;
+  constructor( private httpClient:HttpClient, private router: Router ,private ast_encuesta: Metodos_service,private rutaActiva: ActivatedRoute) {  }
 
   ngOnInit() {
     this.getData();
@@ -21,8 +30,20 @@ export class RowListComponent implements OnInit {
   }
 
   getData() {
-    this.apiService.getData().subscribe(((data: any[]) => {this.data = JSON.parse(JSON.stringify(data));}));
-    this.id_encuesta = this.rutaActiva.snapshot.params.id_encuesta;
-    }
+ 
+    this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
 
+      this.lista = new Array(AST_ENCUESTA_SECCION.length);   
+
+     
+  
+      for(var c = 0; c < AST_ENCUESTA_SECCION.length; c++)
+      {       
+            this.lista[c] = [[AST_ENCUESTA_SECCION[c].SECCION],[AST_ENCUESTA_SECCION[c].SUBSECCION],[AST_ENCUESTA_SECCION[c].DESCRIPCION]];        
+  
+          }
+
+    });
+    this.id_encuesta = this.rutaActiva.snapshot.params.id_encuesta;
   }
+}

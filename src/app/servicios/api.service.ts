@@ -11,7 +11,7 @@ url:string ;
 
   constructor( private httpClient:HttpClient) {  }
 
-  getData() 
+  traer_secciones() 
   {
     this.url = 'https://desastilla.infor.cl/astillas/api/AST/Tipo/Seccion';
     return this.httpClient.get(this.url); //url
@@ -68,6 +68,30 @@ url:string ;
 
     
    this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Encuestador";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_causa_paralizacion()
+  {  
+
+    
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Causa_paralizacion";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_causa_desaparecido()
+  {  
+
+    
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Causa_desaparecido";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_especie()
+  {  
+
+    
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Especie";
     return this.httpClient.get(this.url);
 
   }

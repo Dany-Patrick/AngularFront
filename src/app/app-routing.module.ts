@@ -36,10 +36,7 @@ const routes: Routes = [
     {path: 'formulario/H/:id_encuesta', component: FormularioHComponent}
     ,
     {path: 'formulario/I/:id_encuesta', component: FormularioIComponent}
-    ,
-    {path: 'formulario/J/:id_encuesta', component: FormularioJComponent}
-    
-
+ 
 ];
 
 @NgModule({

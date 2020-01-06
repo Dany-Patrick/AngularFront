@@ -111,6 +111,7 @@ label {
         width: 15rem;
     }
     .ancho_50 {
+        padding-left: 4px;
         width: 22.3rem;
     }
     .ancho_70 {
@@ -134,13 +135,16 @@ label {
 
 @media screen and (max-width: 1140px) and (min-width: 850px) {
     .form-control {
+        padding-left: 2px;
         width: 131px;
         font-size: 10px;
         padding-top: 2px;
         padding-bottom: 2px;
+        height: 26px;
     }
     label {
         width: 88px;
+        padding-top: 3px;
     }
     /*FORMULARIO A*/
     .mini-input {
@@ -160,6 +164,7 @@ label {
 
 @media screen and (max-width: 1552px) and (min-width: 1140px) {
     .form-control {
+        padding-left: 2px;
         height: 27px;
         width: 150px;
         font-size: 11px;

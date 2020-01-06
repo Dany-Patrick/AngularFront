@@ -2,37 +2,46 @@
 
     <table>
         <tr>
-            <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label [ngClass]="clase_label" for="dropdown" [style.width.px]="label_ancho">{{titulo}}</label></td>
+            <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label [ngClass]="clase_label" [style.width.px]="label_ancho">{{titulo}}</label></td>
             
             
-            <td *ngIf="clase_input != 'input_form_c_unidad' && clase_input != 'input_form_c_unidad_c1'"   >
+            <td *ngIf="clase_input != 'input_form_c_unidad' && clase_input != 'input_form_c_unidad_c1' && clase_input != 'input_agregar_especie'"    >
               
-            
-                <select  [(ngModel)]="value"  [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
-                 <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
+
+            <select (click)="mostrar()"  [(ngModel)]="value"  [ngClass]="clase_input" class="form-control" [style.width.px]="input_ancho"> 
+                    
+
+                    <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
                 </select> 
 
             </td>
             <td [style.display]="'block' " *ngIf="clase_input == 'input_form_c_unidad' "  >
               
             
-                    <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
+                    <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control"  [style.width.px]="input_ancho"> 
                      <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
                     </select> 
                 </td>
                 <td [style.display]="'block' " *ngIf="clase_input == 'input_form_c_unidad_c1' "  >
               
             
-                        <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control" id="dropdown"  [style.width.px]="input_ancho"> 
-                         <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
+                        <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control"  [style.width.px]="input_ancho"> 
+                         <option *ngFor="let option of lista ; let i = index" value="{{option[0]}}">{{option[0]}}</option>  
+                        </select> 
+                    </td>
+                    <td [style.display]="'block' " *ngIf="clase_input == 'input_agregar_especie' "  >
+            
+                        <select [(ngModel)]="value" [ngClass]="clase_input" (click)="agregar_elemento_borrado()" (change)="eliminar_seleccion(this.valor)"  class="form-control"  [style.width.px]="input_ancho"> 
+                            <option value="0" selected disabled>Agregar especie</option>  
+                            <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
                         </select> 
                     </td>
         </tr>
-        <tr >
+        <tr  *ngIf="clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' && clase_input != 'input_form_g'&& clase_input != 'input_form_h' && clase_input != 'input_form_f'">
                 <td>
                        
                 </td>
-            <td>
+            <td >
                     <b *ngIf="valido == false " class="requerido" >* is required </b> &nbsp;
             </td>
         </tr>

@@ -1,0 +1,28 @@
+<div>
+  <table>
+      <tr>
+          <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label for="text" [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
+         
+          <td *ngIf="clase_input != 'input_form_c_unidad' && clase_input != 'input_form_c_unidad_c1'"   >
+              <input [(ngModel)]="value" id="text" type="date" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4">   
+              
+          </td>
+          <td [style.display]="'block' " *ngIf="clase_input == 'input_form_c_unidad' "  >
+                  <input [(ngModel)]="value" id="text" type="date" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4">   
+                  
+              </td>
+              <td [style.display]="'block' " *ngIf="clase_input == 'input_form_c_unidad_c1' "  >
+                      <input [(ngModel)]="value" id="text" type="date" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4">   
+                      
+                  </td>
+      </tr>
+      <tr >
+              <td>
+                     
+              </td>
+          <td>
+                  <b *ngIf="valido == false " class="requerido" >* is required </b> &nbsp;
+          </td>
+      </tr>
+  </table>
+</div>
