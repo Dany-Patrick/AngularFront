@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { ApiService } from '../../../servicios/api.service';
 import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
+
 import { Alert } from 'selenium-webdriver';
 @Component({
   selector: 'app-row-list',
@@ -11,7 +12,7 @@ import { Alert } from 'selenium-webdriver';
 })
 
 export class RowListComponent implements OnInit {
- 
+  data: Object[];
   orderId:any;
   id_encuesta : number;
 
@@ -30,8 +31,8 @@ export class RowListComponent implements OnInit {
   }
 
   getData() {
- 
-    this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
+
+ this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
 
       this.lista = new Array(AST_ENCUESTA_SECCION.length);   
 

@@ -1,98 +1,31 @@
 import { Injectable } from '@angular/core';
 import {HttpClient , HttpHeaders} from '@angular/common/http';
+import { Urls } from '../utiles/urls';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
-
-url:string ;
-
+  url:string ;
 
   constructor( private httpClient:HttpClient) {  }
 
+  obtenerTabla(nombretabla :string){        
+    this.url = Urls.rutas[nombretabla];     
+    /*  let headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'DatosEntrada':'{"ID_ENCUESTADOR": 6,"ANO_PROCESO": 2019,"ID_ENCUESTA": null}' });
+      let options = { headers: headers }; */
+    if(nombretabla == "AST_ENCUESTA"){
+      return this.httpClient.post(this.url,null);
+    } 
+    return this.httpClient.get(this.url); //url
+  } 
   traer_secciones() 
   {
     this.url = 'https://desastilla.infor.cl/astillas/api/AST/Tipo/Seccion';
     return this.httpClient.get(this.url); //url
-
-  }
-
-  traer_encuesta()
-  {  
-    this.url = "https://desastilla.infor.cl/astillas/api/Encuestas/ObtenerEncuesta";
-
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'DatosEntrada':'{"ID_ENCUESTADOR": 6,"ANO_PROCESO": 2019,"ID_ENCUESTA": null}' });
-  let options = { headers: headers };
-  
-    return this.httpClient.post(this.url,null);
-
-  }
-  
-  traer_region()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Region";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_provincias()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Provincia";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_comunas()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Comuna";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_cargos()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Cargos";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_encuestadores()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Encuestador";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_causa_paralizacion()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Causa_paralizacion";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_causa_desaparecido()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Causa_desaparecido";
-    return this.httpClient.get(this.url);
-
-  }
-  traer_especie()
-  {  
-
-    
-   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Especie";
-    return this.httpClient.get(this.url);
 
   }
 }
