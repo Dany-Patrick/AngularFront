@@ -48,6 +48,8 @@ import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.comp
 import { Metodos_service } from "./index_db/metodos/metodos.service";
 import { DexieService } from "./servicios/dexie.service";
 import { FechaComponent } from './componentes/fecha/fecha.component';
+import { DialogoComponent } from './componentes/modal-dialogo/dialogo.component';
+import { Spinner } from './componentes/spinner/spinner';
 
 @NgModule({
   declarations: [
@@ -86,7 +88,9 @@ import { FechaComponent } from './componentes/fecha/fecha.component';
     PermanenteComponent,
     TemporalComponent,
     OpcionesComponent,
-    FechaComponent
+    FechaComponent,
+    DialogoComponent,
+    Spinner
   ],
   imports: [
     
@@ -97,6 +101,9 @@ import { FechaComponent } from './componentes/fecha/fecha.component';
     HttpClientModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+  ],
+  entryComponents:[
+    DialogoComponent
   ],
   providers: [DexieService,Metodos_service,ApiService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

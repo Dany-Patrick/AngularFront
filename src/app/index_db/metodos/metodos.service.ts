@@ -13,7 +13,8 @@ import { ASE_TCAUSA_DESAPARECIDO } from '../models/ASE_TCAUSA_DESAPARECIDO';
 import { ASE_TCAUSA_PARALIZACION } from '../models/ASE_TCAUSA_PARALIZACION';
 import { AST_ENCUESTA_SECCION } from '../models/AST_ENCUESTA_SECCION';
 import { PEF_TESPECIE } from '../models/PEF_TESPECIE';
-
+import { Observable, BehaviorSubject } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable()
 export class Metodos_service  {
@@ -96,14 +97,26 @@ export class Metodos_service  {
   get_seccion() {return this.tabla_ast_seccion.toArray();}
   get_especies() {return this.tabla_pef_tespecie.toArray();}
 
-  getEncuestaById(id : any) {
+  private encuesta = new BehaviorSubject<AST_ENCUESTA>(this.nuevaEncuesta());
+  encuesta$ = this.encuesta.asObservable();
+  async getEncuestaById(id : any) {
     if(!isNaN(id)){
-      return this.tabla_ast_encuesta.get(+id);
+      await this.tabla_ast_encuesta.get(+id).then((en: any) => {
+          this.mostrarEncuesta(en);
+      });   
     }
-    else{
-      return null;
+    else{      
+      this.mostrarEncuesta(this.nuevaEncuesta());
     }
   }
+  mostrarEncuesta(enc : AST_ENCUESTA){
+    this.encuesta.next(enc);
+  }
+  
+  nuevaEncuesta(){
+    return new AST_ENCUESTA(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
+  }
+
   remove(id) { //Elimina datos
     return this.tabla_ast_encuesta.delete(id);
   }

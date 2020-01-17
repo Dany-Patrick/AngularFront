@@ -24,4 +24,5 @@ export class AppComponent {
     this.ast_encuesta.crear_tabla_pef_tespecie();
   }
  
+
 }

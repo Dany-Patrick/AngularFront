@@ -1,0 +1,14 @@
+<div class="modal-header badge-danger">
+    <h4 class="modal-title">{{my_modal_title}}</h4>
+    <button id="btnCerrar" type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p> {{my_modal_content}}</p>
+    <input id="modalTxt" *ngIf='esVisible' type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+  </div>
+  <div class="modal-footer">
+    <button   type="button" *ngIf='btnAceptar.length > 0' class="btn btn-secondary" (click)="activeModal.close('Close click')">{{btnAceptar}}</button>    
+    <button  type="button" *ngIf='btnCerrar.length > 0' class="btn btn-danger" (click)="activeModal.close('Close click')">{{btnCerrar}}</button>    
+  </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../../../servicios/api.service';
 import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
 
 import { Alert } from 'selenium-webdriver';
@@ -26,24 +25,15 @@ export class RowListComponent implements OnInit {
 
   ngOnInit() {
     this.getData();
-
- 
   }
 
   getData() {
-
- this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
-
+    this.ast_encuesta.get_seccion().then((AST_ENCUESTA_SECCION: any[]) => { //Obtiene la colección de datos local
       this.lista = new Array(AST_ENCUESTA_SECCION.length);   
-
-     
-  
       for(var c = 0; c < AST_ENCUESTA_SECCION.length; c++)
       {       
-            this.lista[c] = [[AST_ENCUESTA_SECCION[c].SECCION],[AST_ENCUESTA_SECCION[c].SUBSECCION],[AST_ENCUESTA_SECCION[c].DESCRIPCION]];        
-  
-          }
-
+        this.lista[c] = [[AST_ENCUESTA_SECCION[c].SECCION],[AST_ENCUESTA_SECCION[c].SUBSECCION],[AST_ENCUESTA_SECCION[c].DESCRIPCION]];        
+      }
     });
     this.id_encuesta = this.rutaActiva.snapshot.params.id_encuesta;
   }
