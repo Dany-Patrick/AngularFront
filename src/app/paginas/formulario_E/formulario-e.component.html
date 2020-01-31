@@ -1,19 +1,185 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
-        <subtitulo [titulo]="'E1. Personal propio'"></subtitulo>
-        <opciones></opciones>
-        
-        <subtitulo [titulo]="'E2. Personal tercero'"></subtitulo>
-        <opciones></opciones>
-     
+    <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
 
+    <subtitulo [titulo]="'E1. Personal propio'"></subtitulo>
+    <table class="table botones" >
+        <tr>
+                <th class="celda_titulo " [ngClass]="permanente_a" (click)="cambiarFormulario_a('permanente')">Permanente</th>
+                <th class="celda_titulo " [ngClass]="temporal_a"  (click)="cambiarFormulario_a('temporal')" >Temporal</th>    
+        </tr>
+    </table>
+
+    <table class="tabla_0">
+  
+        <tr>
+                <th  class="esquina_izquierda">Especialización</th>
+        </tr>
                 
+        <ng-container *ngFor="let option of lista ; let a = index ">
+            <tr>
+                <td class="sin_borde_abajo">{{option[0]}}</td>
+            </tr>
+        </ng-container>
+            
+           
+    </table>
+        <table class="tabla_1" [ngStyle]="{display:boton_1_activo}">
+            <tr class="tr_inactivo">
+                  
+                <th class="esquina_izquierda" colspan="2"> <b>Permanente</b></th>
+             
+    
+    
+            </tr>
+            <tr>
+                  
+                    <th class="celda_subtitulo"> Hombres</th>
+                    <th class="esquina_derecha">Mujeres</th>
+        
+        
+                </tr>
+                <ng-container *ngFor="let option of lista ; let i = index ">
+                    <tr>
+        
+                        <td ><textbox-numerico [formControlName]="'a_p_hombres_'+i" [titulo]="''" [clase_input]="'input_form_e_permanente'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'a_p_mujeres_'+i" [titulo]="''" [clase_input]="'input_form_e_permanente'"></textbox-numerico></td>
+             
+                    </tr>
+                </ng-container>
+              
+                   
+        </table>
+
+
+
+       
+        <table class="tabla_2" [ngStyle]="{display:boton_2_activo}">
+            <tr class="tr_inactivo">
+
+                <th class="celda_subtitulo" colspan="3"> <b>Hombres</b></th>
+     
+    
+    
+            </tr>
+            <tr>
+
+                <th class="celda_subtitulo"> Hombres</th>
+                <th class="celda_subtitulo">Mujeres</th>
+                <th class="esquina_derecha">N° Meses</th>
+    
+    
+            </tr>
+                <ng-container *ngFor="let option of lista ; let i = index ">
+                <tr>
+                        <td ><textbox-numerico [formControlName]="'a_t_hombres_'+i" [titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'a_t_mujeres_'+i" [titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'a_t_meses_'+i" [titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+             
+                    </tr>
+                    </ng-container>
+                   
+        </table>
+  
+
+
+
+
+
+
+
+
+
+
+    <subtitulo [titulo]="'E2. Personal tercero'"></subtitulo>
+     <table class="table botones" >
+        <tr>
+                <th class="celda_titulo " [ngClass]="permanente_b" (click)="cambiarFormulario_b('permanente')">Permanente</th>
+                <th class="celda_titulo " [ngClass]="temporal_b"  (click)="cambiarFormulario_b('temporal')" >Temporal</th>    
+        </tr>
+    </table>
+
+    <table class="tabla_0">
+  
+        <tr>
+                <th  class="esquina_izquierda">Especialización</th>
+        </tr>
+                
+        <ng-container *ngFor="let option of lista ; let a = index ">
+            <tr>
+                <td class="sin_borde_abajo">{{option[0]}}</td>
+            </tr>
+        </ng-container>
+            
+           
+    </table>
+        <table class="tabla_1" [ngStyle]="{display:boton_3_activo}">
+            <tr class="tr_inactivo">
+                  
+                <th class="esquina_izquierda" colspan="2"> <b>Permanente</b></th>
+             
+    
+    
+            </tr>
+            <tr>
+                  
+                    <th class="celda_subtitulo"> Hombres</th>
+                    <th class="esquina_derecha">Mujeres</th>
+        
+        
+                </tr>
+                <ng-container *ngFor="let option of lista ; let i = index ">
+                    <tr>
+        
+                        <td ><textbox-numerico [formControlName]="'b_p_hombres_'+i" [titulo]="''" [clase_input]="'input_form_e_permanente'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'b_p_mujeres_'+i" [titulo]="''" [clase_input]="'input_form_e_permanente'"></textbox-numerico></td>
+             
+                    </tr>
+                </ng-container>
+              
+                   
+        </table>
+
+
+
+       
+        <table class="tabla_2" [ngStyle]="{display:boton_4_activo}">
+            <tr class="tr_inactivo">
+
+                <th class="celda_subtitulo" colspan="3"> <b>Hombres</b></th>
+     
+    
+    
+            </tr>
+            <tr>
+
+                <th class="celda_subtitulo"> Hombres</th>
+                <th class="celda_subtitulo">Mujeres</th>
+                <th class="esquina_derecha">N° Meses</th>
+    
+    
+            </tr>
+                <ng-container *ngFor="let option of lista ; let i = index ">
+                <tr>
+                        <td ><textbox-numerico [formControlName]="'b_t_hombres_'+i" [titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'b_t_mujeres_'+i" [titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+                        <td ><textbox-numerico [formControlName]="'b_t_meses_'+i"[titulo]="''" [clase_input]="'input_form_e_temporal'"></textbox-numerico></td>
+             
+                    </tr>
+                    </ng-container>
+                   
+        </table>
+  
+  
+
+           
 <div align="center" class="btn_enviar" >
    
     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
 
 </div>
+</form>
 
         </div>
         

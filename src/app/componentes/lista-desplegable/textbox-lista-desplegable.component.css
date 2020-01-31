@@ -45,15 +45,18 @@ label {
     width: 75px;
     margin-top: 7px;
 }
-
+.input_form_c4_puesto {
+    width: 75px;
+    margin-top: 7px;
+}
 .input_form_c_unidad {
     width: 73px;
 }
 
 .label_form_c_unidad {
     width: 73px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
 
@@ -77,6 +80,9 @@ label {
     .input_form_f {
         width: 6rem;
     }
+    .input_form_f_moneda {
+        width: 6rem;
+    }
     /*FORMULARIO D*/
     .input_form_d {
         width: 4rem;
@@ -84,6 +90,19 @@ label {
     /*FORMULARIO H*/
     .input_form_h {
         width: 3rem;
+    }
+    .input_form_h_destino {
+        width: 3rem;
+    }
+    .input_form_c4
+    {
+        width: 75px;
+        margin-top: 7px;
+    }
+    .input_form_c4_puesto
+    {
+        width: 75px;
+        margin-top: 7px;
     }
 }
 
@@ -119,11 +138,31 @@ label {
     .input_form_h {
         width: 8rem;
     }
+    .input_form_h_destino {
+        width: 8rem;
+    }
+    .input_form_c4
+    {
+        width: 75px;
+        margin-top: 7px;
+    }
+    .input_form_c4_puesto
+    {
+        width: 75px;
+        margin-top: 7px;
+    }
+    .input_form_d {
+        width: 4rem;
+    }
 }
 
 @media screen and (max-width:637px) and (min-width:426px) {
     /*FORMULARIO H*/
     .input_form_h {
+        height: 26px;
+        width: 5.1rem;
+    }
+    .input_form_h_destino {
         height: 26px;
         width: 5.1rem;
     }
@@ -157,6 +196,15 @@ label {
     .input_form_h {
         height: 27px;
         width: 8.1rem;
+    }
+    .input_form_h_destino {
+        height: 27px;
+        width: 8.1rem;
+    }
+    .input_form_d {
+        margin-top: 7px;
+    width: 6rem;
+    height: 38px;
     }
    
 }
@@ -195,7 +243,8 @@ label {
     }
     /*FORMULARIO D*/
     .input_form_d {
-        width: 9rem;
+        width: 10.9rem;
+        margin-top: 7px;
     }
     .porcentaje {
         width: 2rem;
@@ -216,9 +265,17 @@ label {
     }
       /*FORMULARIO H*/
       .input_form_f {
-        height: 27px;
+        height: 38px;
         width: 14rem;
     }
+    .input_form_f_moneda {
+        height: 38px;
+        width: 14rem;
+    }
+  .input_form_h_destino 
+  {
+      margin-top: 5px;
+  }
 }
 
 @media screen and (max-width: 1165px) and (min-width: 850px) {
@@ -245,6 +302,9 @@ label {
     }
     /*FORMULARIO H*/
     .input_form_h {
+        width: 9.1rem;
+    }
+    .input_form_h_destino {
         width: 9.1rem;
     }
 }
@@ -277,9 +337,16 @@ label {
     .input_form_h {
         width: 9.1rem;
     }
+    .input_form_h_destino {
+        width: 9.1rem;
+    }
     /*FORMULARIO C*/
     .input_form_c4 {
         width: 75px;
+    }
+    .input_form_c4_puesto {
+        width: 75px;
+  
     }
     .input_form_c_unidad_c1 {
         width: 100px;
@@ -290,7 +357,7 @@ label {
     }
     .label_form_c_unidad {
        
-        margin-bottom: 4px;
+        margin-bottom: 5px;
     }
     .input_form_c_unidad {
         width: 73px;

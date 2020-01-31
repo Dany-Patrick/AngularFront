@@ -31,7 +31,7 @@
 }
 .label_input
 {
-    width: 15rem;
+    width: 17rem;
 }
 table
 {
@@ -156,7 +156,9 @@ tr
     .contenedor
     {
         margin-left: 22px;
-        font-size: 18px;
+    
+            font-size: 14px;
+        
 
     }
     .div_responsivo {

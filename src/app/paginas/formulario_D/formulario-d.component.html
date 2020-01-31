@@ -1,39 +1,43 @@
 <app-navbar></app-navbar>
 <app-title [formulario]=true></app-title>
+<form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
+
 <div class="contenedor animated fadeIn fast">
     <subtitulo [titulo]="'D1. Abastecimiento de astillos sin corteza'"></subtitulo>
 
+    <ng-container *ngFor="let fila of lista_productos_sc ; let i = index ">
+        <b>{{fila[4]}}</b>
 
-    <div class="div_responsivo">
+<div class="div_responsivo" id="myDIV">
+    <!--<tr>
+        <th class="celda_titulo " [ngClass]="consumo_activo_2" (click)="cambiarFormulario_2('consumo')">Consumo</th>
+        <th class="celda_titulo " [ngClass]="origen_activo_2" (click)="cambiarFormulario_2('origen')">Origen</th>
+        <th class="celda_titulo " [ngClass]="regiones_activo_2" (click)="cambiarFormulario_2('regiones')">Regiones</th>
+    </tr>-->
         <table class="table botones">
             <tr>
-                <th class="celda_titulo " [ngClass]="consumo_activo" (click)="cambiarFormulario('consumo')">Consumo</th>
-                <th class="celda_titulo " [ngClass]="origen_activo" (click)="cambiarFormulario('origen')">Origen</th>
-                <th class="celda_titulo " [ngClass]="regiones_activo" (click)="cambiarFormulario('regiones')">Regiones</th>
+      
+                <th class="celda_titulo "  (click)="cambiarFormulario('consumo')">Consumo</th>
+                <th class="celda_titulo " (click)="cambiarFormulario('origen')">Origen</th>
+                <th class="celda_titulo " (click)="cambiarFormulario('regiones')" >Regiones</th>
             </tr>
         </table>
-        <table class="tabla_0">
-
+        <table class="tabla_0" >
+            
             <tr>
                 <th class="esquina_izquierda">Tipo de abastecimineto</th>
+            
 
             </tr>
-            <tr>
-                <td class="sin_borde_abajo">Desechos aserradero s/c</td>
-            </tr>
-            <tr>
-                <td class="sin_borde_abajo">Desechos aserradero c/c</td>
-            </tr>
-            <tr>
-                <td class="sin_borde_abajo">Desecho bosques</td>
-
-            </tr>
-            <tr>
-                <td class="sin_borde_abajo">Rollizos pulpables s/c</td>
-            </tr>
-            <tr>
-                <td class="sin_borde_abajo">Desecho aserraderos c/c</td>
-            </tr>
+            <ng-container *ngFor="let option of lista ; let a = index ">
+       <tr>
+                  
+                    <td class="sin_borde_abajo ">{{option[0]}}</td>
+        
+                 
+                </tr>
+            </ng-container>
+        
             <tr>
                 <td class="sin_borde_abajo">Total</td>
             </tr>
@@ -49,85 +53,41 @@
 
 
             </tr>
-            <tr>
+            <ng-container *ngFor="let option of lista ; let a = index; let c = count ">
+                <tr>
 
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
+                    <td>
+            
+                        <textbox-numerico [formControlName]="'a_'+fila[1]+'_'+option[1]+'_consumo_porcentaje_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [formControlName]="'a_'+fila[1]+'_'+option[1]+'_consumo_porcentaje_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <lista-desplegable  [formControlName]="'a_'+fila[1]+'_'+option[1]+'_unidad_'+a" [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                    </td>
+    
+    
+    
+                </tr>
+             
+                    <ng-container *ngIf="a == c-1">
+                   
+                    <tr>
 
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
+                        <td>
+                            <textbox-numerico  [formControlName]="'a_'+fila[1]+'_total'" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                        </td>
+        
+        
+                    </tr>
+                    </ng-container>
+ 
+                  
+            </ng-container>
+            
+          
+      
 
         </table>
         <table class="tabla_2" [ngStyle]="{display:boton_2_activo}">
@@ -139,61 +99,21 @@
 
 
             </tr>
-            <tr>
+            <ng-container *ngFor="let option of lista ; let a = index ">
+                <tr>
 
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
+                    <td>
+                        <textbox-numerico [formControlName]="'a_'+fila[1]+'_'+option[1]+'_precio_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [formControlName]="'a_'+fila[1]+'_'+option[1]+'_terceros_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+    
+    
+    
+                </tr>
+            </ng-container>
+           
             <tr>
                 <td></td>
 
@@ -220,177 +140,46 @@
 
 
             </tr>
-            <tr>
+            
+            <ng-container *ngFor="let option of lista ; let a = index ">
+                <tr>
 
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
+                    <td>
+                        <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_iv_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_vi_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_viii_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_ix_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_x_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_xi_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_xii_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_rm_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_xiv_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'a_'+fila[1]+'_'+option[1]+'_region_total_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+    
+    
+    
+                </tr>
+            </ng-container>
+           
             <tr>
                 <td></td>
 
@@ -402,9 +191,11 @@
 
         </table>
     </div>
-    <subtitulo [titulo]="'D1. Abastecimiento de astillos con corteza'"></subtitulo>
+</ng-container>
+    <subtitulo [titulo]="'D2. Abastecimiento de astillos con corteza'"></subtitulo>
 
-
+    <ng-container *ngFor="let fila of lista_productos_cc ; let i = index ">
+        <b>{{fila[4]}}</b>
     <div class="div_responsivo">
         <table class="table botones">
             <tr>
@@ -417,17 +208,16 @@
             <tr>
                 <th class="esquina_izquierda">Tipo de abastecimiento</th>
             </tr>
-            <tr>
-                <td class="sin_borde_abajo">Desechos aserradero c/c</td>
-            </tr>
-
-            <tr>
-                <td class="sin_borde_abajo">Desecho bosques</td>
-
-            </tr>
-            <tr>
-                <td class="sin_borde_abajo">Rollizos pulpables c/c</td>
-            </tr>
+            <ng-container *ngFor="let option of lista ; let a = index ">
+                <ng-container *ngIf="option[1] == 2530011 || option[1] == 2530010">
+                <tr>
+          
+                    <td class="sin_borde_abajo ">{{option[0]}}</td>
+      
+                 
+                </tr>
+            </ng-container>
+            </ng-container>
             <tr>
                 <td class="sin_borde_abajo">Total</td>
             </tr>
@@ -445,56 +235,43 @@
             </tr>
 
 
-            <tr>
+            <ng-container *ngFor="let option of lista ; let a = index ; let c = count ">
+                <ng-container *ngIf="option[1] == 2530011 || option[1] == 2530010">
+                <tr>
+          
+                    <td>
+            
+                        <textbox-numerico [formControlName]="'b_'+fila[1]+'_'+option[1]+'_consumo_porcentaje_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [formControlName]="'b_'+fila[1]+'_'+option[1]+'_consumo_porcentaje_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <lista-desplegable  [formControlName]="'b_'+fila[1]+'_'+option[1]+'_unidad_'+a" [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
+                    </td>
+    
+    
+      
+                 
+                </tr>
+            </ng-container>
+           
+          
+          
 
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
+                <ng-container *ngIf="a == c-1">
+                    <tr>
 
+                        <td>
+                            <textbox-numerico  [formControlName]="'b_'+fila[1]+'_total'" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                        </td>
+        
+        
+                    </tr>
+                    </ng-container>
 
-            </tr>
-            <tr>
+                </ng-container>
 
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <lista-desplegable [titulo]="''" [clase_input]="'input_form_d'"></lista-desplegable>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
 
         </table>
         <table class="tabla_2" [ngStyle]="{display:boton_6_activo}">
@@ -506,38 +283,23 @@
 
 
             </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
-            <tr>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
-                </td>
-
-
-            </tr>
+            <ng-container *ngFor="let option of lista ; let a = index ">
+                <ng-container *ngIf="option[1] == 2530011 || option[1] == 2530010">
+                <tr>
+          
+                    <td>
+                        <textbox-numerico [formControlName]="'b_'+fila[1]+'_'+option[1]+'_precio_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+                    <td>
+                        <textbox-numerico [formControlName]="'b_'+fila[1]+'_'+option[1]+'_terceros_'+a" [titulo]="''" [clase_input]="'input_form_d'"></textbox-numerico>
+                    </td>
+    
+      
+                 
+                </tr>
+            </ng-container>
+            </ng-container>
+            
             <tr>
                 <td></td>
 
@@ -565,108 +327,48 @@
 
             </tr>
 
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
-            <tr>
-
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-                <td>
-                    <textbox-numerico [titulo]="''" [clase_input]="'porcentaje'"></textbox-numerico>
-                </td>
-
-            </tr>
+            <ng-container *ngFor="let option of lista ; let a = index ">
+                <ng-container *ngIf="option[1] == 2530011 || option[1] == 2530010">
+                <tr>
+          
+                    <td>
+                        <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_iv_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_vi_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_viii_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_ix_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_x_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_xi_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_xii_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_rm_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_xiv_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+                    <td>
+                         <textbox-porcentaje [formControlName]="'b_'+fila[1]+'_'+option[1]+'_region_total_'+a" [titulo]="''" [clase_input]="'porcentaje'"></textbox-porcentaje>
+                    </td>
+    
+      
+                 
+                </tr>
+            </ng-container>
+            </ng-container>
+            
+           
             <tr>
                 <td></td>
 
@@ -680,9 +382,13 @@
 
 
     </div>
-
+    </ng-container>
 </div>
-<div class="btn_enviar" align="center"> <button type="submit" class="btn btn-success btn-lg">FINALIZAR FORMULARIO</button></div>
+<div class="btn_enviar" align="center"> 
+    <button type="submit" class="btn btn-success btn-lg">FINALIZAR FORMULARIO</button>
+</div>
+</form>
+
 
 <footer>
     <menu-footer></menu-footer>

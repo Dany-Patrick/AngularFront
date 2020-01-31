@@ -1,14 +1,23 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter ,forwardRef } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+
 
 @Component({
   selector: 'textbox-porcentaje',
   templateUrl: './textbox-porcentaje.component.html',
-  styleUrls: ['./textbox-porcentaje.component.css']
+  styleUrls: ['./textbox-porcentaje.component.css'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => TextboxPorcentajeComponent),
+      multi: true
+    }
+  ]
 })
-export class TextboxPorcentajeComponent implements OnInit {
+export class TextboxPorcentajeComponent implements OnInit, ControlValueAccessor {
   nombre: string;
 
-  id: string;
+
 
   required: boolean;
   ocultar: boolean;
@@ -16,7 +25,8 @@ export class TextboxPorcentajeComponent implements OnInit {
 
 
 
-
+  @Input() valido: boolean;
+  @Input() id: number;
   @Input() titulo: string;
   @Input() label_ancho: any;
   @Input() input_ancho: any;
@@ -64,6 +74,7 @@ export class TextboxPorcentajeComponent implements OnInit {
     if (value) {
       this.value = value;
     }
-  }etDisabledState?(isDisabled: boolean): void;
+  } 
+  setDisabledState?(isDisabled: boolean): void;
 
 }

@@ -9,12 +9,12 @@
     <div class="contenedor">
         <div class="div_responsivo">
             <span><b>a) Producción SIN corteza</b></span>
-            <table>
+            <table >
 
                 <tr>
 
                     <td class="td_form_c">
-                        <textbox-numerico formControlName="produccion_anual_a" [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                        <textbox-numerico  formControlName="produccion_anual_a" [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
                     </td>
 
                     <td class="td_form_c_unidad">
@@ -43,9 +43,9 @@
                 <tr>
 
                     <td class="td_form_c">
-                        <textbox-numerico formControlName="produccion_anual_b"  [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
+                        <textbox-numerico  formControlName="produccion_anual_b"  [titulo]="'Producción anual'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
                     </td>
-
+             
                     <td class="td_form_c_unidad">
                         <lista-desplegable formControlName="unidad_b"  [titulo]="'Unidad'" [clase_label]="'label_form_c_unidad'" [clase_input]="'input_form_c_unidad'"></lista-desplegable>
                     </td>
@@ -71,7 +71,7 @@
             <table>
 
                 <tr>
-
+         
                     <td class="td_form_c">
                         <textbox-numerico  formControlName="produccion_turno" [titulo]="'Producción/turno'" [clase_label]="'label_form_c'" [clase_input]="'input_form_c'"></textbox-numerico>
                     </td>
@@ -116,7 +116,7 @@
         <div class="div_responsivo">
             <table class="boton_a_la_derecha">
                 <tr>
-                    <td> <span><b>Meses trabajados (meses_turno)</b></span></td>
+                    <td> <span><b>Meses trabajados</b></span></td>
                     <td class="td_c2">
                         <checkbox [value]="todos"   formControlName="todos" [titulo]=" 'Todos' " (change)="activar_todos()" [clase_label]=" 'ancho_25' "></checkbox>
                     </td>
@@ -132,22 +132,22 @@
 
 
                     <td>
-                        <checkbox (click)="desactivar_todos()"   formControlName="enero" [titulo]=" 'Enero' " [clase_label]="'ancho_25_c'"></checkbox>
+                        <checkbox (click)="desactivar_todos();" (change)=" add_meses_detalle()"  formControlName="enero" [id]="1" [titulo]=" 'Enero' " [clase_label]="'ancho_25_c'"></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()"  formControlName="febrero" [titulo]=" 'Febrero' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos();" (change)="add_meses_detalle()"  formControlName="febrero" [id]="2" [titulo]=" 'Febrero' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()"  formControlName="marzo" [titulo]=" 'Marzo' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos();" (change)="add_meses_detalle()"  formControlName="marzo" [id]="3" [titulo]=" 'Marzo' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()"  formControlName="abril" [titulo]=" 'Abril' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos();" (change)="add_meses_detalle()"  formControlName="abril" [id]="4" [titulo]=" 'Abril' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
@@ -162,12 +162,12 @@
 
 
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="mayo" [titulo]=" 'Mayo' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="mayo" [id]="5"  [titulo]=" 'Mayo' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="junio" [titulo]=" 'Junio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos();" (change)="add_meses_detalle()" formControlName="junio" [id]="6"  [titulo]=" 'Junio' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
@@ -178,12 +178,12 @@
             <table>
                 <tr>
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="julio"  [titulo]=" 'Julio' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="julio" [id]="7"   [titulo]=" 'Julio' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="agosto" [titulo]=" 'Agosto' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle( )" formControlName="agosto" [id]="8"  [titulo]=" 'Agosto' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
@@ -198,22 +198,22 @@
 
 
                     <td>
-                        <checkbox (click)="desactivar_todos()"  formControlName="septiembre" [titulo]=" 'Septiembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="septiembre" [id]="9"  [titulo]=" 'Septiembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()"  formControlName="octubre" [titulo]=" 'Octubre' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="octubre" [id]="10"  [titulo]=" 'Octubre' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="noviembre" [titulo]=" 'Noviembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="noviembre" [id]="11"  [titulo]=" 'Noviembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
                     <td>
-                        <checkbox (click)="desactivar_todos()" formControlName="diciembre" [titulo]=" 'Diciembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
+                        <checkbox (click)="desactivar_todos(); " (change)="add_meses_detalle()" formControlName="diciembre" [id]="12"  [titulo]=" 'Diciembre' " [clase_label]=" 'ancho_25_c' "></checkbox>
 
 
                     </td>
@@ -229,7 +229,7 @@
                 <td colspan="2 "></td>
                 <td class="td_c2">
      
-                    <lista-desplegable (click)="contador2_cero()" [especie_seleccionada]="especie_seleccionada" formControlName="agregar_especie" (change)="agregar_especie()"  [titulo]=" '' " [clase_input]=" 'input_agregar_especie'"></lista-desplegable>
+                    <lista-desplegable  [especies_en_indexdb]="especies_en_indexdb" [especie_seleccionada]="especie_seleccionada" formControlName="agregar_especie" (change)="agregar_especie()"  [titulo]=" '' " [clase_input]=" 'input_agregar_especie'"></lista-desplegable>
                 </td>
 
             </tr>
@@ -239,36 +239,49 @@
 
             <tr>
                 <th class="esquina_izquierda ">Especie</th>
-                <th class="celda_subtitulo ">S/C(%)</th>
+                <th class="celda_subtitulo " >S/C(%)</th>
                 <th class="celda_subtitulo ">C/C(%)</th>
+                <th class="celda_subtitulo ">Total</th>
                 <th class="esquina_derecha ">Borrar</th>
             </tr>
-            <ng-container *ngFor="let option of lista ; let i = index">
+            <ng-container *ngFor="let option of lista ;  let i = index "  >
             <tr>
                 <td class="sin_borde_abajo ">{{option[0]}}</td>
+
                 <td class="sin_borde_abajo ">
-                    <textbox-porcentaje  [titulo]=" '' " [clase_input]=" 'input_form_c3' "></textbox-porcentaje>
+              
+                    <textbox-porcentaje  (change)="mostrar_c3a(this.forma.get('sin_corteza_'+option[2]).value, option[2]); contador2_cero()" [formControlName]="'sin_corteza_'+option[2]" [titulo]=" '' " [clase_input]=" 'input_form_c3' " ></textbox-porcentaje>
                 </td>
                 <td class="sin_borde_abajo ">
-                    <textbox-porcentaje  [titulo]=" '' " [clase_input]=" 'input_form_c3' "></textbox-porcentaje>
+         
+                    <textbox-porcentaje (change)="mostrar_c3b(this.forma.get('con_corteza_'+option[2]).value ,option[2]); contador2_cero()"  [formControlName]="'con_corteza_'+option[2]" [titulo]=" '' " [clase_input]=" 'input_form_c3' " ></textbox-porcentaje>
                 </td>
-                <td class="sin_borde_abajo " align="center "><img (click)="borrar_fila(option[0])" src="assets/icons/trash.png"></td>
+                <td class="sin_borde_abajo ">
+         
+                    <textbox-porcentaje [formControlName]="'porcentaje_final_'+option[2]" [titulo]=" '' " [clase_input]=" 'input_form_c3' " ></textbox-porcentaje>
+                </td>
+
+                <td class="sin_borde_abajo " align="center "><img  (click)="borrar_fila(option[0], i , option[2], option[1])" src="assets/icons/trash.png"></td>
             </tr>
+
         </ng-container>
+        
 
         </table>
 
 
     </div>
+    
     <subtitulo [titulo]=" 'C3. Destino de la producción por especie' "></subtitulo>
     <div class="contenedor">
+            <ng-container *ngIf="mostrar_a">
         <div class="div_responsivo ">
             <span><b>a) Astillas SIN corteza</b></span>
             <table class="tabla ">
 
                 <tr>
                     <th class="esquina_izquierda ">Destino</th>
-                    <ng-container *ngFor="let option of lista ; let i = index ; let ultimo = last">
+                    <ng-container *ngFor="let option of lista_a ; let i = index ; let ultimo = last">
                             <ng-container *ngIf="ultimo == false">
                                     <th class="celda_subtitulo">{{option[0]}}</th>
                                 </ng-container>
@@ -280,216 +293,71 @@
                 </ng-container>
 
                 </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Exportación</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                            <td>
-                                <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                            </td>
-                        </ng-container>
-                  
-                 
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Exportación indirecta</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Planta celulosa</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Planta tableros</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Combustible</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Punto cogerenación</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Criadero de animales</td>
-                    <ng-container *ngFor="let option of lista ; let i = index">
-                        <td>
-                            <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                        </td>
-                    </ng-container>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Total</td>
+                <ng-container *ngFor="let option of lista_2 ; let a = index ">
+                    <tr>
+              
+                        <td class="sin_borde_abajo ">{{option[0]}}</td>
                    
-                    <td >
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-
-
-
+                                <ng-container *ngFor="let option of lista_a ; let b = index">
+                                    <td>      
+                             
+                                        <textbox-numerico  [formControlName]="'a_'+option[2]+'_'+a" [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                                    </td>
+                                </ng-container>
+                            
+                    </tr>
+               
+       
+                </ng-container>
+         
+     
             </table>
         </div>
-        <div class="div_responsivo ">
+    </ng-container>
+    <ng-container *ngIf="mostrar_b">
+        <div class="div_responsivo_c3_b  ">
             <span><b>b) Astillas SIN corteza</b></span>
             <table class="tabla ">
 
                 <tr>
                     <th class="esquina_izquierda ">Destino</th>
-                    <th class="celda_subtitulo ">Especie 1</th>
-                    <th class="celda_subtitulo ">Especie 2</th>
-                    <th class="celda_subtitulo ">Especie 3</th>
-                    <th class="esquina_derecha ">Especie n</th>
+                    <ng-container *ngFor="let option of lista_b ; let i = index ; let ultimo = last">
+                            <ng-container *ngIf="ultimo == false">
+                                    <th class="celda_subtitulo">{{option[0]}}</th>
+                                </ng-container>
+             
+                            <ng-container *ngIf="ultimo">
+                                    <th class="esquina_derecha ">{{option[0]}}</th>
+                                </ng-container>
+                  
+                </ng-container>
 
                 </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Exportación</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Exportación indirecta</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Planta celulosa</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Planta tableros</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Combustible</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Punto cogerenación</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Criadero de animales</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Total</td>
-                    <td>
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                    <td>
-                        <textbox-numerico [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
-                    </td>
-                </tr>
-
-
-
+                <ng-container *ngFor="let option of lista_2 ; let a = index ">
+                    <tr>
+              
+                        <td class="sin_borde_abajo ">{{option[0]}}</td>
+                   
+                                <ng-container *ngFor="let option of lista_b ; let b = index">
+                                    <td>      
+                                        <textbox-numerico  [formControlName]="'b_'+option[2]+'_'+a" [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c3' "> </textbox-numerico>
+                                    </td>
+                                </ng-container>
+                            
+                    </tr>
+               
+       
+                </ng-container>
+         
+     
             </table>
         </div>
-
-        <subtitulo [titulo]=" 'C4. Destino de la producción por especie' "></subtitulo>
-
+      
+    </ng-container>
+    </div>
+    <subtitulo [titulo]=" 'C4. Precio de venta y contenido de humedad promedio' "></subtitulo>
+    <div class="contenedor">
+        <ng-container *ngIf="mostrar_a">
         <div class="div_responsivo ">
             <span><b>a) Astillas SIN corteza</b></span>
             <table class="tabla ">
@@ -501,21 +369,24 @@
                     <th class="celda_subtitulo ">C.H.(%)</th>
                     <th class="esquina_derecha ">Puesto</th>
                 </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Especie 1</td>
-                    <td class="sin_borde_abajo ">
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <lista-desplegable  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <textbox-porcentaje  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <lista-desplegable  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
-                    </td>
-                </tr>
+                <ng-container *ngFor="let option of lista_a ; let i = index">
+                        <tr>
+                                <td class="sin_borde_abajo ">{{option[0]}}</td>
+                                <td class="sin_borde_abajo ">
+                                    <textbox-numerico [formControlName]="'a_precio_'+i"  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <lista-desplegable [formControlName]="'a_unidad_'+i"  [titulo]="''" [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <textbox-porcentaje [formControlName]="'a_c_h_'+i"   [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <lista-desplegable [formControlName]="'a_puesto_'+i"   [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4_puesto' "></lista-desplegable>
+                                </td>
+                            </tr>
+                    </ng-container>
+        
 
 
 
@@ -523,9 +394,10 @@
 
             </table>
         </div>
-
-        <div class="div_responsivo ">
-            <span><b>a) Astillas CON corteza</b></span>
+</ng-container>
+<ng-container *ngIf="mostrar_b">
+        <div class="div_responsivo_c4_b ">
+            <span><b>b) Astillas CON corteza</b></span>
             <table class="tabla ">
 
                 <tr>
@@ -535,21 +407,23 @@
                     <th class="celda_subtitulo ">C.H.(%)</th>
                     <th class="esquina_derecha ">Puesto</th>
                 </tr>
-                <tr>
-                    <td class="sin_borde_abajo ">Especie 1</td>
-                    <td class="sin_borde_abajo ">
-                        <textbox-numerico  [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <lista-desplegable  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <textbox-porcentaje  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
-                    </td>
-                    <td class="sin_borde_abajo ">
-                        <lista-desplegable  [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
-                    </td>
-                </tr>
+                <ng-container *ngFor="let option of lista_b ; let i = index">
+                        <tr>
+                                <td class="sin_borde_abajo ">{{option[0]}}</td>
+                                <td class="sin_borde_abajo ">
+                                    <textbox-numerico [formControlName]="'b_precio_'+i" [titulo]=" '' " [clase_label]=" 'label_form_c' " [clase_input]=" 'input_form_c4' "></textbox-numerico>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <lista-desplegable [formControlName]="'b_unidad_'+i" [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></lista-desplegable>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <textbox-porcentaje [formControlName]="'b_c_h_'+i" [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4' "></textbox-porcentaje>
+                                </td>
+                                <td class="sin_borde_abajo ">
+                                    <lista-desplegable  [formControlName]="'b_puesto_'+i" [titulo]=" '' " [clase_label]=" 'input_form_c' " [clase_input]=" 'input_form_c4_puesto' "></lista-desplegable>
+                                </td>
+                            </tr>
+                </ng-container>
 
 
 
@@ -557,6 +431,7 @@
 
             </table>
         </div>
+        </ng-container>
     </div>
     <div class="btn_enviar " align="center "> <button type="submit " class="btn btn-success btn-lg ">FINALIZAR FORMULARIO</button></div>
 

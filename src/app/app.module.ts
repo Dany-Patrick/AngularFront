@@ -42,9 +42,7 @@ import { ApiService } from './servicios/api.service';
 import { CheckboxComponent } from './componentes/checkbox/checkbox.component';
 import { SubtituloComponent } from './componentes/subtitulo/subtitulo.component';
 import { EmailComponent } from './componentes/email/email.component';
-import { PermanenteComponent } from './paginas/formulario_E/opciones/permanente/permanente.component';
-import { TemporalComponent } from './paginas/formulario_E/opciones/temporal/temporal.component';
-import { OpcionesComponent } from './paginas/formulario_E/opciones/opciones.component';
+
 import { Metodos_service } from "./index_db/metodos/metodos.service";
 import { DexieService } from "./servicios/dexie.service";
 import { FechaComponent } from './componentes/fecha/fecha.component';
@@ -83,9 +81,6 @@ import { FechaComponent } from './componentes/fecha/fecha.component';
     CheckboxComponent,
     SubtituloComponent,
     EmailComponent,
-    PermanenteComponent,
-    TemporalComponent,
-    OpcionesComponent,
     FechaComponent
   ],
   imports: [

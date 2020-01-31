@@ -15,10 +15,8 @@ import { Metodos_service } from 'src/app/index_db/metodos/metodos.service';
     }
   ]
 })
-export class TextboxListaDesplegableComponent implements OnInit,OnDestroy, ControlValueAccessor {
-  ngOnDestroy(): void {
-console.log("destruido");
-  }
+export class TextboxListaDesplegableComponent implements OnInit, ControlValueAccessor {
+
   nombre: string;
 
   id: string;
@@ -27,8 +25,9 @@ console.log("destruido");
   ocultar: boolean;
 
 
-
+  @Input() name : any;
 @Input() region_seleccionada : any;
+@Input() especies_en_indexdb:string = "";
   @Input() titulo: string;
   @Input() label_ancho: any;
   @Input() input_ancho: any;
@@ -56,10 +55,71 @@ lista_elementod_borrados:any;
 
   }
 
-
+  
   ngOnInit() {
+    if(this.clase_input == "input_form_h_destino" )
+    {
+      this.valor = "0";
+      this.ast_encuesta.get_residuo().then((AST_TIPO_TRESIDUO: any[]) => { //Obtiene la colección de datos local
+        
+        this.lista = new Array(AST_TIPO_TRESIDUO.length);
+    
+          for(var i = 0; i < AST_TIPO_TRESIDUO.length; i++)
+          {
+            this.lista[i] = [[AST_TIPO_TRESIDUO[i].DESCRIPCION],[AST_TIPO_TRESIDUO[i].DESTINO_RESIDUO]];
+          }
+      
+          this.lista.sort();
+        });
+    }
+    if(this.clase_input == "input_form_f_moneda" )
+    {
+      this.valor = "0";
+      this.ast_encuesta.get_moneda().then((AST_TMONEDA: any[]) => { //Obtiene la colección de datos local
+        
+        this.lista = new Array(AST_TMONEDA.length);
+    
+          for(var i = 0; i < AST_TMONEDA.length; i++)
+          {
+            this.lista[i] = [[AST_TMONEDA[i].SIGLA],[AST_TMONEDA[i].DESCRIPCION]];
+          }
+      
+          this.lista.sort();
+        });
+    }
+    if(this.clase_input == "input_form_c4_puesto" )
+    {
+      this.valor = "0";
+      this.ast_encuesta.get_plaza().then((AST_TPLAZA: any[]) => { //Obtiene la colección de datos local
+        
+        this.lista = new Array(AST_TPLAZA.length);
+    
+          for(var i = 0; i < AST_TPLAZA.length; i++)
+          {
+            this.lista[i] = [[AST_TPLAZA[i].DESCRIPCION],[AST_TPLAZA[i].DESCRIPCION]];
+          }
+      
+          this.lista.sort();
+        });
+    }
+    if(this.titulo == "Unidad" || this.clase_input == "input_form_c4" || this.clase_input == "input_form_d")
+{
+  this.valor = "0";
+  this.ast_encuesta.get_unidad().then((AST_TUNIDAD: any[]) => { //Obtiene la colección de datos local
+    
+    this.lista = new Array(AST_TUNIDAD.length);
+
+      for(var i = 0; i < AST_TUNIDAD.length; i++)
+      {
+        this.lista[i] = [[AST_TUNIDAD[i].SIGLA],[AST_TUNIDAD[i].UNIDAD]];
+      }
+  
+      this.lista.sort();
+    });
+}
     if(this.clase_input == "input_agregar_especie")
 {
+ 
   this.valor = "0";
   this.ast_encuesta.get_especies().then((PEF_TESPECIE: any[]) => { //Obtiene la colección de datos local
     
@@ -67,7 +127,7 @@ lista_elementod_borrados:any;
 
       for(var i = 0; i < PEF_TESPECIE.length; i++)
       {
-        this.lista[i] = [[PEF_TESPECIE[i].NOMBRE],[PEF_TESPECIE[i].NOMBRE]];
+        this.lista[i] = [[PEF_TESPECIE[i].NOMBRE],[PEF_TESPECIE[i].ESPECIE]];
       }
   
       this.lista.sort();
@@ -305,12 +365,14 @@ eliminar_seleccion(dato)
 
   for(var a = 0; a < this.lista.length; a++)
   {
-    
-      if(this.lista[a][0][0] != dato)
+  
+      if(this.lista[a][1][0] != dato)
       {
-        nueva_lista[contador] = [[this.lista[a][0][0]],[this.lista[a][0][0]]];
-       contador++;
+        nueva_lista[contador] = [[this.lista[a][0][0]],[this.lista[a][1][0]]];
+      contador++;
       }
+    
+      
     
 
   }
@@ -320,24 +382,59 @@ eliminar_seleccion(dato)
 }
 
 agregar_elemento_borrado()
-{
-  if(this.especie_seleccionada != undefined)
-  {
-  var arreglo: any = this.especie_seleccionada.split(',')
-  for(var i = 0; i < arreglo.length ; i++)
-  {
+{ 
 
-    if(arreglo[i] != "")
-    {
-      this.lista.push([[arreglo[i].toString()],[arreglo[i].toString()]]);
-    }
-  
-  
+  if(this.especie_seleccionada != "")
+  { 
+  var arreglo: any = this.especie_seleccionada.split(',')
+ 
+  for(var i = 0; i < arreglo.length -1; i++)
+ 
+  {var arreglo2: any =arreglo[i].split('|')
+
+    for(var d = 0; d < arreglo.length ; d++)
+  { 
+ 
+    if( arreglo2[d] >0 )
+  {
+   
+    this.lista.push([[arreglo2[d-1]],[arreglo2[d].toString()]]);
+  }
+      
+  }
 
   }
+
+}
+
+this.especie_seleccionada = "";
+this.lista =  this.lista.sort();
+
+if(this.especies_en_indexdb != "")
+{
+  var arreglo2: any = this.especies_en_indexdb.split(',')
+  
  
-  this.especie_seleccionada = "";
-  this.lista =  this.lista.sort();
+
+    
+      for(var e = 0; e < arreglo2.length -1 ; e++)
+  {
+    for(var a = 0; a < this.lista.length  ; a++)
+    {
+    if(arreglo2[e] != "")
+    {   
+    if(arreglo2[e] == this.lista[a][0])
+      { 
+        this.lista.splice(a,1);
+      }
+
+  }
+  
+    }
+  }
+
+ 
+  this.especies_en_indexdb = "";
 }
 
 }

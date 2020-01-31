@@ -23,12 +23,6 @@ id_encuesta: any;
     this.ast_encuesta.getAll().then((AST_ENCUESTA: any[]) => { //Obtiene la colección de datos local
       this.AST_ENCUESTA_List = AST_ENCUESTA; //Variable de interpolación con el html
 
-      for(var i = 0; i < AST_ENCUESTA.length; i++)
-      {
-   
-          console.log(this.AST_ENCUESTA_List[i]);
-       
-      }
   });
 
 

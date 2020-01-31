@@ -81,7 +81,7 @@ export class FormAComponent implements OnInit {
 
 
   ngOnInit() {
-  
+
     this.forma = new FormGroup({
       "region": new FormControl("", Validators.required),
       "provincia": new FormControl("", Validators.required),
@@ -256,6 +256,7 @@ this.getLocation();
 
       if(this.forma.valid)
       {
+ 
         console.log(this.forma.value);
       }
 

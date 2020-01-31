@@ -22,6 +22,14 @@ export class AppComponent {
     this.ast_encuesta.crear_tabla_ase_paralizacion();
     this.ast_encuesta.crear_tabla_ast_seccion();
     this.ast_encuesta.crear_tabla_pef_tespecie();
+    this.ast_encuesta.crear_tabla_ast_tunidad();
+    this.ast_encuesta.crear_tabla_ast_tplaza();
+    this.ast_encuesta.crear_tabla_ast_tdestino_produccion();
+    this.ast_encuesta.crear_tabla_ast_tabastecimiento();
+    this.ast_encuesta.crear_tabla_ast_tespecializacion();
+    this.ast_encuesta.crear_tabla_ast_tmaquinaria();
+    this.ast_encuesta.crear_tabla_ast_tmoneda();
+    this.ast_encuesta.crear_tabla_ast_tresiduo();
   }
  
 }

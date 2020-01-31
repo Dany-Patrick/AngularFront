@@ -1,4 +1,10 @@
-
+b{
+  margin-left: 10px;
+}
+.active, .table th:hover {
+  background-color:grey;
+  color: #fff;
+}
 .esquina_subtitulo
 {
   background-color: lightgrey;
@@ -33,7 +39,10 @@
     width: 19rem;
     margin-left: 13rem;
   margin-bottom: unset;
+  border-color: #fff;
+  margin-left:unset;
 }
+
 .tabla_0
 {
    
@@ -114,12 +123,7 @@ td, th {
     border-bottom: 1px solid #000;
 
 }
-table
-{
-  border-color: #fff;
 
-  margin-left:unset;
-}
 
 .div_responsivo {
     box-sizing: border-box;
@@ -154,6 +158,11 @@ table
  
 }
 @media  screen and (max-width: 865px)  and (min-width: 763px) {
+  /* Style the buttons */
+
+
+/* Style the active class, and buttons on mouse-over */
+
     .esquina_subtitulo
 {
     border-right: 1px solid;
@@ -192,13 +201,15 @@ table
 .sin_borde_abajo
 {
   border-bottom: unset ;
-  height: 54px;
-  width: 14.5rem;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  width: 13.1rem;
+  height: 38px;
 }
 .tabla_2 td
 {
     height: 39px;
-    width: 15rem;
+    width: 15.8rem;
  
 }
 .botones
@@ -249,9 +260,11 @@ table
     
     .sin_borde_abajo
     {
-      border-bottom: unset ;
-      height: 39px;
-      width: 13rem;
+      border-bottom: unset;
+      padding-top: 17px;
+      padding-bottom: 12px;
+      width: 13.1rem;
+      height: 47px;
     }
     .tabla_2 td
     {
@@ -270,14 +283,17 @@ table
     {
         display: none;
         width: 27rem;
+        height: 338px;
     }
     .tabla_2
     {
         display: none;
         width: 27rem;
+        height: 338px;
     }
     .tabla_3
     {
+      height: 338px;
         display: none;
         width: 27rem;
     }
@@ -286,9 +302,14 @@ table
         height: 39px;
         width: 43px;
     }
+    .tabla_0{
+      height: 338px;
+    }
 }
 @media  screen and (max-width:701px)  and (min-width: 692px)  {
-    
+  .tabla_0{
+    height: 347px;
+  }
     .esquina_subtitulo
     {
         border-right: 1px solid;
@@ -314,9 +335,11 @@ table
     
     .sin_borde_abajo
     {
-      border-bottom: unset ;
-      height: 39px;
-      width: 13rem;
+      border-bottom: unset;
+    padding-top: 17px;
+    padding-bottom: 12px;
+    width: 13.1rem;
+    height: 47px;
     }
     .tabla_2 td
     {
@@ -335,11 +358,13 @@ table
     {
         display: none;
         width: 27rem;
+        height: 347px;
     }
     .tabla_2
     {
         display: none;
         width: 27rem;
+        height: 347px;
     }
     .tabla_3
     {
@@ -383,9 +408,11 @@ table
     
     .sin_borde_abajo
     {
-      border-bottom: unset ;
-      height: 39px;
-      width: 13rem;
+      border-bottom: unset;
+    padding-top: 17px;
+    padding-bottom: 12px;
+    width: 13.1rem;
+    height: 55px;
     }
     .tabla_2 td
     {
@@ -404,9 +431,11 @@ table
     {
         display: none;
         width: 27rem;
+        height: 347px;
     }
     .tabla_2
     {
+      height: 347px;
         display: none;
         width: 27rem;
     }
@@ -420,6 +449,9 @@ table
         height: 39px;
         width: 43px;
     }
+    .tabla_0 {
+      height: 347px;
+  }
   }
 
    /*FORMULARIO D*/

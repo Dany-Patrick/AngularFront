@@ -13,6 +13,15 @@ import { ASE_TCAUSA_DESAPARECIDO } from '../models/ASE_TCAUSA_DESAPARECIDO';
 import { ASE_TCAUSA_PARALIZACION } from '../models/ASE_TCAUSA_PARALIZACION';
 import { AST_ENCUESTA_SECCION } from '../models/AST_ENCUESTA_SECCION';
 import { PEF_TESPECIE } from '../models/PEF_TESPECIE';
+import { AST_TUNIDAD } from '../models/AST_TUNIDAD';
+import { AST_TPLAZA } from '../models/AST_TPLAZA';
+import { AST_TDESTINO_PRODUCCION } from '../models/AST_TDESTINO_PRODUCCION';
+import { AST_TABASTECIMIENTO } from '../models/AST_TABASTECIMIENTO';
+import { ASE_TTIPO_ESPECIALIZACION } from '../models/ASE_TTIPO_ESPECIALIZACION';
+import { AST_TMAQUINARIA } from '../models/AST_TMAQUINARIA';
+import { ASE_TTIPO_MONEDA } from '../models/ASE_TTIPO_MONEDA';
+import { ASE_TDESTINO_RESIDUO } from '../models/ASE_TDESTINO_RESIDUO';
+
 
 
 @Injectable()
@@ -31,6 +40,14 @@ export class Metodos_service  {
   tabla_ase_tcausa_paralizacion: Dexie.Table<ASE_TCAUSA_PARALIZACION[], number>;
   tabla_ast_seccion: Dexie.Table<AST_ENCUESTA_SECCION[], number>;
   tabla_pef_tespecie: Dexie.Table<PEF_TESPECIE[], number>;
+  tabla_ast_tunidad: Dexie.Table<AST_TUNIDAD[], number>;
+  tabla_ast_tplaza: Dexie.Table<AST_TPLAZA[], number>;
+  tabla_ast_tdestino_produccion: Dexie.Table<AST_TDESTINO_PRODUCCION[], number>;
+  tabla_ast_tabastecimiento: Dexie.Table<AST_TABASTECIMIENTO[], number>;
+  tabla_ast_tespecializacion: Dexie.Table<ASE_TTIPO_ESPECIALIZACION[], number>;
+  tabla_ast_tmaquinaria: Dexie.Table<AST_TMAQUINARIA[], number>;
+  tabla_ast_tmoneda: Dexie.Table<ASE_TTIPO_MONEDA[], number>;
+  tabla_ast_tresiduo: Dexie.Table<ASE_TDESTINO_RESIDUO[], number>;
   
   constructor(private dexieService: DexieService,private apiService: ApiService) {
 
@@ -44,6 +61,16 @@ export class Metodos_service  {
     this.tabla_ase_tcausa_paralizacion = this.dexieService.table('ASE_TCAUSA_PARALIZACION');
     this.tabla_ast_seccion = this.dexieService.table('AST_ENCUESTA_SECCION');
     this.tabla_pef_tespecie = this.dexieService.table('PEF_TESPECIE');
+    this.tabla_ast_tunidad = this.dexieService.table('AST_TUNIDAD');
+    this.tabla_ast_tplaza = this.dexieService.table('AST_TPLAZA');
+    this.tabla_ast_tdestino_produccion = this.dexieService.table('AST_TDESTINO_PRODUCCION');
+    this.tabla_ast_tabastecimiento = this.dexieService.table('AST_TABASTECIMIENTO');
+    this.tabla_ast_tespecializacion = this.dexieService.table('ASE_TTIPO_ESPECIALIZACION');
+    this.tabla_ast_tmaquinaria = this.dexieService.table('AST_TMAQUINARIA');
+    this.tabla_ast_tmoneda = this.dexieService.table('ASE_TTIPO_MONEDA');
+    this.tabla_ast_tresiduo = this.dexieService.table('ASE_TDESTINO_RESIDUO');
+    
+
   }
 
   getAll() {//Obtiene todos los datos de la tabla
@@ -88,16 +115,52 @@ export class Metodos_service  {
     
     return this.tabla_pef_tespecie.toArray();
   }
-
-
+  get_unidad() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tunidad.toArray();
+  }
+  get_plaza() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tplaza.toArray();
+  }
+  get_destino_produccion() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tdestino_produccion.toArray();
+  }
+  get_abastecimiento() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tabastecimiento.toArray();
+  }
+  get_tipo_especializacion() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tespecializacion.toArray();
+  }
+  get_maquinaria() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tmaquinaria.toArray();
+  }
+  get_moneda() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tmoneda.toArray();
+  }
+  get_residuo() {//Obtiene todos los datos de la tabla
+    
+    return this.tabla_ast_tresiduo.toArray();
+  }
   remove(id) { //Elimina datos
     return this.tabla_ast_encuesta.delete(id);
   }
 
+/*
+  guardar_tabla_ast_encuesta() {//Obtiene el  dato de la tabla
+    
 
-
-
-
+      this.tabla_ast_encuesta.where("ID_ENCUESTA").equals(1780).modify({NOMBRE_GERENTE: "Daniel Vergara"});
+      return this.tabla_ast_encuesta.where("ID_ENCUESTA").equals(1).each(function(friend) {
+        console.log(friend);
+    });
+  }
+*/
 
 
   crear_tablas() {
@@ -291,5 +354,149 @@ if(AST_ENCUESTA.length <= 0)
                     }
                  ));    
                    }
+                   crear_tabla_ast_tunidad() {
 
+                    this.apiService.traer_unidad().subscribe((
+                   (data: any[]) =>  
+                       {  
+                        this.get_unidad().then((AST_TUNIDAD: any[]) => { //Obtiene la colección de datos local
+                    
+                          if(AST_TUNIDAD.length <= 0)
+                          {
+                                  this.data = JSON.parse(JSON.stringify(data));  
+                                    for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                      this.tabla_ast_tunidad.add(this.data[a] );
+                                    }
+                          }   
+                        });
+                      }
+                   ));    
+                     }
+                     crear_tabla_ast_tplaza() {
+
+                      this.apiService.traer_plaza().subscribe((
+                     (data: any[]) =>  
+                         {  
+                          this.get_plaza().then((AST_TPLAZA: any[]) => { //Obtiene la colección de datos local
+                      
+                            if(AST_TPLAZA.length <= 0)
+                            {
+                                    this.data = JSON.parse(JSON.stringify(data));  
+                                      for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                        this.tabla_ast_tplaza.add(this.data[a] );
+                                      }
+                            }   
+                          });
+                        }
+                     ));    
+                       }
+
+                       crear_tabla_ast_tdestino_produccion() {
+
+                        this.apiService.traer_destino_produccion().subscribe((
+                       (data: any[]) =>  
+                           {  
+                            this.get_plaza().then((AST_TDESTINO_PRODUCCION: any[]) => { //Obtiene la colección de datos local
+                        
+                              if(AST_TDESTINO_PRODUCCION.length <= 0)
+                              {
+                                      this.data = JSON.parse(JSON.stringify(data));  
+                                        for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                          this.tabla_ast_tdestino_produccion.add(this.data[a] );
+                                        }
+                              }   
+                            });
+                          }
+                       ));    
+                         }
+                         crear_tabla_ast_tabastecimiento() {
+
+                          this.apiService.traer_abastecimiento().subscribe((
+                         (data: any[]) =>  
+                             {  
+                              this.get_plaza().then((AST_TABASTECIMIENTO: any[]) => { //Obtiene la colección de datos local
+                          
+                                if(AST_TABASTECIMIENTO.length <= 0)
+                                {
+                                        this.data = JSON.parse(JSON.stringify(data));  
+                                          for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                            this.tabla_ast_tabastecimiento.add(this.data[a] );
+                                          }
+                                }   
+                              });
+                            }
+                         ));    
+                           }
+                           crear_tabla_ast_tespecializacion() {
+
+                            this.apiService.traer_especializacion().subscribe((
+                           (data: any[]) =>  
+                               {  
+                                this.get_tipo_especializacion().then((ASE_TTIPO_ESPECIALIZACION: any[]) => { //Obtiene la colección de datos local
+                            
+                                  if(ASE_TTIPO_ESPECIALIZACION.length <= 0)
+                                  {
+                                          this.data = JSON.parse(JSON.stringify(data));  
+                                            for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                              this.tabla_ast_tespecializacion.add(this.data[a] );
+                                            }
+                                  }   
+                                });
+                              }
+                           ));    
+                             }
+                             crear_tabla_ast_tmaquinaria() {
+
+                              this.apiService.traer_maquinaria().subscribe((
+                             (data: any[]) =>  
+                                 {  
+                                  this.get_maquinaria().then((AST_TMAQUINARIA: any[]) => { //Obtiene la colección de datos local
+                              
+                                    if(AST_TMAQUINARIA.length <= 0)
+                                    {
+                                            this.data = JSON.parse(JSON.stringify(data));  
+                                              for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                                this.tabla_ast_tmaquinaria.add(this.data[a] );
+                                              }
+                                    }   
+                                  });
+                                }
+                             ));    
+                               }
+                               crear_tabla_ast_tmoneda() {
+
+                                this.apiService.traer_monedas().subscribe((
+                               (data: any[]) =>  
+                                   {  
+                                    this.get_moneda().then((ASE_TTIPO_MONEDA: any[]) => { //Obtiene la colección de datos local
+                                
+                                      if(ASE_TTIPO_MONEDA.length <= 0)
+                                      {
+                                              this.data = JSON.parse(JSON.stringify(data));  
+                                                for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                                  this.tabla_ast_tmoneda.add(this.data[a] );
+                                                }
+                                      }   
+                                    });
+                                  }
+                               ));    
+                                 }
+                                 crear_tabla_ast_tresiduo() {
+
+                                  this.apiService.traer_residuo().subscribe((
+                                 (data: any[]) =>  
+                                     {  
+                                      this.get_residuo().then((ASE_TDESTINO_RESIDUO: any[]) => { //Obtiene la colección de datos local
+                                  
+                                        if(ASE_TDESTINO_RESIDUO.length <= 0)
+                                        {
+                                                this.data = JSON.parse(JSON.stringify(data));  
+                                                  for(var a = 0; a < Object.keys(this.data).length ;a++){ 
+                                                    this.tabla_ast_tresiduo.add(this.data[a] );
+                                                  }
+                                        }   
+                                      });
+                                    }
+                                 ));    
+                                   }
 }

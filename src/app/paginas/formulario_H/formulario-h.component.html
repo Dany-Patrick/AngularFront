@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
-       
+    <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
     <div class="div_responsivo" style="overflow-x:auto;"> 
         <subtitulo [titulo]="'H1. subproducto de proceso de astillado (%)'"></subtitulo>
         <table >
@@ -16,47 +16,45 @@
             
             
                     </tr>
-                    <tr>
-                            <td class="sin_borde_abajo">Especie 1</td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                 
-                        </tr>
-     
-                            <tr>
-                                    <td class="sin_borde_abajo">Especie 2</td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                </tr>
-                                <tr>
-                                        <td class="sin_borde_abajo">Especie n </td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
-                                    </tr>
-                                    <tr>
-                                            <td class="sin_borde_abajo">Destino</td>
-                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
-                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
-                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
-                                            <td ><lista-desplegable [titulo]="''" [clase_input]="'input_form_h'"></lista-desplegable></td>
-                                        </tr>
+                    <ng-container *ngFor="let option of lista ; let i = index ">
+                        <ng-container *ngIf="option[4] != 'DESTINO'">
+                        <tr>
+                                   
+                                     <td class="sin_borde_abajo ">{{option[4]}}</td>
+                                     <td ><textbox-numerico [formControlName]="option[1]+'_aserrin_'+i" [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                     <td ><textbox-numerico [formControlName]="option[1]+'_corteza_'+i" [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                     <td ><textbox-numerico [formControlName]="option[1]+'_desclasificacion_'+i" [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                                     <td ><textbox-numerico [formControlName]="option[1]+'_otros_'+i" [titulo]="''" [clase_input]="'input_form_h'"></textbox-numerico></td>
+                         
+                         
+                                  
+                                 </tr>
+                                </ng-container>
+                                <ng-container *ngIf="option[4] == 'DESTINO'">
+                                              
+                                    <td class="sin_borde_abajo ">{{option[4]}}</td>
+                                    <td ><lista-desplegable [formControlName]="option[1]+'_aserrin_'+i"  [titulo]="''" [clase_input]="'input_form_h_destino'"></lista-desplegable></td>
+                                    <td ><lista-desplegable [formControlName]="option[1]+'_corteza_'+i"  [titulo]="''" [clase_input]="'input_form_h_destino'"></lista-desplegable></td>
+                                    <td ><lista-desplegable [formControlName]="option[1]+'_desclasificacion_'+i"  [titulo]="''" [clase_input]="'input_form_h_destino'"></lista-desplegable></td>
+                                    <td ><lista-desplegable [formControlName]="option[1]+'_otros_'+i"  [titulo]="''" [clase_input]="'input_form_h_destino'"></lista-desplegable></td>
+
+                                </ng-container>
+                             </ng-container>
+               
+                                
                         
             </table>
 </div>
- 
-</div>
-<br>
 <div align="center" class="btn_enviar" >
    
     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
 
 </div>
+ </form>
+
+</div>
+<br>
+
 <footer>
     <menu-footer></menu-footer>
     </footer>

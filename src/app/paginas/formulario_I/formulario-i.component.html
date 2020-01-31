@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
+        <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
         <subtitulo [titulo]="'La empresa cuenta con'"></subtitulo>
 
 
@@ -10,18 +11,18 @@
             <tr>
                     <td class="label_input">Certificación ISO 9001</td>
                 <td> 
-                        <switch-boton></switch-boton></td>
+                        <switch-boton [formControlName]="'iso9001'"></switch-boton></td>
             </tr>
             <tr>
                     <td class="label_input">Certificación con ISO 14001</td>
                     <td>
-                            <switch-boton></switch-boton></td>
+                            <switch-boton [formControlName]="'iso14001'"></switch-boton></td>
             
                 </tr>
                 <tr>
                         <td class="label_input">Certificación CERTFFOR</td>
                         <td>
-                                <switch-boton></switch-boton></td>
+                                <switch-boton [formControlName]="'certffor'"></switch-boton></td>
 
                     </tr>
               
@@ -32,29 +33,31 @@
      
         <tr>
                 <td class="label_input">Certificación FSC</td>
-            <td>  <switch-boton></switch-boton></td>
+            <td>  <switch-boton [formControlName]="'fsc'"></switch-boton></td>
         </tr>
         <tr>
                 <td class="label_input">Acuerdo de producción limpia (APL)</td>
                 <td>
-                        <switch-boton></switch-boton></td>
+                        <switch-boton [formControlName]="'adpl'"></switch-boton></td>
         
             </tr>
             <tr>
                     <td class="label_input">Certificación OHSAS</td>
                     <td>
-                            <switch-boton></switch-boton></td>
+                            <switch-boton [formControlName]="'ohsas'"></switch-boton></td>
 
                 </tr>
           
     </table>
 </div>
-    </div>
-
-    <br>
-    <div align="center" class="btn_enviar" >
+<div align="center" class="btn_enviar" >
        
         <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
     
     </div>
+        </form>
+    </div>
+
+
+  
     <menu-footer></menu-footer>

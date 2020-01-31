@@ -2,9 +2,9 @@
     <table>
         <tr>
             <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
-            <td [style.display]="form_c ? 'block' : 'inline-block'"><input [ngClass]="clase_input"  type="number" class="form-control" [style.width.px]="input_ancho" [(ngModel)]="value"></td>
+            <td [style.display]="form_c ? 'block' : 'inline-block'"><input [ngClass]="clase_input"  type="number" class="form-control" [style.width.px]="input_ancho" min="0" max="100" [(ngModel)]="value"></td>
         </tr>
-        <tr *ngIf="clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' && clase_input != 'input_form_g'&& clase_input != 'input_form_h'&& clase_input != 'input_form_e_permanente'&& clase_input != 'input_form_e_temporal'&& clase_input != 'input_form_f'">
+        <tr *ngIf=" clase_input != 'input_form_d' && clase_input != 'porcentaje' && clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' && clase_input != 'input_form_g'&& clase_input != 'input_form_h'&& clase_input != 'input_form_e_permanente'&& clase_input != 'input_form_e_temporal'&& clase_input != 'input_form_f'">
                 <td >
                        
                 </td>

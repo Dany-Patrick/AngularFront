@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" async="async">
 
 <head>
     <base href="/">
@@ -22,7 +22,20 @@
     <app-root></app-root>
 
     <script>
+   
+        
+var header = document.getElementById("myDIV");
 
+    var btns = header.getElementsByClassName("table");
+
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
        
 
 function box_group(id)

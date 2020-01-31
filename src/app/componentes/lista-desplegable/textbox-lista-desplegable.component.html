@@ -26,7 +26,7 @@
               
             
                         <select [(ngModel)]="value" [ngClass]="clase_input" class="form-control"  [style.width.px]="input_ancho"> 
-                         <option *ngFor="let option of lista ; let i = index" value="{{option[0]}}">{{option[0]}}</option>  
+                         <option *ngFor="let option of lista ; let i = index" value="{{option[1]}}">{{option[0]}}</option>  
                         </select> 
                     </td>
                     <td [style.display]="'block' " *ngIf="clase_input == 'input_agregar_especie' "  >
@@ -37,7 +37,7 @@
                         </select> 
                     </td>
         </tr>
-        <tr  *ngIf="clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' && clase_input != 'input_form_g'&& clase_input != 'input_form_h' && clase_input != 'input_form_f'">
+        <tr  *ngIf=" clase_input != 'input_form_h_destino' &&  clase_input != 'input_form_d' && clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' &&  clase_input != 'input_form_c4_puesto' && clase_input != 'input_form_g'&& clase_input != 'input_form_h' && clase_input != 'input_form_f' && clase_input != 'input_form_f_moneda'">
                 <td>
                        
                 </td>

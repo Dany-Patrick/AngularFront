@@ -2,10 +2,15 @@
     <table>
         <tr>
             <td [style.display]="ocultar ? 'none' : 'inline-block'"> <label  [style.width.px]="label_ancho" [ngClass]="clase_label">{{titulo}}</label></td>
-            <td [style.display]="form_c ? 'block' : 'inline-block'"><input [(ngModel)]="value" type="text" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4">
-
-            </td>
+            <td [style.display]="form_c ? 'block' : 'inline-block'"><input [(ngModel)]="value" type="text" class="form-control" [ngClass]="clase_input" [style.width.px]="input_ancho" minlength="4" ></td>
         </tr>
-
+        <tr *ngIf="clase_input != 'porcentaje' && clase_input != 'input_form_c3' &&  clase_input != 'input_form_c4' && clase_input != 'input_form_g'&& clase_input != 'input_form_h'&& clase_input != 'input_form_e_permanente'&& clase_input != 'input_form_e_temporal'&& clase_input != 'input_form_f'">
+            <td >
+                   
+            </td>
+        <td>
+                <b *ngIf="valido == false " class="requerido" >* is required </b> &nbsp;
+        </td>
+    </tr>
     </table>
 </div>

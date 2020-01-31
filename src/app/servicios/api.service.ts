@@ -95,4 +95,62 @@ url:string ;
     return this.httpClient.get(this.url);
 
   }
+  traer_unidad()
+  {  
+
+    
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Unidad";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_plaza()
+  {  
+
+    
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Plaza";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_destino_produccion()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Destino_produccion";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_abastecimiento()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Abastecimiento";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_especializacion()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Especializacion";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_maquinaria()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Maquinaria";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_monedas()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Moneda";
+    return this.httpClient.get(this.url);
+
+  }
+  traer_residuo()
+  {  
+ 
+   this.url = "https://desastilla.infor.cl/astillas/api/AST/Tipo/Residuo";
+    return this.httpClient.get(this.url);
+
+  }
 }

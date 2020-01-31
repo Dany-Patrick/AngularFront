@@ -1,32 +1,34 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
+    <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
+
         <subtitulo [titulo]="'F1. Inversiones'"></subtitulo>
 
 
         <div class="div_responsivo"> 
                 <table> 
                 <tr>
-                        <td colspan="2">  <b>Inversiones realizadas ano_proceso</b></td>
+                        <td colspan="2"><span><b>Inversiones realizadas</b></span></td>
                     
                     </tr>
             <tr>
                     <td class="label_input">Seleccione tipo de moneda</td>
-                <td> <lista-desplegable   [titulo]="''" [clase_input]="'input_form_f'"></lista-desplegable></td>
+                <td> <lista-desplegable  [formControlName]="'a_tipo_moneda'"  [titulo]="''" [clase_input]="'input_form_f_moneda'"></lista-desplegable></td>
             </tr>
             <tr>
                     <td class="label_input">Maquinaria y equipos</td>
-                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'" ></textbox-numerico></td>
+                    <td><textbox-numerico [formControlName]="'a_maquinaria'" [titulo]="''" [clase_input]="'input_form_f'" ></textbox-numerico></td>
             
                 </tr>
                 <tr>
                         <td class="label_input">Instalaciones</td>
-                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+                        <td><textbox-numerico [formControlName]="'a_instalaciones'" [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
 
                     </tr>
                     <tr>
                             <td class="label_input">Total</td>
-                            <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"> </textbox-numerico></td>
+                            <td><textbox-numerico [formControlName]="'a_total'" [titulo]="''" [clase_input]="'input_form_f'"> </textbox-numerico></td>
      
                         </tr>
         </table>
@@ -34,37 +36,38 @@
     <div class="div_responsivo"> 
             <table> 
             <tr>
-                    <td colspan="2">  <b>Inversiones proyectadas ano_proceso + 1</b></td>
+                    <td colspan="2">  <span><b>Inversiones proyectadas</b></span></td>
                 
                 </tr>
         <tr>
                 <td class="label_input">Seleccione tipo de moneda</td>
-            <td> <lista-desplegable   [titulo]="''" [clase_input]="'input_form_f'"></lista-desplegable></td>
+            <td> <lista-desplegable  [formControlName]="'b_tipo_moneda'"  [titulo]="''" [clase_input]="'input_form_f_moneda'"></lista-desplegable></td>
         </tr>
         <tr>
                 <td class="label_input">Maquinaria y equipos</td>
-                <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+                <td><textbox-numerico [formControlName]="'b_maquinaria'"  [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
         
             </tr>
             <tr>
                     <td class="label_input">Instalaciones</td>
-                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+                    <td><textbox-numerico [formControlName]="'b_instalaciones'"  [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
 
                 </tr>
                 <tr>
                         <td class="label_input">Total</td>
-                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
+                        <td><textbox-numerico [formControlName]="'b_total'" [titulo]="''" [clase_input]="'input_form_f'"></textbox-numerico></td>
  
                     </tr>
     </table>
 </div>
-     
-</div>
-<br>
 <div align="center" class="btn_enviar" >
    
     <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
 
 </div>
+
+ </form>    
+</div>
+<br>
 
 <menu-footer></menu-footer>

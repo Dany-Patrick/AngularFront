@@ -12,11 +12,12 @@ table
 .div_responsivo {
     box-sizing: border-box;
     display: table-cell;
-
- 
+}
+span {
+  color: green;
  
 }
-t
+
 .contenedor
 {
   
@@ -45,6 +46,9 @@ t
      margin-top: 10px;
      
     }
+    .contenedor{
+      font-size: 14px;
+  }
 }
 @media  screen and (max-width: 1140px)  and (min-width:850px) {
 

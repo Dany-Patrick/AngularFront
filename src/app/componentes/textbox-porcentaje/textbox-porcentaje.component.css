@@ -8,6 +8,7 @@ label {
     height: unset;
     padding: unset;
     width: 200px;
+    height: 26px;
 }
 
 
@@ -29,7 +30,10 @@ label {
     width: 97px;
 }
 
-
+input
+{
+    text-align: center;
+}
 /*FORMULARIO A*/
 
 
@@ -54,6 +58,18 @@ label {
         display: -webkit-box;
         display: flex;
     }
+    .porcentaje {
+        width: 2rem;
+    }
+    .input_form_c4
+    {
+        width: 75px;
+        margin-top: 7px;
+    }
+    .porcentaje {
+        width: 2rem;
+    }
+    
 }
 
 @media screen and (max-width: 426px) and (min-width:361px) {
@@ -79,7 +95,17 @@ label {
         margin-top: 33px;
         width: 9.4rem;
     }
+    .input_form_c4
+    {
+        width: 75px;
+        margin-top: 7px;
+    }
     /*FORMULARIO A*/
+    .porcentaje {
+        margin-top: 7px;
+        width: 2.5rem;
+        height: 38px;
+    }
 }
 
 @media screen and (max-width: 570px) and (min-width: 426px) {
@@ -104,6 +130,11 @@ label {
     }
     .ancho_70 {
         width: 18.5rem;
+    }
+    .porcentaje {
+        margin-top: 7px;
+        width: 2.5rem;
+        height: 38px;
     }
 }
 
@@ -136,6 +167,11 @@ label {
     .ancho_10 {
         width: 169px;
     }
+    .porcentaje {
+        margin-top: 7px;
+        width: 2rem;
+        height: 38px;
+    }
 }
 
 @media screen and (max-width:752px) and (min-width:687px) {
@@ -161,11 +197,21 @@ label {
     .ancho_70 {
         width: 26.5rem;
     }
+    .porcentaje {
+        margin-top: 7px;
+        width: 2rem;
+        height: 38px;
+    }
 }
 
 @media screen and (max-width:850px) and (min-width:752px) {
     td {
         display: flex;
+    }
+    .porcentaje {
+        margin-top: 7px;
+        width: 2.5rem;
+        height: 38px;
     }
     .form-control {
         height: 37px;
@@ -229,6 +275,9 @@ label {
         width: 66px;
     }
     /*FORMULARIO A*/
+    .porcentaje {
+        width: 2rem;
+    }
 }
 
 @media screen and (max-width: 1552px) and (min-width: 1140px) {
@@ -237,6 +286,9 @@ label {
         font-size: 11px;
         padding-top: 2px;
         padding-bottom: 2px;
+    }
+    .porcentaje {
+        width: 2rem;
     }
     label {
         width: 110px;
@@ -262,5 +314,9 @@ label {
     .input_form_c4 {
         width: 75px;
         font-size: unset;
+    }
+    .input_form_c3 {
+        width: 100px;
+        margin-top: 7px;
     }
 }

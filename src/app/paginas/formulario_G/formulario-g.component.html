@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
 <app-title  [formulario]=true></app-title>
 <div class="contenedor animated fadeIn fast">
-       
+    <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
+
 
 
         <div class="div_responsivo"> 
@@ -12,47 +13,16 @@
                         <td class="espacio"></td>
                         <th style="border-top:unset; border-bottom: unset;"> Cantidad</th>
                     </tr>
-            <tr>
-                    <td class="label_input">Disco astillador</td>
-                    <td class="espacio"></td>
-                     <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-            </tr>
-            <tr>
-                    <td class="label_input">Tambor</td>
-                    <td class="espacio"></td>
-                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"  ></textbox-numerico></td>
-            
-                </tr>
-                <tr>
-                        <td class="label_input">Platos troncoconicos</td>
-                        <td class="espacio"></td>
-                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-
-                    </tr>
-                    <tr>
-                            <td class="label_input">Aletas</td>
-                            <td class="espacio"></td>
-                            <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
-     
-                        </tr>
+                    <ng-container *ngFor="let option of lista ; let i = index ">
                         <tr>
-                                <td class="label_input">Aserradora-Astilladora</td>
+                                <td class="label_input">{{option[0]}}</td>
                                 <td class="espacio"></td>
-                                <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
-         
+                                <td><textbox-numerico  [formControlName]="option[1]+'_'+i" [titulo]="''" [clase_input]="'input_form_g'"  ></textbox-numerico></td>
+                        
                             </tr>
-                            <tr>
-                                    <td class="label_input">Conteadroa-Astilladora</td>
-                                    <td class="espacio"></td>
-                                    <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
-             
-                                </tr>
-                                <tr>
-                                        <td class="label_input">Aletas</td>
-                                        <td class="espacio"></td>
-                                        <td><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"> </textbox-numerico></td>
-                 
-                                    </tr>
+                            </ng-container>
+           
+               
         </table>
     </div>
 
@@ -71,63 +41,64 @@
                         </tr>
                         <tr>
                                 <td class="sin_borde_abajo">Pino radiata CC</td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_cc_mr'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_cc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_cc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_cc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
                      
                             </tr>
                             <tr>
-                                    <td class="sin_borde_abajo">Pino radiata SC</td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                </tr>
+                                <td class="sin_borde_abajo">Eucalyptus Globulus SC</td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_sc_mr'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_sc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_sc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                <td ><textbox-numerico [formControlName]="'pino_radiata_sc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                      </tr>
                                 <tr>
                                         <td class="sin_borde_abajo">Eucalyptus Globulus CC</td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_cc_mr'"  [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_cc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_cc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_cc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
                                     </tr>
                                     <tr>
                                             <td class="sin_borde_abajo">Eucalyptus Globulus SC</td>
-                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                            <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_sc_mr'"  [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_sc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_sc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                            <td ><textbox-numerico [formControlName]="'eucalyptus_globulus_sc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
                                         </tr>
                                         <tr>
                                                 <td class="sin_borde_abajo">Eucalyptus Nitens CC</td>
-                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                            </tr>
+                                                <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_cc_mr'"  [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_cc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_cc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                        <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_cc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                    </tr>
                                             <tr>
                                                     <td class="sin_borde_abajo">Eucalyptus Nitens SC</td>
-                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                    <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                </tr>
+                                                    <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_sc_mr'"  [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_sc_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_sc_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                    <td ><textbox-numerico [formControlName]="'eucalyptus_nitens_sc_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                              </tr>
                                                 <tr>
                                                         <td class="sin_borde_abajo">Otras exóticas</td>
-                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
-                                                        <td ><textbox-numerico [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico  [formControlName]="'otras_exoticas_mr'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [formControlName]="'otras_exoticas_bmdt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [formControlName]="'otras_exoticas_mestreo'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
+                                                        <td ><textbox-numerico [formControlName]="'otras_exoticas_gmt'" [titulo]="''" [clase_input]="'input_form_g'"></textbox-numerico></td>
                                                     </tr>
                 </table>
 </div>
-     
-</div>
-<br>
-<div align="center" class="btn_enviar" >
+ 
+    <div align="center" class="btn_enviar" >
    
-    <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
-
+        <button type="submit" class="btn btn-success">ENVIAR FORMULARIO</button>
+    
+    </div>
+</form> 
 </div>
+
 
 <menu-footer></menu-footer>

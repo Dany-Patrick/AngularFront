@@ -41,7 +41,12 @@
     display: inline-block;
 
 }
+.div_responsivo_c3_b , .div_responsivo_c4_b {
+    box-sizing: border-box;
+    display: table-cell;
+    padding-left: 50px;
 
+}
 .sin_borde_arriba {
     border-top: unset;
 }
@@ -80,7 +85,9 @@ table th {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
-
+img{
+    cursor: pointer; margin-top: 7px; height: 35px;
+}
 table {
     border-color: #fff;
     margin-left: unset;
@@ -92,13 +99,24 @@ span {
 }
 
 .boton_a_la_derecha {
-    width: 81.7rem;
+    width: 80.7rem;
 }
-@media screen and (max-width: 1024px)  {
+@media screen and (max-width: 320px)   {
+    .tabla {
+        width: 18.6rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 321px)  {
      
     .div_responsivo {
         display: inline-block;
         margin-top: 10px;
+    }
+    .div_responsivo_c3_b , .div_responsivo_c4_b {
+        display: inline-block;
+        margin-top: 10px;
+        padding-left: 0px;
     }
     .div_responsivo_c1 {
         display: inline-block;
@@ -127,11 +145,18 @@ span {
         width: 46rem;
     }
 }
-@media screen and (max-width: 1321px) and (min-width: 1024px) {
+@media screen and (max-width: 1321px) and (min-width: 1021px) {
    
     .div_responsivo {
         display: inline-block;
         margin-top: 10px;
+      
+    }
+    .div_responsivo_c3_b , .div_responsivo_c4_b  {
+        display: inline-block;
+        margin-top: 10px;
+        padding-left:0px;
+    
     }
     .div_responsivo_c1 {
         display: inline-block;
@@ -162,7 +187,7 @@ span {
 }
 @media screen and (max-width: 1552px) and (min-width: 1321px) {
     .boton_a_la_derecha {
-        width: 77.5rem;
+        width: 107rem;
 
     }
 }

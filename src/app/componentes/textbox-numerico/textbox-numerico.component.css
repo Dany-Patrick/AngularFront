@@ -48,7 +48,7 @@ input {
 
 .label_form_c {
     width: 178px;
-    margin-top: 4px;
+ 
 }
 
 .input_form_c3 {
@@ -81,10 +81,14 @@ input {
 
 .input_form_e_permanente {
     width: 9rem;
+    margin-top: 5px;
+    height: 38px;
 }
 
 .input_form_e_temporal {
     width: 7rem;
+    margin-top: 5px;
+    height: 38px;
 }
 
 
@@ -100,6 +104,7 @@ input {
         font-size: 11px;
         padding-top: 2px;
         padding-bottom: 2px;
+        height: 26px;
     }
     label {
         width: 118px;
@@ -142,6 +147,7 @@ input {
     }
     .input_form_c {
         width: 186px;
+        height: 26px;
     }
     /*FORMULARIO D*/
     .input_form_d {
@@ -152,8 +158,18 @@ input {
     }
     /*FORMULARIO E*/
     .input_form_e_temporal {
-        width: 95px;
+        width: 9rem;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+    .input_form_e_permanente {
+        width: 9rem;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
     /*FORMULARIO E*/
     /*FORMULARIO G*/
     .input_form_g {
@@ -165,7 +181,7 @@ input {
 @media screen and (max-width: 1140px) and (min-width: 850px) {
     .form-control {
         width: 131px;
-        font-size: 10px;
+        font-size: 14px;
         padding-top: 2px;
         padding-bottom: 2px;
     }
@@ -216,10 +232,16 @@ input {
     }
     /*FORMULARIO E*/
     .input_form_e_permanente {
-        width: 10rem;
+        width: 6rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    
     }
     .input_form_e_temporal {
-        width: 7rem;
+        width: 6rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    
     }
     /*FORMULARIO E*/
     /*FORMULARIO G*/
@@ -297,7 +319,7 @@ input {
     /*FORMULARIO F*/
     .input_form_f {
         width: 13.9rem;;
-        height: 26px;
+        height: 38px;
     }
     /*FORMULARIO D*/
     .input_form_d {
@@ -313,21 +335,26 @@ input {
     /*FORMULARIO E*/
     .input_form_e_permanente {
         width: 8rem;
+        height: 38px;
     }
     .input_form_e_temporal {
         width: 6rem;
+        height: 38px;
     }
     /*FORMULARIO E*/
     /*FORMULARIO G*/
     .input_form_g {
-        height: 27px;
+        height: 38px;
         width: 7rem;
+        margin-top: 5px;
     }
     /*FORMULARIO H*/
     .input_form_h {
-        height: 27px;
+        height: 38px;
         width: 8.1rem;
-    }
+        margin-top: 5px;
+}
+    
 }
 
 @media screen and (max-width:753px) and (min-width:637px) {
@@ -344,6 +371,11 @@ input {
         height: 27px;
         width: 8.1rem;
     }
+    .input_form_d{
+        margin-top: 7px;
+        width: 6rem;
+        height: 38px;
+    }
 }
 
 @media screen and (max-width:637px) and (min-width:425px) {
@@ -351,7 +383,9 @@ input {
     .input_form_h {
         height: 27px;
         width: 5.1rem;
-    }
+        margin-top: 5px;
+}
+    
     .fono{
         margin-top: 25px;
         height: 30px;
@@ -415,6 +449,7 @@ input {
 }
 
 @media screen and (max-width:321px) {
+    
     /*FORMULARIO E*/
     .input_form_e_permanente {
         width: 66px;
@@ -425,5 +460,7 @@ input {
     /*FORMULARIO H*/
     .input_form_h {
         width: 3rem;
-    }
+        margin-top: 5px;
+}
+    
 }
