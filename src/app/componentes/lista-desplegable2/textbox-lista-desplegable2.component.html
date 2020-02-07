@@ -1,0 +1,8 @@
+<div class="form-group  col-12">
+    <label *ngIf="!tieneTitulo" class="col-12 col-xl-4 tituloCampo">{{titulo}}</label>
+    <select [class.is-invalid]="addClassError()" [ngClass] = "!tieneTitulo ? ['form-control', 'col-12','col-xl-8'] : ['form-control', 'col-12']" [(ngModel)]="value">
+      <option *ngFor="let option of lista" value="{{option[identificador]}}">{{option[texto]}}</option>
+    </select>
+    <small *ngIf="!simple" class="form-text text-danger push-left col-12">{{mensajeError}}</small>
+</div>
+  

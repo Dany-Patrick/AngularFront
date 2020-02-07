@@ -1,4 +1,28 @@
+.btn-gps {
+    min-width: 40px !important;
+    max-width: 40px !important;   
+}
+.img-gps{
+    height: 1.2em;
+}
+.codigo{width: 80px; padding-right: 10px; padding-left:0px ;}
+.fono{width: calc(100% - 80px);}
+.label_switch {
+    display: inline-flex;  
+    padding-right: 15px;     
+    color: var(--col-verdeClaro);
+}
+.huso{width: calc(50% + 45px - 50px);}
 
+switch-boton
+{
+    display: inline-flex;
+    /*margin-bottom: 20px;*/
+}
+@media (min-width: 1200px) {
+    .btn-gps { align-self: baseline !important;}
+}
+/*
 textbox,
 lista-desplegable,
 email,
@@ -57,7 +81,7 @@ switch-boton
 }
 
 /*Responsive*/
-
+/*
 @media screen and (max-width: 375px) {
     .btn-gps {
         margin-top: 15px;
@@ -174,3 +198,4 @@ switch-boton
         font-size: 12px;
     }
 }
+*/

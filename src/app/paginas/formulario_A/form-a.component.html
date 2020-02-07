@@ -1,90 +1,101 @@
 <app-navbar></app-navbar>
 <app-title [formulario]=true></app-title>
-<form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate" *ngIf="AST_ENCUESTA_List2  ; else mostrarLoading">
-    <div class="contenedor animated fadeIn fast">
-
-        <subtitulo [titulo]="'A1. Antecedente de la planta'"></subtitulo>
+<div class="animated fadeIn fast container-fluid formulario">
+    <app-formulario  #formulario *ngIf="encuesta" >
+        <h2 >A1. Antecedente de la planta</h2>
+        <hr>
         <div class="form-inline">
-            <lista-desplegable  (change)="cambio()" [valido]="valido_1" formControlName="region" [titulo]="'Región'" [clase_input]="'ancho_25'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.REGION"></lista-desplegable>        
-            <lista-desplegable (change)="cambio_2()"  [value]="this.valor_provincia"  [seleccion_regional]="this.seleccion_regional" [valido]="valido_2" [clase_input]="'ancho_25'" formControlName="provincia" [titulo]="'Provincia'" ></lista-desplegable>
-            <lista-desplegable [value]="this.valor_comuna"  [seleccion_regional]="this.seleccion_regional" [seleccion_provincia]="this.seleccion_provincia" [clase_input]="'ancho_25'"  [valido]="valido_3" formControlName="comuna" [titulo]="'Comuna'" ></lista-desplegable>
-        </div>
-        <div class="form-inline">
-            <textbox [valido]="valido_4" formControlName="localidad" [titulo]="'Localidad'" [clase_input]="'ancho_total'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.LOCALIDAD"></textbox>
-            <lista-desplegable [valido]="valido_5" formControlName="huso" [titulo]="'Huso'" [clase_input]="'mini-input'" [clase_label]="'mini-label'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.HUSO" ></lista-desplegable>
-            <lista-desplegable [valido]="valido_6" formControlName="zona" [titulo]="'Zona'" [clase_input]="'mini-input'" [clase_label]="'mini-label'" [value]="" ></lista-desplegable>
-            <textbox [valido]="valido_7" formControlName="utmx" [titulo]="'UTM X'" [clase_input]="'mini-input'" [clase_label]="'mini-label'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.UTMX" ></textbox>
-            <textbox [valido]="valido_8" formControlName="utmy" [titulo]="'UTM Y'" [clase_input]="'mini-input'" [clase_label]="'mini-label'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.UTMY" ></textbox>
-            <button type="button" (click)="convertLatLngToUtm()" class="btn-gps"><img class="img-gps"  src="assets\icons\icon_place.png"></button>
-        </div>
-        <div class="form-inline">
-            <textbox [valido]="valido_9" formControlName="rut_empresa" [titulo]="'Rut empresa'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.RUT_EMPRESA" ></textbox>
-            <textbox [valido]="valido_10" formControlName="nombre_propietario" [titulo]="'Nombre propietario'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.NOMBRE_PROPIETARIO" ></textbox>
-            <textbox [valido]="valido_11" formControlName="razon_social" [titulo]="'Razón social'" [clase_input]="'ancho_total'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.RAZON_SOCIAL"></textbox>
-            <button type="button" class="btn-primary boton">CAMBIAR RAZÓN SOCIAL</button>
-        </div>
-        <div class="form-inline">
-            <textbox [valido]="valido_12" formControlName="nombre_planta" [titulo]="'Nombre planta'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.NOMBRE_UNIDAD" ></textbox>
-            <textbox [valido]="valido_13" formControlName="ciudad_planta" [titulo]="'Ciudad planta'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.CIUDAD" ></textbox>
-            <textbox [valido]="valido_14" formControlName="direccion_planta" [titulo]="'Dirección planta'" [clase_input]="'ancho_total'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.DIRECCION" ></textbox>
-        </div>
-        <div class="form-inline">
-            <codigo-fono [valido]="valido_15" [seleccion_regional]="forma.get('region').value"  [seleccion_provincia]="forma.get('provincia').value" formControlName="codigo_fono_1_planta" [titulo]="'Fono 1'" [clase_input]="'codigo-fono'"  ></codigo-fono>
-            <textbox-numerico [valido]="valido_16" formControlName="num_fono_1_planta" [titulo]="''" [clase_input]="'fono'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.FONO1" ></textbox-numerico>
-            <codigo-fono [valido]="valido_17" formControlName="codigo_fono_2_planta" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"  ></codigo-fono>
-            <textbox-numerico [valido]="valido_18" formControlName="num_fono_2_planta" [titulo]="''" [clase_input]="'fono'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.FONO2" ></textbox-numerico>
-            <email  [valido]="valido_19" formControlName="email_planta" [titulo]="'Email planta'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.MAIL" ></email>
-            <textbox [valido]="valido_20" formControlName="casilla_planta" [titulo]="'Casilla planta'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.CASILLA" ></textbox>
-        </div>
-
-        <subtitulo [titulo]="'A2. Antecedente de la gerencia'"></subtitulo>
-        <div class="form-inline">
-            <textbox  [valido]="valido_21" formControlName="nombre_gerente" [titulo]="'Nombre gerente'" [clase_input]="'ancho_total'" [value]="AST_ENCUESTA_List2.NOMBRE_GERENTE"></textbox>
-            <span class="label_switch">¿Los datos de la gerencia son los mismo datos de la planta?</span>
-            <switch-boton  formControlName="switch_boton" (change)="copiar_datos()"></switch-boton>
-        </div>
-        <div class="form-inline">
-            <lista-desplegable  [valido]="valido_22" [clase_input]="'ancho_25'" formControlName="region_gerencia" [titulo]="'Región'" ></lista-desplegable>
-            <lista-desplegable [valido]="valido_23" [clase_input]="'ancho_25'" [seleccion_regional]="forma.get('region_gerencia').value"  formControlName="provincia_gerencia" [titulo]="'Provincia'"></lista-desplegable>
-            <lista-desplegable [valido]="valido_24"  [clase_input]="'ancho_25'" [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value" formControlName="comuna_gerencia" [titulo]="'Comuna'"></lista-desplegable>
-        </div>
-        <div class="form-inline">
-            <textbox [valido]="valido_25" formControlName="direccion_gerencia" [titulo]="'Dirección gerencia'" [clase_input]="'ancho_total'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.DIRECCION" ></textbox>
-            <textbox [valido]="valido_26" formControlName="ciudad_gerencia" [titulo]="'Ciudad gerencia'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.CIUDAD" ></textbox>
-            <textbox [valido]="valido_27" formControlName="casilla_gerencia" [titulo]="'Casilla gerencia'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.CASILLA" ></textbox>
-        </div>
-        <div class="form-inline">
-            <codigo-fono [valido]="valido_28" formControlName="codigo_fono_1_gerencia"  [seleccion_regional]="forma.get('region_gerencia').value"   [seleccion_provincia]="forma.get('provincia_gerencia').value"  [titulo]="'Fono 1'"   [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico [valido]="valido_29" formControlName="num_fono_1_gerencia" [titulo]="''" [clase_input]="'fono'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.FONO1" ></textbox-numerico>
-            <codigo-fono [valido]="valido_30" formControlName="codigo_fono_2_gerencia" [titulo]="'Fono 2'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico [valido]="valido_31" formControlName="num_fono_2_gerencia" [titulo]="''" [clase_input]="'fono'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.FONO2" ></textbox-numerico>
-            <email [valido]="valido_32" formControlName="email_gerencia" [titulo]="'Email gerencia'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.MAIL" ></email>
-            <textbox [valido]="valido_33" formControlName="web" [titulo]="'Web'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.WEB" ></textbox>
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.REGION" validadores="requerido()" [lista]="regionesList" (valueChange)="cambiarProvincias(true,encuesta.REGION)" titulo="Región" identificador="REGION" texto="NOMBRE"></lista-desplegable2>
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.PROVINCIA" validadores="requerido()" [lista]="provinciasList" (valueChange)="cambiarComunas(true,encuesta.REGION,encuesta.PROVINCIA)" titulo="Provincia" identificador="PROVINCIA" texto="NOMBRE"></lista-desplegable2>
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.COMUNA" validadores="requerido()" [lista]="comunasList" titulo="Comuna" identificador="COMUNA" texto="NOMBRE"></lista-desplegable2>
+    
+            <app-textbox-input class="col-12 col-xl-4" tipo="Texto" titulo="Localidad" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.LOCALIDAD"></app-textbox-input>
+            <app-textbox-input class="col-6 col-sm-3 col-xl-2" tipo="Entero" titulo="UTM X" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.UTMX"></app-textbox-input>
+            <app-textbox-input class="col-6 col-sm-3 col-xl-2" tipo="Entero" titulo="UTM Y" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.UTMY"></app-textbox-input>            
+            
+            <lista-desplegable2 class="col-6 col-sm-3  col-xl-2" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.HUSO" [lista]="husoList" titulo="Huso" identificador="id" texto="valor"></lista-desplegable2>
+            <div class="col-6 col-sm-3 col-xl-2 container  d-flex">    
+                <lista-desplegable2 class="col" style="width: calc(100% - 40px);padding-left: 0px;padding-right: 10px;" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.ZONA" [lista]="zonaList" titulo="Zona" identificador="id" texto="valor"></lista-desplegable2>                                                  
+                <button  type="button" (click)="convertLatLngToUtm()" class="noPadding btn btn-success btn-elevado col align-self-center btn-gps float-right"><img class="img-gps"  src="assets\icons\icon_place.png"></button>           
+            </div>
+          
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Rut Empresa" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.RUT_EMPRESA"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Nombre Propietario" [(value)]="encuesta.NOMBRE_PROPIETARIO"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-12 col-xl-4" tipo="Texto" titulo="Razón Social" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.RAZON_SOCIAL"></app-textbox-input>           
+           
+            <div class="d-flex justify-content-center col-12" style="margin-bottom: calc(0.8rem + 16px);">  
+               <button type="button"  class="btn btn-secondary btn-elevado btn-sm" style="width: 350px;">CAMBIAR RAZÓN SOCIAL</button>
+            </div>
+             
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Nombre Planta" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.NOMBRE_UNIDAD"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Ciudad Planta" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.CIUDAD"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-12 col-xl-4" tipo="Texto" titulo="Dirección Planta" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.DIRECCION"></app-textbox-input>            
+       
+            <div class="col-12 col-sm-6 col-xl-4" >
+                <label class="col-12 col-xl-4 tituloCampo noPadding">Fono 1</label>
+                <lista-desplegable2 simple="true" tieneTitulo="false" class="codigo col-xl-2" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.AREA1" [lista]="codigoPlanta" identificador="id" texto="valor"></lista-desplegable2>
+                <app-textbox-input  tieneTitulo="false" class="fono col-xl-6 noPadding" tipo="Entero" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.FONO1"></app-textbox-input>
+            </div>   
+            <div class="col-12 col-sm-6 col-xl-4"  >
+                <label class="col-12 col-xl-4 tituloCampo noPadding">Fono 2</label>
+                <lista-desplegable2 simple="true" tieneTitulo="false" class="codigo col-xl-2" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.AREA2" [lista]="codigoPlanta" identificador="id" texto="valor"></lista-desplegable2>
+                <app-textbox-input  tieneTitulo="false" class="fono col-xl-6 noPadding" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.FONO2"></app-textbox-input>
+            </div>        
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Correo" titulo="Email Planta" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.MAIL"></app-textbox-input>
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Texto" titulo="Casilla Planta" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.CASILLA"></app-textbox-input>        
         </div>
 
-        <subtitulo [titulo]="'A3. Antecedentes del encuestado'"></subtitulo>
+        <h2>A2. Antecedente de la gerencia</h2>
+        <hr>      
         <div class="form-inline">
-            <lista-desplegable [valido]="valido_34" formControlName="nombre_encuestador" [titulo]="'Nombre encuestador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></lista-desplegable>
-            <fecha [valido]="valido_35" formControlName="fecha" [titulo]="'Fecha'" [clase_input]="'ancho_10'"></fecha>
+            <app-textbox-input  class="col-12 col-md-6 col-xl-4 " tipo="Texto" titulo="Nombre Gerente" [(value)]="encuesta.NOMBRE_GERENTE"></app-textbox-input>
+            <div class="col12 col-md-6 col-xl-8 ">
+                <span class="label_switch col-8 col-sm-9 col-md-8 col-xl-auto">¿Los datos de la gerencia son los mismo datos de la planta?</span>
+                <switch-boton class="col-4 col-sm-3 col-md-4 col-xl-auto align-self-center" #switch_boton (change)="copiar_datos()"></switch-boton>
+            </div>
+        
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.REGION" [lista]="regionesList" (valueChange)="cambiarProvincias(false,encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.REGION)" titulo="Región" identificador="REGION" texto="NOMBRE"></lista-desplegable2>
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.PROVINCIA" validadores="requerido()" [lista]="provinciasListGerencia" (valueChange)="cambiarComunas(false,encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.REGION,encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.PROVINCIA)" titulo="Provincia" identificador="PROVINCIA" texto="NOMBRE"></lista-desplegable2>
+            <lista-desplegable2 class="col-12 col-md-4" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.COMUNA" validadores="requerido()" [lista]="comunasListGerencia" titulo="Comuna" identificador="COMUNA" texto="NOMBRE"></lista-desplegable2>
+        
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Dirección Gerencia" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.DIRECCION"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-6 col-xl-4" tipo="Texto" titulo="Ciudad Gerencia" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.CIUDAD"></app-textbox-input>
+            <app-textbox-input class="col-12 col-md-12 col-xl-4" tipo="Texto" titulo="Casilla Gerencia" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.CASILLA"></app-textbox-input>           
+        
+            <div class="col-12 col-sm-6 col-xl-4" >
+                <label class="col-12 col-xl-4 tituloCampo noPadding">Fono 1</label>
+                <lista-desplegable2 simple="true" tieneTitulo="false" class="codigo col-xl-2" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.AREA1" [lista]="codigoGerencia" identificador="id" texto="valor"></lista-desplegable2>
+                <app-textbox-input  tieneTitulo="false" class="fono col-xl-6 noPadding" tipo="Entero" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.FONO1"></app-textbox-input>
+            </div>   
+            <div class="col-12 col-sm-6 col-xl-4"  >
+                <label class="col-12 col-xl-4 tituloCampo noPadding">Fono 2</label>
+                <lista-desplegable2 simple="true" tieneTitulo="false" class="codigo col-xl-2" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.AREA2" [lista]="codigoGerencia" identificador="id" texto="valor"></lista-desplegable2>
+                <app-textbox-input  tieneTitulo="false" class="fono col-xl-6 noPadding" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.FONO2"></app-textbox-input>
+            </div>        
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Correo" titulo="Email Gerencia" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.MAIL"></app-textbox-input>
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Texto" titulo="Web" [(value)]="encuesta.PEF_EMPRESA_UNIDAD_ASTILLAS.PEF_EMPRESA_ASTILLAS.WEB"></app-textbox-input>                  
         </div>
+
+        <h2>A3. Antecedentes del encuestado</h2>
+        <hr>              
         <div class="form-inline">
-            <textbox [valido]="valido_36" formControlName="nombre_encuestado" [titulo]="'Nombre encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'" [value]="AST_ENCUESTA_List2.NOMBRE_ENCUESTADO"></textbox>
-            <lista-desplegable [valido]="valido_37" formControlName="cargo" [clase_input]="'ancho_25'" [titulo]="'Cargo'"></lista-desplegable>
+            <lista-desplegable2 class="col-12 col-sm-6 col-xl-4" [(value)]="encuesta.C_ENCUESTADOR" [lista]="encuestadorList" titulo="Nombre Encuestador" identificador="C_ENCUESTADOR" texto="NOMBRE"></lista-desplegable2>
+            <fecha class="col-12 col-sm-6 col-xl-4" [valido]="valido_35" #fecha [titulo]="'Fecha'"></fecha>
+            <!-- FECHA_ENCUESTA
+            <lista-desplegable [valido]="valido_34" #nombre_encuestador [titulo]="'Nombre encuestador'" [clase_label]="'label_largo'" [clase_input]="'ancho_70'"></lista-desplegable>
+            <fecha [valido]="valido_35" #fecha [titulo]="'Fecha'" [clase_input]="'ancho_10'"></fecha>
+            -->
+       
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Texto" titulo="Nombre Encuestado" [(value)]="encuesta.NOMBRE_ENCUESTADO"></app-textbox-input>           
+            <lista-desplegable2 class="col-12 col-sm-6 col-xl-4" [(value)]="encuesta.CARGO_ENCUESTADO" [lista]="cargoList" titulo="Cargo" identificador="CARGO" texto="DESCRIPCION"></lista-desplegable2>            
+        
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Correo" titulo="Email Encuestado" [(value)]="encuesta.EMAIL_ENCUESTADO"></app-textbox-input>                       
+            <app-textbox-input class="col-12 col-sm-6 col-xl-4" tipo="Numero" titulo="Fono" [(value)]="encuesta.CELULAR_ENCUESTADO"></app-textbox-input>                     
         </div>
-        <div class="form-inline">
-            <email [valido]="valido_38" formControlName="email_encuestado" [titulo]="'Email encuestado'" [clase_label]="'label_largo'" [clase_input]="'ancho_50'" [value]="AST_ENCUESTA_List2.EMAIL_ENCUESTADO" ></email>
-            <codigo-fono [valido]="valido_39"  [codigo_provincia]="codigo_provincia "  formControlName="codigo_fono_1_encuestado" [titulo]="'Fono'" [clase_input]="'codigo-fono'"></codigo-fono>
-            <textbox-numerico [valido]="valido_40" formControlName="num_fono_1_encuestado" [titulo]="''" [clase_input]="'fono'" [value]="AST_ENCUESTA_List2.FONO1" ></textbox-numerico>
-        </div>
+    </app-formulario>
+        <div class="d-flex justify-content-center" style="margin-bottom: 80px;">  
+            <button type="button"  class="btn btn-success btn-elevado" style="width: 250px;">FINALIZAR FORMULARIO A</button>
+        </div>       
     </div>
-    <!--
-       <p>fono_numero_1: {{ fono_numero_1 }}</p>
-       <p>codigo_fono_2: {{ codigo_fono_2}}</p>
-       <p>fono_numero_2: {{ fono_numero_2 }}</p>
--->
-    <div class="btn_enviar" align="center"> <button type="submit" class="btn btn-success btn-lg">FINALIZAR FORMULARIO</button></div>
-
-</form>
-
 <menu-footer></menu-footer>
 <app-spinner  [display] ="spinnerComp" ></app-spinner>

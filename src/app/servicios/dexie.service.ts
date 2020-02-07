@@ -8,8 +8,8 @@ export class DexieService extends Dexie {
       //Nombre de la base de datos con una key autoincrementable ++ID
       AST_ENCUESTA: 'ID_ENCUESTA',
       PEF_TREGION: 'ORDEN',
-      PEF_TPROVINCIA: '++ID',
-      PEF_TCOMUNA: '++ID',
+      PEF_TPROVINCIA: '++ID,REGION,PROVINCIA,NOMBRE',
+      PEF_TCOMUNA: '++ID,REGION,PROVINCIA,COMUNA,NOMBRE,VIGENTE',
       PEF_TCARGOS: '++ID',
       AST_ENCUESTADOR: 'C_ENCUESTADOR',
       ASE_TCAUSA_DESAPARECIDO: 'CAUSA_DESAPARECIDO',

@@ -289,6 +289,9 @@ export class ConverCoordenadas {
           else{      
             resolve(new Coordenadas(null,null,null,null,null,null,null,DataStrings.errorObtenerCoordenadas()));//DataStrings.errorGeolocacion());
           }
+        },
+        function(error){
+          resolve(new Coordenadas(null,null,null,null,null,null,null,DataStrings.errorGeolocacionPermisos()));
         });     
       } 
       else { 

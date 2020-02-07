@@ -1,0 +1,13 @@
+:host {
+    display: inline-flex
+  }
+  small{
+      text-align:right;
+      display:block;
+      height:16px;
+  }
+label{display: inline-flex;padding-left: 0 !important;padding-right: 0 !important;}
+.form-group{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

@@ -50,6 +50,10 @@ import { DexieService } from "./servicios/dexie.service";
 import { FechaComponent } from './componentes/fecha/fecha.component';
 import { DialogoComponent } from './componentes/modal-dialogo/dialogo.component';
 import { Spinner } from './componentes/spinner/spinner';
+import { TextboxListaDesplegable2Component } from './componentes/lista-desplegable2/textbox-lista-desplegable2.component';
+import {FormularioComponent} from './paginas/formulario/formulario.component';
+import { ComponenteValidableComponent } from './componentes/ComponenteValidable.component';
+import { TextboxInputComponent } from './componentes/textbox-input/textbox-input.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +94,11 @@ import { Spinner } from './componentes/spinner/spinner';
     OpcionesComponent,
     FechaComponent,
     DialogoComponent,
-    Spinner
+    Spinner,
+    TextboxListaDesplegable2Component,
+    FormularioComponent,
+    ComponenteValidableComponent,
+    TextboxInputComponent
   ],
   imports: [
     

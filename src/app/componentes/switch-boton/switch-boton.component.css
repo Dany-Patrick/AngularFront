@@ -2,10 +2,10 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 84px;
+  width: 100px;
 
   margin-bottom: 0px;
-  height: 20px;
+  height: 32px;
 }
 
 .switch input {display:none;}
@@ -20,8 +20,8 @@
   right: 0;
   bottom: 0;
   background-color: grey;
-  -webkit-transition: .4s;
-  transition: .4s;
+  /*-webkit-transition: .4s;
+  transition: .4s;*/
 }
 
 .slider:before {
@@ -32,8 +32,8 @@
   left: 6px;
   bottom: 5px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+ /* -webkit-transition: .4s;
+  transition: .4s;*/
 }
 
 input:checked + .slider {
@@ -85,7 +85,7 @@ input:checked + .slider .off
 /*--------- END --------*/
 
 
-
+/*
 
 @media  screen and (max-width: 425px)   {
         
@@ -136,4 +136,4 @@ input:checked + .slider .off
 
 
 @media  screen and (max-width: 1552px) and (min-width: 1140px) {
-}
+}*/

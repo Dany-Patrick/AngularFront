@@ -10,7 +10,8 @@ export class DialogoComponent implements OnInit {
     @Input() my_modal_title;
     @Input() my_modal_content;
     @Input() esVisible = false;
-    
+    @Input() btnAceptar = '';
+    @Input() btnCerrar = 'true';
     constructor(public activeModal: NgbActiveModal) {  }
    
     ngOnInit() {

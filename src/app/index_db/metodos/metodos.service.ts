@@ -3,7 +3,6 @@ import Dexie from 'dexie';
 import { ApiService } from 'src/app/servicios/api.service';
 import { DexieService } from '../../servicios/dexie.service';
 import { AST_ENCUESTA } from '../models/AST_ENCUESTA';
-
 import { PEF_TREGION } from '../models/PEF_TREGION';
 import { PEF_TPROVINCIA } from '../models/PEF_TPROVINCIA';
 import { PEF_TCOMUNA } from '../models/PEF_TCOMUNA';
@@ -13,8 +12,7 @@ import { ASE_TCAUSA_DESAPARECIDO } from '../models/ASE_TCAUSA_DESAPARECIDO';
 import { ASE_TCAUSA_PARALIZACION } from '../models/ASE_TCAUSA_PARALIZACION';
 import { AST_ENCUESTA_SECCION } from '../models/AST_ENCUESTA_SECCION';
 import { PEF_TESPECIE } from '../models/PEF_TESPECIE';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class Metodos_service  {
@@ -34,7 +32,7 @@ export class Metodos_service  {
   
   constructor(private dexieService: DexieService,private apiService: ApiService) {
 
-    this.tabla_ast_encuesta = this.dexieService.table('AST_ENCUESTA');//Se asigna la tabla de la base de datos
+    this.tabla_ast_encuesta = this.dexieService.table('AST_ENCUESTA');//Se asigna la tabla de la base de datos    
     this.tabla_pef_region = this.dexieService.table('PEF_TREGION');
     this.tabla_pef_provincia = this.dexieService.table('PEF_TPROVINCIA');
     this.tabla_pef_comuna = this.dexieService.table('PEF_TCOMUNA');
@@ -44,6 +42,16 @@ export class Metodos_service  {
     this.tabla_ase_tcausa_paralizacion = this.dexieService.table('ASE_TCAUSA_PARALIZACION');
     this.tabla_ast_seccion = this.dexieService.table('AST_ENCUESTA_SECCION');
     this.tabla_pef_tespecie = this.dexieService.table('PEF_TESPECIE');
+    this.tabla_ast_encuesta.mapToClass(AST_ENCUESTA); 
+    this.tabla_pef_region.mapToClass(PEF_TREGION); 
+    this.tabla_pef_provincia.mapToClass(PEF_TPROVINCIA); 
+    this.tabla_pef_comuna.mapToClass(PEF_TCOMUNA); 
+    this.tabla_pef_cargos.mapToClass(PEF_TCARGOS); 
+    this.tabla_ast_encuestador.mapToClass(AST_ENCUESTADOR); 
+    this.tabla_ase_tcausa_desaparecido.mapToClass(ASE_TCAUSA_DESAPARECIDO); 
+    this.tabla_ase_tcausa_paralizacion.mapToClass(ASE_TCAUSA_PARALIZACION); 
+    this.tabla_ast_seccion.mapToClass(AST_ENCUESTA_SECCION); 
+    this.tabla_pef_tespecie.mapToClass(PEF_TESPECIE); 
   }
   
   crear_tablas() {this.generarTablas<AST_ENCUESTA>("AST_ENCUESTA",this.tabla_ast_encuesta);}
@@ -87,7 +95,7 @@ export class Metodos_service  {
   }
 
   getAll(){ return this.tabla_ast_encuesta.toArray();}
-  get_regiones() {return this.tabla_pef_region.toArray();}
+  get_regiones() {return this.tabla_pef_region.toArray();}//borrar
   get_provincias() {return this.tabla_pef_provincia.toArray();}
   get_comunas() {return this.tabla_pef_comuna.toArray();}
   get_cargos() {return this.tabla_pef_cargos.toArray();}
@@ -97,25 +105,6 @@ export class Metodos_service  {
   get_seccion() {return this.tabla_ast_seccion.toArray();}
   get_especies() {return this.tabla_pef_tespecie.toArray();}
 
-  private encuesta = new BehaviorSubject<AST_ENCUESTA>(this.nuevaEncuesta());
-  encuesta$ = this.encuesta.asObservable();
-  async getEncuestaById(id : any) {
-    if(!isNaN(id)){
-      await this.tabla_ast_encuesta.get(+id).then((en: any) => {
-          this.mostrarEncuesta(en);
-      });   
-    }
-    else{      
-      this.mostrarEncuesta(this.nuevaEncuesta());
-    }
-  }
-  mostrarEncuesta(enc : AST_ENCUESTA){
-    this.encuesta.next(enc);
-  }
-  
-  nuevaEncuesta(){
-    return new AST_ENCUESTA(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
-  }
 
   remove(id) { //Elimina datos
     return this.tabla_ast_encuesta.delete(id);
